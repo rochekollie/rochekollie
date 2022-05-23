@@ -1,3 +1,5 @@
 # Roche Kollie
 
-A personal web developer portfolio for the World Wide Web.
+Hello World!
+
+Welcome to my personal portfolio on the world wide web.
