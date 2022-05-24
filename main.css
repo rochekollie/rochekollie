@@ -281,11 +281,10 @@ header nav:hover .nav-items {
 main {
 	margin: 0 auto;
 	padding: 0;
-	width: 100%;
+	width: min(100%, calc(100%));
 	min-height: 100vh;
 	background-color: #fff;
-	width: 1000px;
-	padding: 100px 1rem;
+	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
