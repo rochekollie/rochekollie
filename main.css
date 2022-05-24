@@ -92,14 +92,15 @@
 ************************************************************************* */
 
 html {
-	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -164,7 +165,7 @@ header ul li a:hover {
 	display: inline-block;
 	vertical-align: middle;
 	opacity: 50%;
-	/* object-fit: contain; */
+	object-fit: contain;
 }
 
 #site-title {
@@ -229,7 +230,7 @@ header ul li a:hover {
 	display: inline-block;
 }
 
-header nav {
+.nav-items {
 	background-color: inherit;
 	box-shadow: none;
 	border: none;
@@ -253,7 +254,6 @@ header nav:hover .nav-items {
 	display: flex;
 	flex-direction: column-reverse;
 }
-
 
 .nav-items {
 	width: 100%;
@@ -279,10 +279,63 @@ header nav:hover .nav-items {
 }
 
 main {
-	/* margin: 5vh 0 0 0; */
+	margin: 0 auto;
 	padding: 0;
 	width: 100%;
 	min-height: 100vh;
+	background-color: #fff;
+	width: 1000px;
+	padding: 100px 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+article {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 70ch;
+	background-color: #fff;
+	padding: 100px 1rem;
+	line-height: 2;
+}
+
+p {
+	margin: 1rem 0;
+	padding: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--dark-900);
+}
+
+footer {
+	width: 100%;
+	height: 48px;
+	background-color: #292929;
+	color: #ffffff99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 0.8rem;
+	line-height: 1.5;
+	color: var(--light-700);
+}
+
+footer p a, footer a:visited {
+	color: var(--theme-5-hex);
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+}
+
+footer p a:hover {
+	color: var(--theme-5-hex);
 }
 
 /* *************************************************************************** /
@@ -293,10 +346,10 @@ main {
 
 @media only screen and (min-width: 769px) {
 	header {
-		justify-content: center;
+		justify-content: space-evenly;
 	}
 
-	header nav {
+	.nav-items {
 		border: solid 1px red;
 		height: 100%;
 		width: auto;
@@ -304,24 +357,13 @@ main {
 		margin: 0;
 	}
 
-	.nav-items {
-		display: flex;
-		position: relative;
+	header nav ul {
+		margin: 0;
 		padding: 0;
-		margin: 0;
 		display: flex;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
-		top: 0;
-		right: 0;
-		/* width: 100%; */
-		margin: 0;
-		gap: 0;
-		/* justify-content: center; */
-		/* flex-direction: row; */
-		/* width: auto; */
-		/* height: 100%; */
-		/* top: 0; */
+		width: 100%;
 	}
 
 	header nav:hover .nav-items {
