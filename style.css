@@ -1,185 +1,219 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    font-family: Inter, sans-serif;
-    font-size: clamp(1rem, 1vw, 2.5rem);
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #ffffff;
-    background-color: #000;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: Inter, sans-serif;
+  font-size: clamp(1rem, .7vw, 2rem);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-weight: 700;
 }
 
 header div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 header div:first-child {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 header div:last-child {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 a {
-    text-decoration: underline;
-    color: #ffffff;
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 a:hover,
 a:active,
 a:visited {
-    color: #ffffff99;
+  color: #ffffff99;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 nav ul li {
-    list-style: none;
+  list-style: none;
 }
 
 nav ul li:hover, nav ul li a {
-    color: #000;
+  color: #000;
 }
 
 nav ul li a {
-    display: inline-block;
-    width: 10ch; /* width of the link - temporary */
-    border: solid 0.001rem #ffffff;
-    border-radius: 7rem;
-    padding: 0.2rem .7rem;
-    text-align: center;
-    font-weight: 400;
-    text-decoration: none;
-    color: #ffffff;
+  display: inline-block;
+  width: 10ch; /* width of the link - temporary */
+  border: solid 0.001rem #ffffff;
+  border-radius: 7rem;
+  padding: 0.2rem .7rem;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 nav ul li a:hover,
 nav ul li a:active {
-    background-color: #ffffff;
-    color: #000;
+  background-color: #ffffff;
+  color: #000;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 #welcome-page {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .25);
-    padding: 1rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .25);
+  padding: 1rem;
 }
 
 main img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: solid 0.1rem #ffffff;
-    box-shadow: 0 0.1rem 0.1rem rgb(0 0 0 / 30%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 0.1rem #ffffff;
+  box-shadow: 0 0.1rem 0.1rem rgb(0 0 0 / 30%);
 }
 
 h1 {
-    word-spacing: 5px;
-    letter-spacing: .01rem;
-    font-size: 2rem !important;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    margin-bottom: 1rem;
+  word-spacing: 5px;
+  letter-spacing: .01rem;
+  font-size: 2rem !important;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 #welcome-button {
-    font-family: Inter, sans-serif;
-    width: 230px;
-    font-size: 1rem;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-    -webkit-border-radius: 7rem;
-    border-radius: 7rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0 0 0 / 7%);
-    border: solid 1px #ffffff99;
-    text-align: center;
-    text-decoration: none;
-    text-transform: capitalize;
+  font-family: Inter, sans-serif;
+  width: 230px;
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 7rem;
+  border-radius: 7rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0 0 0 / 7%);
+  border: solid 1px #ffffff99;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 #welcome-button:hover,
 #welcome-button:focus,
 #welcome-button:active {
-    outline: none;
-    background-color: #ffffff;
-    color: #000;
+  outline: none;
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Scroll Down Icon */
+.scroll-down-arrow {
+  width: 48px;
+  height: 48px;
+  left: calc(50% - 16px);
+  position: absolute;
+  bottom: 50px;
+  animation: scroll-up-and-down 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.scroll-down-arrow path {
+  fill: #fff;
+  font-weight: 900;
+}
+
+@keyframes scroll-up-and-down {
+  100% {
+    bottom: 50px;
+  }
+
+  0% {
+    bottom: 30px;
+  }
+}
+
+.scroll-down-arrow {
+  transform: scale(1.5);
 }
 
 footer {
-    justify-items: flex-end;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    line-height: 1;
-    text-align: center;
-    font-weight: 600;
+  justify-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  line-height: 1;
+  text-align: center;
+  font-weight: 600;
 }
 
 footer div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #heart {
-    color: red;
+  color: red;
 }
 
 #city, #desc {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }

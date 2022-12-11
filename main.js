@@ -90,7 +90,7 @@
 	};
 
 	const randomNumber = Math.floor(Math.random() * 100);
-	const image = `images/backgrounds/${ randomNumber }.jpeg`;
+	const image = `assets/images/backgrounds/${ randomNumber }.jpeg`;
 	const body = document.querySelector("body");
 
 	//save the image and date to local storage
