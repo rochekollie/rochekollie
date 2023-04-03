@@ -11,7 +11,3 @@ const debugLogger = (event) => {
 }
 
 //module.exports.logger = logger;
-
-const string = new String('Hello World');
-
-console.log(string);

@@ -4,68 +4,294 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eebedf95-1a4e-4274-9384-70966ea774f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/Element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/behaviors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/debug-reset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/debugger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/fs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/myFile.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/render.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/scratch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/assets/images/earth.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/assets/images/mars.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sandboxes/try-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/icons/arrow_downward_FILL0_wght300_GRAD0_opsz24.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/arrow_downward_FILL0_wght400_GRAD0_opsz40.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/code_FILL1_wght700_GRAD200_opsz48.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/dashboard_FILL1_wght700_GRAD200_opsz48.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/data_object_FILL1_wght700_GRAD200_opsz48.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/default/adelin-preda--tOr_T4qTpQ-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/default/night-sky.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/default/night.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/100.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/25.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/26.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/27.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/28.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/31.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/32.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/33.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/34.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/35.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/36.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/37.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/38.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/39.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/40.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/41.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/42.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/43.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/44.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/45.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/46.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/47.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/48.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/49.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/50.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/51.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/52.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/53.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/54.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/55.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/56.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/57.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/58.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/59.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/60.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/61.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/62.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/63.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/64.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/65.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/66.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/67.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/68.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/69.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/70.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/71.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/72.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/73.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/74.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/75.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/76.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/77.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/78.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/79.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/80.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/81.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/82.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/83.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/84.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/85.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/86.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/87.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/88.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/89.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/90.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/91.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/92.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/93.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/94.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/95.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/96.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/97.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/98.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/backgrounds/dynamic/99.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/516twa9lgg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/898.dd101c1eed50fae46b5f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/analytics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/banner-rotator.entry.8221c735266011e9e353.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/banner-rotator.entry.e0cc5eeaac6f533f6f02.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/clarity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/common.4372aff663b2eee21444.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/common.bc9c89737995ff1229ef.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/default-page.ccc960c0749ff36b5102.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/default-page.f286b21d4fb1e7e54ac0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/ec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/f-block.9ce357fbbe75599ce94e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/f-block.beb2a09dd039905e2a39.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/gtm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/linkid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/optimize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/page-with-nav-react.81ea83a0e1fc84b5b507.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/web_development.entry.b91a99734bef642eb975.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/Full-stack Web Development - Features _ PyCharm_files/web_development.entry.cc4cf77ede191a1f3c58.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/icons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-icons/icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/rochekollie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rochekollie.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/10.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/100.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/11.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/12.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/13.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/14.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/15.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/16.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/17.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/18.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/19.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/20.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/21.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/22.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/23.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/24.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/25.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/26.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/27.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/28.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/29.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/30.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/31.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/32.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/33.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/34.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/35.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/36.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/37.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/38.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/39.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/40.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/41.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/42.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/43.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/44.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/45.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/46.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/47.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/48.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/49.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/50.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/51.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/52.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/53.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/54.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/55.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/56.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/57.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/58.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/59.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/60.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/61.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/62.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/63.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/64.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/65.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/66.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/67.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/68.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/69.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/70.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/71.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/72.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/73.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/74.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/76.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/77.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/78.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/79.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/80.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/81.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/82.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/83.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/84.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/85.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/86.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/87.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/88.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/89.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/90.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/91.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/92.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/93.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/94.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/95.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/96.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/97.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/98.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/backgrounds/99.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/behaviors.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/behaviors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/debugger.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/debugger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2MoufMkQQwKluRk3BiHRPAiE4yG" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NtBQB9nvNfbwPZK6xFTqvL58Aq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.19.1",
-    "javascript.nodejs.core.library.typings.version": "16.18.14",
-    "last_opened_file_path": "/Users/rochekollie/Documents/code/rochekollie",
+    "git-widget-placeholder": "vertical-scroll-snap",
+    "last_opened_file_path": "/Users/rochekollie/Documents/Code/rochekollie",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eebedf95-1a4e-4274-9384-70966ea774f1" name="Changes" comment="" />
-      <created>1678446358914</created>
+      <changelist id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="" />
+      <created>1680469250007</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1678446358914</updated>
-      <workItem from="1678446359965" duration="12000" />
-      <workItem from="1678446380344" duration="798000" />
+      <updated>1680469250007</updated>
+      <workItem from="1680473481230" duration="6334000" />
     </task>
     <servers />
   </component>

@@ -56,7 +56,6 @@ export function render(element, content) {
   ];
   const hrefElements = ["A", "AREA", "BASE"];
   const dataElements = ["OBJECT"];
-  const customElements = [];
 
   if (textElements.includes(element.nodeName)) {
     element.textContent = content;

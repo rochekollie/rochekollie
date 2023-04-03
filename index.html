@@ -1,242 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Roche Kollie | Web Developer</title>
-  <meta content="Roche Kollie is a professional Software developer."
-        name="description">
-  <meta content="Roche Kollie" name="author">
-  <meta content="Roche Kollie, Web Developer, Software Engineer"
-        name="keywords">
-  <link href="assets/images/profiles/profile.png" rel="shortcut icon">
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet">
-  <link href="styles/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Roche Kollie | Web Developer</title>
+    <meta content="Roche Kollie is a professional Software developer."
+          name="description">
+    <meta content="Roche Kollie" name="author">
+    <meta content="Roche Kollie, Web Developer, Software Engineer"
+          name="keywords">
+    <link href="assets/images/profiles/profile.png" rel="shortcut icon">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <link href="styles/ui.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/light.css" rel="stylesheet">
+    <link href="styles/dark.css" rel="stylesheet">
 </head>
-
 <body>
 <!-- Landing Page -->
 <div id="landing-page">
-  <div class="scroll-snap-wrapper">
-    <header>
-      <div>
-        <span id="date"></span>
-        <span id="time"></span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">projects</a></li>
-          <li><a class="active" href="#">blog</a></li>
-          <li><a href="#">contact</a></li>
-        </ul>
-      </nav>
-      <div>
-        <span id="weather">partly cloudy</span>
-        <span id="weather-icon"></span>
-        <span id="city">baltimore</span>
-        <span id="temp">89</span>
-        <span id="desc">north bounds</span>
-      </div>
-    </header>
-    <main>
-      <img id="profile-picture" alt="Roche Kollie profile picture"
-           src="assets/images/profiles/profile.png">
-      <h3 id="developer-name-text" class="tertiary-heading">Roche Kollie</h3>
-      <a href="mailto:enteric_lacquer_0b@icloud.com"
-         class="text-link-btn">Contact
-        Me</a>
-      <div id="quote-wrapper">
-        <p id="quote"></p>
-        <p id="author"></p>
-      </div>
-    </main>
-    <footer>
-      <div>
-        <p>Photo by</p>
-        <a href="#"><span id="photographer">John
-                Brown</span></a>
-      </div>
-      <!-- Scroll Down Icon -->
-      <div id="scroll-down-container">
-        <svg class="scroll-down-icon">
-          <path
-              d="M16.5 27.207l-4.854-4.854.707-.707L16 25.293V5h1v20.293l3.646-3.646.707.707z">
-          </path>
-        </svg>
-        <button id="scroll-down-button" type="button">Scroll
-          down or click here
-        </button>
-      </div>
-      <div>
-        <p><span id="copyright">Made with <span
-            id="heart">&hearts;</span></span>
-        </p>
-        <a href="https://twitter.com/rochekollie">Roche
-          Kollie</a>
-      </div>
-    </footer>
-  </div>
+    <div class="scroll-snap-wrapper">
+        <img id="page-background" src="" alt="">
+        <div id="page-wrapper">
+            <!-- <header> -->
+            <!--     <div class="component-wrapper"> -->
+            <!--         <div> -->
+            <!--             <a id="logo-wrapper" href="./"> -->
+            <!--                 <img id="logo" alt="Roche Kollie profile picture" -->
+            <!--                      src="assets/images/profiles/profile.png"> -->
+            <!--                 <h1 id="app-name">Roche Kollie</h1> -->
+            <!--             </a> -->
+            <!--         </div> -->
+            <!--         <nav> -->
+            <!--             <ul> -->
+            <!--                 <li><a href="#hero-wrapper">About Me</a></li> -->
+            <!--                 <li><a href="#contact-wrapper">Contact Me</a></li> -->
+            <!--                 <li><a href="#projects-wrapper">My Projects</a></li> -->
+            <!--             </ul> -->
+            <!--         </nav> -->
+            <!--         <div> -->
+            <!--             <p id="time-data"> -->
+            <!--                 <span id="date"></span> -->
+            <!--                 <span id="time"></span> -->
+            <!--             </p> -->
+            <!--             &lt;!&ndash;            <p id="location-data">&ndash;&gt; -->
+            <!--             &lt;!&ndash;              <span id="city">Sun Valley</span>&ndash;&gt; -->
+            <!--             &lt;!&ndash;              <span id="temp">64<sup>&deg;</sup></span>&ndash;&gt; -->
+            <!--             &lt;!&ndash;            </p>&ndash;&gt; -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </header> -->
+            <main>
+                <div class="wrapper">
+                    <div id="main-content">
+                        <div id="quote-wrapper">
+                            <p id="quote"></p>
+                            <p id="author"></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
 </div>
 <!-- Main Page -->
 <div id="main-page">
-  <div class="scroll-snap-wrapper">
-    <!-- Header -->
-    <header id="main-header">
-      <a id="developer-name-wrapper" href="./">
-        <img id="profile-picture" src="assets/images/profiles/profile.png"
-             alt="A portrait of Roche Kollie in a grey dress suit with tie.">
-        <div id="developer-name-text">
-          <span id="developer-name">Roche Kollie</span>
-          <span id="job-title">Software &lt;&#47;&gt; Developer</span>
-        </div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="mailto:enteric_lacquer_0b@icloud.com">Contact</a>
-          </li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Hero Section -->
-    <section id="hero-wrapper">
-      <h1 id="primary-heading">Building products and services to
-        empower people and enrich lives.</h1>
-      <button>Get started</button>
-    </section>
-    <!-- Services Section -->
-    <section id="services-wrapper">
-      <h2 class="secondary-heading">Let's build the future
-        together</h2>
-      <div id="services-categories">
-        <div class="service">
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-            <path
-                d="m16 35.9-12-12 12.1-12.1 2.15 2.15L8.3 23.9l9.85 9.85Zm15.9.1-2.15-2.15 9.95-9.95-9.85-9.85L32 11.9l12 12Z"/>
-          </svg>
-          <h3>UI/UX Designer</h3>
-          <p>
-            We build software that helps you achieve your
-            goals. Our team of full-stack developers
-            can get your project done from start to finish,
-            back-end to front-end.
-            Let us build or improve your next big idea into
-            a viable product using
-            the latest technologies, frameworks, and
-            libraries.
-          </p>
-          <button>See my works</button>
-        </div>
-        <div class="service">
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-            <path
-                d="M7.5 42q-1.2 0-2.1-.9-.9-.9-.9-2.1V9q0-1.2.9-2.1.9-.9 2.1-.9h30q1.2 0 2.1.9.9.9.9 2.1v3h3v3h-3v7.5h3v3h-3V33h3v3h-3v3q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9h-30v30Zm3-3h12.65V26H10.5Zm14.15-16.8h9.85V12h-9.85ZM10.5 24.5h12.65V12H10.5ZM24.65 36h9.85V20.7h-9.85ZM7.5 9v30V9Z"/>
-          </svg>
-          <h3>Frontend Developer</h3>
-          <p>
-            We develop public and custom website themes and
-            plugins for the most popular content management
-            systems, including <a
-              href="https://wordpress.com/">WordPress</a>,
-            <a href="https://www.shopify.com/">Shopify</a>,
-            <a href="https://www.drupal.org/">Drupal</a>,
-            and
-            <a href="https://www.joomla.org/">Joomla</a>.
-            All our themes come with free
-            installation and 90 days of free support.
-          </p>
-          <button>View my projects</button>
-        </div>
-        <div class="service">
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-            <path
-                d="M42 22.05V39q0 1.2-.9 2.1-.9.9-2.1.9H8.95q-1.2 0-2.1-.9-.9-.9-.9-2.1V22.05q-1.4-1.2-1.85-2.95-.45-1.75.1-3.5l2.15-6.75q.4-1.35 1.4-2.1 1-.75 2.3-.75H37.7q1.4 0 2.45.775 1.05.775 1.45 2.075l2.2 6.75q.55 1.75.075 3.5Q43.4 20.85 42 22.05ZM28.5 20.5q1.45 0 2.45-.95 1-.95.8-2.3L30.5 9h-5v8.25q0 1.3.85 2.275.85.975 2.15.975Zm-9.35 0q1.4 0 2.375-.95.975-.95.975-2.3V9h-5l-1.25 8.25q-.2 1.3.7 2.275.9.975 2.2.975Zm-9.1 0q1.2 0 2.075-.825.875-.825 1.025-2.025L14.45 9h-5l-2.3 7.3q-.5 1.55.4 2.875t2.5 1.325Zm27.85 0q1.6 0 2.525-1.3.925-1.3.425-2.9L38.55 9h-5l1.3 8.65q.15 1.2 1.025 2.025.875.825 2.025.825ZM8.95 39H39V23.45q.05.05-.325.05H37.9q-1.25 0-2.375-.525T33.3 21.35q-.8 1-2 1.575t-2.65.575q-1.5 0-2.575-.425Q25 22.65 24 21.65q-.75.9-1.9 1.375t-2.6.475q-1.55 0-2.75-.55t-2.05-1.6q-1.2 1.05-2.35 1.6-1.15.55-2.3.55h-.675q-.325 0-.425-.05V39ZM39 39H8.95 39Z"/>
-          </svg>
-          <h3>Backend Developer</h3>
-          <p>
-            Managing an online store can be a daunting task.
-            We can help you manage your store runs
-            smoothly.
-            Our affordable store management services include
-            product listing, order fulfillment, customer
-            support, email marketing, and more.
-          </p>
-          <button>GitHub Repos</button>
-        </div>
-      </div>
-    </section>
-    <!-- Clients Section -->
-    <section id="clients-wrapper">
-      <h2 class="secondary-heading">Trusted by high-growth
-        businesses</h2>
-      <div id="clients">
-<!--        <img-->
-<!--            src="https://images.unsplash.com/photo-1617670000000-8b8b8b8b8b8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"-->
-<!--            alt="Web development">-->
-<!--        <img-->
-<!--            src="https://images.unsplash.com/photo-1617670000000-8b8b8b8b8b8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"-->
-<!--            alt="Web development">-->
-<!--        <img-->
-<!--            src="https://images.unsplash.com/photo-1617670000000-8b8b8b8b8b8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"-->
-<!--            alt="Web development">-->
-<!--        <img-->
-<!--            src="https://images.unsplash.com/photo-1617670000000-8b8b8b8b8b8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"-->
-<!--            alt="Web development">-->
-<!--        <img-->
-<!--            src="https://images.unsplash.com/photo-1617670000000-8b8b8b8b8b8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"-->
-<!--            alt="Web development">-->
-      </div>
-    </section>
-    <!-- Email Signup Section -->
-    <section id="email-section-wrapper">
-      <h2 class="secondary-heading">Subscribe to our newsletter
-      </h2>
-      <p>Get the latest news and updates from our team.</p>
-      <form>
-        <label for="email-signup">
-          <input id="email-signup" type="email"
-                 placeholder="Enter your email address">
-        </label>
-        <button type="button">Subscribe</button>
-      </form>
-    </section>
-    <!-- Contact Section Wrapper -->
-    <section id="contact-section-wrapper">
-      <h2 class="secondary-heading">Contact Us</h2>
-      <p>Have a question or want to work together? Send us a
-        message.</p>
-      <form>
-        <label for="contact-name">
-          <input id="contact-name" type="text"
-                 placeholder="Enter your name">
-        </label>
-        <label for="contact-email">
-          <input id="contact-email" type="email"
-                 placeholder="Enter your email address">
-        </label>
-        <label for="contact-message">
-              <textarea id="contact-message"
-                        placeholder="Enter your message"></textarea>
-        </label>
-        <button type="button">Send</button>
-      </form>
-    </section>
-  </div>
+    <div class="scroll-snap-wrapper">
+        <header>
+            <div class="wrapper">
+                <div>
+                    <a id="logo-wrapper" href="./">
+                        <img id="logo" alt="Roche Kollie profile picture"
+                             src="assets/images/profiles/profile.png">
+                        <h1 id="app-name">Roche Kollie</h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#hero-wrapper">About</a></li>
+                        <li><a href="#projects-wrapper">Projects</a>
+                        </li>
+                        <!--            <li><a href="#projects-wrapper">Blog</a></li>-->
+                        <!--            <li><a href="#projects-wrapper">Tools</a></li>-->
+                        <li><a href="#contact-wrapper">Contact</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <p id="time-data">
+                        <span id="date"></span>
+                        <span id="time"></span>
+                    </p>
+                    <!--            <p id="location-data">-->
+                    <!--              <span id="city">Sun Valley</span>-->
+                    <!--              <span id="temp">64<sup>&deg;</sup></span>-->
+                    <!--            </p>-->
+                </div>
+            </div>
+        </header>
+        <section id="hero-wrapper">
+            <div class="wrapper">
+                <!-- <h2 class="secondary-heading">Roche Kollie,</h2> -->
+                <!-- <p>I am Roche Kollie, fullstack developer from the Baltimore-Washington Metro Area.</p> -->
+                <h1 id="primary-heading">I am a software engineer with a
+                    passion for
+                    building products and services that empower
+                    people and enrich lives.</h1>
+                <button id="cta-btn">Get in touch</button>
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills-wrapper">
+            <div class="wrapper">
+                <h2 class="secondary-heading">Things I Do </h2>
+                <div id="skills-categories">
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                            <path
+                                    d="M25.2 19V3.95h18.85V19ZM3.9 26.3V3.95h18.75V26.3ZM25.2 44V21.55h18.85V44ZM3.9 44V28.9h18.75V44Z"/>
+                        </svg>
+                        <h3>UI/UX Designer</h3>
+                        <p>
+                            I design and build beautiful, responsive
+                            websites and web
+                            applications. I also design and build mobile
+                            applications. I
+                            specialize in creating user-friendly,
+                            intuitive, and dynamic
+                            interfaces. I also have experience with
+                            graphic design. I can
+                            create logos, icons, and other graphics. I
+                            can also create
+                            animations and transitions.
+                        </p>
+                        <a href="#">View Designs</a>
+                    </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                            <path
+                                    d="M15.45 37 2.35 23.9 15.6 10.65l3.25 3.25-9.9 9.95 9.85 9.8Zm17 .15L29.2 33.9l9.95-9.95-9.85-9.85 3.25-3.25L45.7 23.9Z"/>
+                        </svg>
+                        <h3>Frontend Developer</h3>
+                        <p>
+                            I am an experienced web developer with
+                            specializations in HTML,
+                            CSS, JavaScript, and its frameworks and
+                            libraries. I also have a
+                            strong background in React and React Native.
+                            I am also proficient in
+                            TypeScript, Node.js, and Express. I am
+                            experienced in building responsive websites
+                            and web
+                            applications.
+                            I also have experience in building mobile
+                            applications using React Native, Cordova,
+                            and
+                            Ionic.
+                        <p>
+                        </p>
+                        <a href="#">View Projects</a>
+                    </div>
+                    <div class="skill">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                            <path
+                                    d="M28.6 40.75V36.2h4.75q1.2 0 2.05-.825.85-.825.85-2.075v-3.85q0-1.8 1.075-3.225T40.15 24.2v-.4q-1.75-.55-2.825-2-1.075-1.45-1.075-3.3v-3.85q0-1.2-.85-2.05-.85-.85-2.05-.85H28.6V7.2h5.95q2.6 0 4.425 1.825Q40.8 10.85 40.8 13.5v3.85q0 1.2.825 2.05.825.85 2.075.85h1.1v7.5h-1.1q-1.25 0-2.075.85-.825.85-.825 2.05v3.85q0 2.65-1.825 4.45-1.825 1.8-4.425 1.8Zm-15.1 0q-2.7 0-4.475-1.8-1.775-1.8-1.775-4.45v-3.85q0-1.2-.85-2.05-.85-.85-2.05-.85h-1.1v-7.5h1.1q1.2 0 2.05-.85.85-.85.85-2.05V13.5q0-2.65 1.8-4.475Q10.85 7.2 13.5 7.2h5.95v4.55H14.7q-1.25 0-2.075.85-.825.85-.825 2.05v3.85q0 1.85-1.1 3.3-1.1 1.45-2.85 2v.4q1.75.6 2.85 2.025 1.1 1.425 1.1 3.225v3.85q0 1.25.825 2.075.825.825 2.075.825h4.75v4.55Z"/>
+                        </svg>
+                        <h3>Backend Developer</h3>
+                        <p>
+                            I am an experienced backend developer with
+                            specializations in Python, Java, Node.js,
+                            Express, and MongoDB.
+                            I am experienced in building RESTful APIs
+                            and GraphQL APIs.
+                            I am also experienced in building
+                            microservices and serverless applications. I
+                            am also
+                            experienced in
+                            building
+                            web applications using the Django and Spring
+                            frameworks. I am confidence that I can take
+                            a
+                            project from
+                            start to finish and ship a scalable and
+                            secure application.
+                            back-end to front-end.
+                        <p>
+                        </p>
+                        <a href="#">Browse Repos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section Wrapper -->
+        <section id="contact-wrapper">
+            <div class="wrapper">
+                <h2 class="secondary-heading">Get In Touch</h2>
+                <p>
+                    I am currently looking for new opportunities. If you
+                    have a project
+                    that you would like to get started, think you need
+                    my help with
+                    something or just fancy saying hello, then get in
+                    touch.
+                </p>
+                <form>
+                    <label for="contact-name">
+                        <input id="contact-name" type="text"
+                               placeholder="How may I call you?">
+                    </label>
+                    <label for="contact-email">
+                        <input id="contact-email" type="email"
+                               placeholder="How may I contact you?">
+                    </label>
+                    <label for="contact-message">
+                <textarea id="contact-message"
+                          placeholder="Write something nice..."></textarea>
+                    </label>
+                    <button type="button">Send</button>
+                </form>
+            </div>
+        </section>
+        <!-- Projects Section -->
+<!--        <section id="projects-wrapper">-->
+<!--            <div class="wrapper">-->
+<!--                <h2 class="secondary-heading">Feature Projects</h2>-->
+<!--            </div>-->
+<!--            <div id="projects">-->
+<!--                <div class="wrapper">-->
+<!--                    <div class="flex-container">-->
+
+<!--                        &lt;!&ndash;  Whizzy Kid  &ndash;&gt;-->
+<!--                        <section>-->
+<!--                            <div class="project-title">-->
+<!--                                <h2 class="project-name">WhizzyKid</h2>-->
+<!--                            </div>-->
+<!--                            <div class="project-info">-->
+<!--                                <h3>Description</h3>-->
+<!--                                <p>-->
+
+<!--                                </p>-->
+<!--                                <h3>Languages</h3>-->
+<!--                                <p>-->
+<!--                                    <span class="lang">HTML5</span>-->
+<!--                                    <span class="lang">CSS3</span>-->
+<!--                                    <span class="lang">JavaScript</span>-->
+<!--                                </p>-->
+<!--                                <h3>Updated</h3>-->
+<!--                                <p class="date">Sept. 18, 2021</p>-->
+<!--                            </div>-->
+<!--                            <button class="secondary-button" type="button">View-->
+<!--                                Project-->
+<!--                            </button>-->
+<!--                        </section>-->
+
+<!--                        &lt;!&ndash;  Beyond These Walls  &ndash;&gt;-->
+<!--                        <section>-->
+<!--                            <div class="project-title">-->
+<!--                                <h2 class="project-name">Single Page-->
+<!--                                    Static Site</h2>-->
+<!--                            </div>-->
+<!--                            <div class="project-info">-->
+<!--                                <h3>Description</h3>-->
+<!--                                <p>-->
+<!--                                    A responsive website about an art-->
+<!--                                    mural project in-->
+<!--                                    Portsmouth, Ohio.-->
+<!--                                </p>-->
+<!--                                <p>Lorem ipsum dolor, sit amet-->
+<!--                                    consectetur adipisicing elit.-->
+<!--                                    Facere ipsum quas porro odit-->
+<!--                                    voluptatibus nemo tenetur-->
+<!--                                    consectetur ipsa tempore-->
+<!--                                    accusantium, ullam possimus ducimus-->
+<!--                                    cum doloremque magni recusandae et-->
+<!--                                    neque sapiente illo dolor-->
+<!--                                    dolorem! Quasi vitae dolore pariatur-->
+<!--                                    magnam recusandae-->
+<!--                                    distinctio placeat dolorem aut-->
+<!--                                    ratione ullam unde eius, quod-->
+<!--                                    quo saepe?</p>-->
+<!--                                <p>Lorem ipsum dolor sit amet,-->
+<!--                                    consectetur adipisicing elit.-->
+<!--                                    Aperiam sequi eum a magnam mollitia-->
+<!--                                    dolor blanditiis minus.-->
+<!--                                    Tempore accusantium nobis impedit,-->
+<!--                                    in veniam et tenetur-->
+<!--                                    quaerat quis amet repudiandae-->
+<!--                                    distinctio fuga illum, magnam-->
+<!--                                    ad iusto accusamus vel quae.-->
+<!--                                    Cupiditate, in hic harum eos,-->
+<!--                                    vero molestiae, suscipit placeat-->
+<!--                                    quam labore neque debitis-->
+<!--                                    voluptatum consectetur incidunt-->
+<!--                                    illum. Provident molestiae-->
+<!--                                    quia, veritatis dolorum eveniet-->
+<!--                                    itaque placeat commodi,-->
+<!--                                    numquam cumque laboriosam ipsum-->
+<!--                                    quos, autem deleniti laborum-->
+<!--                                    voluptatibus eaque aspernatur-->
+<!--                                    asperiores! Hic, neque aliquam-->
+<!--                                    officia adipisci blanditiis-->
+<!--                                    temporibus animi accusamus eos-->
+<!--                                    asperiores voluptatum mollitia dolor-->
+<!--                                    nostrum repellendus-->
+<!--                                    ullam suscipit nesciunt? Recusandae-->
+<!--                                    neque exercitationem-->
+<!--                                    voluptatem odio.</p>-->
+<!--                                <h3>Languages</h3>-->
+<!--                                <p>-->
+<!--                                    <span class="lang">HTML5</span>-->
+<!--                                    <span class="lang">CSS3</span>-->
+<!--                                    <span class="lang">JavaScript</span>-->
+<!--                                </p>-->
+<!--                                <h3>Updated</h3>-->
+<!--                                <p class="date">-->
+<!--                                    Sept. 28, 2021-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <button class="secondary-button" type="button">View-->
+<!--                                Project-->
+<!--                            </button>-->
+<!--                        </section>-->
+<!--                        &lt;!&ndash;  Restaurant Menu  &ndash;&gt;-->
+<!--                        <section>-->
+<!--                            <div class="project-title">-->
+<!--                                <h2 class="project-name">Restaurant-->
+<!--                                    Website</h2>-->
+<!--                            </div>-->
+<!--                            <div class="project-info">-->
+<!--                                <h3>Description</h3>-->
+<!--                                <p>-->
+<!--                                    A CSS flexbox project about creating-->
+<!--                                    a restaurant-->
+<!--                                    menu-->
+<!--                                    sampled after Chick-fil-A menus.-->
+<!--                                </p>-->
+<!--                                <h3>Languages</h3>-->
+<!--                                <p>-->
+<!--                                    <span class="lang">HTML5</span>-->
+<!--                                    <span class="lang">CSS3</span>-->
+<!--                                </p>-->
+<!--                                <h3 class="date">Updated</h3>-->
+<!--                                <p>-->
+<!--                                    Sept. 30, 2021-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <button class="secondary-button" type="button">View-->
+<!--                                Project-->
+<!--                            </button>-->
+<!--                        </section>-->
+<!--                        &lt;!&ndash;  Art Directed Images  &ndash;&gt;-->
+<!--                        <section>-->
+<!--                            <div class="project-title">-->
+<!--                                <h2 class="project-name">Art Directed-->
+<!--                                    Images</h2>-->
+<!--                            </div>-->
+<!--                            <div class="project-info">-->
+<!--                                <h3>Description</h3>-->
+<!--                                <p>-->
+<!--                                    A project creating cards with CSS-->
+<!--                                    that show an image-->
+<!--                                    of the-->
+<!--                                    subject that has been "art directed"-->
+<!--                                    to work on-->
+<!--                                    different-->
+<!--                                    screen sizes.-->
+<!--                                </p>-->
+<!--                                <h3>Languages</h3>-->
+<!--                                <p>-->
+<!--                                    <span class="lang">HTML5</span>-->
+<!--                                    <span class="lang">CSS3</span>-->
+<!--                                </p>-->
+<!--                                <h3>Updated</h3>-->
+<!--                                <p>-->
+<!--                                    Oct. 2, 2021-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <button class="secondary-button" type="button">View-->
+<!--                                Project-->
+<!--                            </button>-->
+<!--                        </section>-->
+<!--                        &lt;!&ndash;  Mount Nimba Strict Nature Reserve  &ndash;&gt;-->
+<!--                        <section>-->
+<!--                            <div class="project-title">-->
+<!--                                <h2 class="project-name">Mount Nimba-->
+<!--                                    Strict Nature Reserve</h2>-->
+<!--                            </div>-->
+<!--                            <div class="project-info">-->
+<!--                                <h3>Description</h3>-->
+<!--                                <p>-->
+<!--                                    A UNESCO World Heritage Site using-->
+<!--                                    HiDPI switching, web-->
+<!--                                    fonts-->
+<!--                                    and color to communicate what is-->
+<!--                                    unique about the site, and-->
+<!--                                    media-->
+<!--                                    queries where appropriate.-->
+<!--                                </p>-->
+<!--                                <h3>Languages</h3>-->
+<!--                                <p>-->
+<!--                                    <span class="lang">HTML5</span>-->
+<!--                                    <span class="lang">CSS3</span>-->
+<!--                                    <span class="lang">JavaScript</span>-->
+<!--                                </p>-->
+<!--                                <h3>Updated</h3>-->
+<!--                                <p>-->
+<!--                                    Oct. 6, 2021-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <button class="secondary-button" type="button">View-->
+<!--                                Project-->
+<!--                            </button>-->
+<!--                        </section>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <footer>
+            <div class="wrapper flex jc-space-between">
+                <div class="flex jc-flex-start ai-center gap-0-5x">
+                    <p>&copy;2023</p>
+                    <a href="https://twitter.com/rochekollie">Roche Kollie</a>
+                </div>
+                <!-- Scroll Down Icon -->
+<!--                <div id="scroll-down-container">-->
+<!--                    <a href="#hero-wrapper">-->
+<!--                        <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg"-->
+<!--                             height="40" width="40">-->
+<!--                            <path-->
+<!--                                    d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    &lt;!&ndash; <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24"> &ndash;&gt;-->
+<!--                    &lt;!&ndash;   <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/> &ndash;&gt;-->
+<!--                    &lt;!&ndash; </svg> &ndash;&gt;-->
+<!--                </div>-->
+                <div class="flex jc-flex-end ai-center gap-0-5x">
+                    <p>Photo powered by</p>
+                    <a href="https://unsplash.com/">Unsplash</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
 <script src="main.js" type="module"></script>
-<script src="modules/debug-reset.js"></script>
+<!--<script src="modules/debug-reset.js"></script>-->
 <script src="modules/behaviors.js"></script>
 </body>
-<!--<script src="myapp.js"></script>-->
-
 </html>

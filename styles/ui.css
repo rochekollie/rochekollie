@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-inherit {
+    display: flex;
+    flex-direction: inherit;
+}
+
+.flex-initial {
+    display: flex;
+    flex-direction: initial;
+}
+
+.flex-unset {
+    display: flex;
+    flex-direction: unset;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex-revert {
+    display: flex;
+    flex-direction: revert;
+}
+
+.fw-w {
+    flex-wrap: wrap;
+}
+
+.fw-nw {
+    flex-wrap: nowrap;
+}
+
+.jc-start {
+    justify-content: start;
+}
+
+.jc-end {
+    justify-content: end;
+}
+
+.jc-flex-start {
+    justify-content: flex-start;
+}
+
+.jc-flex-end {
+    justify-content: flex-end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-left {
+    justify-content: left;
+}
+
+.jc-right {
+    justify-content: right;
+}
+
+.jc-normal {
+    justify-content: normal;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+.jc-stretch {
+    justify-content: stretch;
+}
+
+.gap-0-5x {
+    gap: 0.5rem;
+}
+
+.gap-1-0x {
+    gap: 1rem;
+}
+
+.gap-1-5x {
+    gap: 1.5rem;
+}
+
+.gap-2-0x {
+    gap: 2rem;
+}
+
+.gap-2-5x {
+    gap: 2.5rem;
+}
+
+.gap-3-0x {
+    gap: 3rem;
+}
+
+.gap-3-5x {
+    gap: 3.5rem;
+}
+
+.gap-4-0x {
+    gap: 4rem;
+}
+
+.gap-4-5x {
+    gap: 4.5rem;
+}
+
+.gap-5-0x {
+    gap: 5rem;
+}
+
+.jc-initial {
+    justify-content: initial;
+}
+
+.jc-inherit {
+    justify-content: inherit;
+}
+
+.jc-unset {
+    justify-content: unset;
+}
+
+
+/* align-items */
+
+.ai-start {
+    align-items: start;
+}
+
+.ai-end {
+    align-items: end;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-flex-start {
+    align-items: flex-start;
+}
+
+.ai-flex-end {
+    align-items: flex-end;
+}
+
+.ai-baseline {
+    align-items: baseline;
+}
+
+.ai-normal {
+    align-items: normal;
+}
+
+.ai-stretch {
+    align-items: stretch;
+}
+
+.ai-initial {
+    align-items: initial;
+}
+
+.ai-inherit {
+    align-items: inherit;
+}
+
+.ai-unset {
+    align-items: unset;
+}
+
+/* align-content */
+
+
+/* responsive design */
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.over-flow-hidden {
+    overflow: hidden;
+}
+
+.over-flow-visible {
+    overflow: visible;
+}
+
+.over-flow-scroll {
+    overflow: scroll;
+}
+
+.over-flow-auto {
+    overflow: auto;
+}
+
+.over-flow-initial {
+    overflow: initial;
+}
+
+.over-flow-inherit {
+    overflow: inherit;
+}
+
+.over-flow-unset {
+    overflow: unset;
+}
+
+/* position */
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.position-static {
+    position: static;
+}
+
+.position-initial {
+    position: initial;
+}
+
+.position-inherit {
+    position: inherit;
+}
+
+.position-unset {
+    position: unset;
+}
+
+.screen {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .screen {
+        width: 100%;
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .screen {
+        width: 100%;
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .screen {
+        width: 100%;
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .screen {
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .screen {
+        width: 100%;
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .screen {
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .screen {
+        width: 100%;
+        max-width: 2560px;
+    }
+}
+
+@media (min-width: 3840px) {
+    .screen {
+        width: 100%;
+        max-width: 3840px;
+    }
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1276px;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        padding: 0 40px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1276px;
+    height: 100%;
+}
