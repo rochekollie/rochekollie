@@ -149,6 +149,10 @@ window.onload = function () {
   });
 }
 
+const age = 100 / 365;
+
+
+
 // When the user clicks a section, set the window location prefix to the value of this section's h2 element
 // document.querySelectorAll('section').forEach(function (section) {
 //     const dir = "./";

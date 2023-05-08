@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/photos/pattern.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/algo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/issuestore/4/6/46e3381e9569c09e85a30b9e5a2af7525ee9fd78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/issuestore/b/0/b04d464a2f228d4fa3d904c067eb17073e9e9986" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/issuestore/b/9/b9098a6d199cafa67e3bc15f385767e13d01b2a3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/securityhotspotstore/4/6/46e3381e9569c09e85a30b9e5a2af7525ee9fd78" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/securityhotspotstore/b/0/b04d464a2f228d4fa3d904c067eb17073e9e9986" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/securityhotspotstore/b/9/b9098a6d199cafa67e3bc15f385767e13d01b2a3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/styles.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/root.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/ui.css" afterDir="false" />
     </list>
@@ -15,36 +33,116 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="snwnb85u" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.2.4/bin/php" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2NtBQB9nvNfbwPZK6xFTqvL58Aq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "flex-skills-section-items",
-    "last_opened_file_path": "/Users/rochekollie/Documents/Code/rochekollie",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.google.cloudcode.ide_session_index&quot;: &quot;20230406_0003&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix-navbar&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rochekollie/Code/rochekollie&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images/backgrounds/default" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="35a9a68f-efc3-4b6b-b2aa-8a3959c45713" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,10 +154,37 @@
       <updated>1680469250007</updated>
       <workItem from="1680473481230" duration="6334000" />
       <workItem from="1680481400772" duration="23402000" />
+      <workItem from="1680584544309" duration="34706000" />
+      <workItem from="1680666965959" duration="2939000" />
+      <workItem from="1680688496278" duration="10000" />
+      <workItem from="1680688647152" duration="1417000" />
+      <workItem from="1680731009232" duration="27000" />
+      <workItem from="1680744153421" duration="71000" />
+      <workItem from="1680744237899" duration="75000" />
+      <workItem from="1680744324217" duration="847000" />
+      <workItem from="1680746146811" duration="98000" />
+      <workItem from="1680750308861" duration="2381000" />
+      <workItem from="1680755231132" duration="1314000" />
+      <workItem from="1680772226417" duration="1272000" />
+      <workItem from="1680817514490" duration="632000" />
+      <workItem from="1683490798487" duration="169000" />
+      <workItem from="1683490990355" duration="3046000" />
+      <workItem from="1683508093831" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
