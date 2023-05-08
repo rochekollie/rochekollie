@@ -1,0 +1,27 @@
+{
+  "name": "rochekollie",
+  "version": "1.0.0",
+  "description": "Enthusiastic about building products and services to empower people and enrich their lives.",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochekollie/rochekollie.git"
+  },
+  "keywords": [
+    "rochekollie"
+  ],
+  "author": "Roche Kollie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rochekollie/rochekollie/issues"
+  },
+  "homepage": "https://rochekollie.com",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
