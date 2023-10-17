@@ -1,4 +1,4 @@
-# Roche Kollie
+# Robert Kollie
 
 Roche Kollie is an aspiring software engineer enthusiastic about building products and services 
 fundamentally embedded in privacy, security, accessibility, and aesthetics to empower people and enrich lives. 
