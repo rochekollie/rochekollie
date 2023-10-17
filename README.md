@@ -1,8 +1,7 @@
 # Robert Kollie
 
-Roche Kollie is an aspiring software engineer enthusiastic about building products and services 
-fundamentally embedded in privacy, security, accessibility, and aesthetics to empower people and enrich lives. 
-Learn more about Roche Kollie at [rochekollie.com](https://rochekollie.com). 
+I am a web developer with experience in HTML, CSS, JavaScript, React, Node.js, and Git and GitHub. I have theoretical training in user experience design, web accessibility, data security, and privacy best practices. I have an associate's degree in web development. I am actively seeking employment opportunities in roles such as web developer, frontend developer, backend developer, or full-stack web developer. 
+Learn more about Robert Kollie at [rochekollie.com](https://rochekollie.com). 
 
 He is currently working on a Bachelor's degree in Computer Science.
 An active learner of [Codecademy](https://www.codecademy.com/profiles/rochekollie).
