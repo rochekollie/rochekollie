@@ -17,7 +17,7 @@ Passionate about crafting seamless and visually appealing web experiences, Roche
 ROche Kollie has contributed to a variety of projects, showcasing a commitment to delivering high-quality front-end solutions. Previous work includes collaborating with cross-functional teams to bring creative visions to life and optimizing web applications for performance and user experience.
 
 📚 **Continuous Learning**:
-Always eager to stay at the forefront of web development trends, [Developer's Name] actively seeks out opportunities for professional growth. Whether experimenting with the latest JavaScript features or exploring emerging design patterns, continuous learning is a cornerstone of [Developer's Name]'s approach to development.
+Always eager to stay at the forefront of web development trends, Roche Kollie actively seeks out opportunities for professional growth. Whether experimenting with the latest JavaScript features or exploring emerging design patterns, continuous learning is a cornerstone of ROche's approach to development.
 
 🌐 **Portfolio**:
 [www.rochekollie.com](https://rochekollie.com)
