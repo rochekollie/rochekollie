@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +70,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20230406_0003",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/Users/rochekollie/Repos/rochekollie",
     "list.type.of.created.stylesheet": "CSS",
@@ -177,7 +174,7 @@
       <workItem from="1705797642905" duration="31000" />
       <workItem from="1712810972731" duration="926000" />
       <workItem from="1712875787761" duration="637000" />
-      <workItem from="1712892466309" duration="3328000" />
+      <workItem from="1712892466309" duration="3707000" />
     </task>
     <servers />
   </component>
