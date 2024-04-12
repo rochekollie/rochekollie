@@ -7,12 +7,13 @@ html {
     scroll-snap-type: y mandatory;
 }
 
+/*noinspection CssNoGenericFontName*/
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: var(--Mona);
+    font-family: var(--Mona), var(--system-font);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -170,7 +171,7 @@ header .wrapper {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    border: 1px solid var(--perano);
+    border: 1px solid var(--caribbean-green);
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -397,7 +398,7 @@ button, .button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     /*-ms-flex-item-align: start;*/
-    align-self: flex-start;
+    -webkit-align-items: center;
     /*border: 1px solid transparent;*/
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -579,6 +580,7 @@ button:hover, .button:hover, .skill .button:hover {
 }
 
 .heading-3 {
+    /*noinspection CssNoGenericFontName*/
     font-family: var(--Mona);
     font-size: clamp(1.5rem, 1.5vw, 1.7rem);
     font-weight: 600;
@@ -595,6 +597,7 @@ button:hover, .button:hover, .skill .button:hover {
 }
 
 #skills-categories {
+    display: flex;
     padding: 3rem 1rem;
     width: 100%;
     gap: 1rem;
@@ -612,7 +615,6 @@ button:hover, .button:hover, .skill .button:hover {
     justify-content: center;
     align-items: center;
     flex-basis: min(400px, 100%);
-
     border: solid thin rgb(225, 225, 225);
     border-radius: 0.5rem;
     background-color: #f2f2f7;

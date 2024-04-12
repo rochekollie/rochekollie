@@ -1,4 +1,5 @@
 :root {
+    --system-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --Aclonica: 'Aclonica', sans-serif;
     --Inter: 'Inter', sans-serif;
     --Martian: 'Martian Mono', monospace;
@@ -29,6 +30,7 @@
     --selective-yellow: #f7b500;
     --cornflower-blue: #56a8f5;
     --apple: #2cc740;
+    --caribbean-green: #01CCAC;
 
     /* heights */
     --hHeight: 100px;
