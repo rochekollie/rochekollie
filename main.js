@@ -37,17 +37,17 @@ const clientLocationLanguage = navigator.language || "en-US";
 
 
 const date = document.getElementById("date");
-const time = document.getElementById("time");
+// const time = document.getElementById("time"); / TURN OFF TEMPORARILY
 
 //set initial date and time
 date.textContent = getDate(clientLocationLanguage).shortDateText;
-time.textContent = getDate(clientLocationLanguage).shortTimeText;
+// time.textContent = getDate(clientLocationLanguage).shortTimeText; / TURN OFF TEMPORARILY
 
 //update date and time every second
 setTimeInterval(() => {
     try {
         date.textContent = getDate(clientLocationLanguage).shortDateText;
-        time.textContent = getDate(clientLocationLanguage).shortTimeText;
+        // time.textContent = getDate(clientLocationLanguage).shortTimeText;   / TURN OFF TEMPORARILY
     } catch (error) {
         console.log(error);
     }

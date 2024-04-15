@@ -7,7 +7,8 @@
     <list default="true" id="190ad8b0-8574-4097-b6de-d6248159ab37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.google.cloudcode.ide_session_index": "20230406_0003",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "site-pages-feature",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/Users/rochekollie/Repos/rochekollie",
     "list.type.of.created.stylesheet": "CSS",
@@ -96,6 +97,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/images/backgrounds/default" />
     </key>
   </component>
@@ -179,6 +181,7 @@
       <workItem from="1712810972731" duration="926000" />
       <workItem from="1712875787761" duration="637000" />
       <workItem from="1712892466309" duration="12051000" />
+      <workItem from="1713150392943" duration="7685000" />
     </task>
     <servers />
   </component>
