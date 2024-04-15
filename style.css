@@ -1,6 +1,56 @@
-@import url('root.css');
-@import url('ui.css');
-@import url('animations.css');
+:root {
+    --system-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --Aclonica: 'Aclonica', sans-serif;
+    --Inter: 'Inter', sans-serif;
+    --Martian: 'Martian Mono', monospace;
+    --Montserrat: 'Montserrat', sans-serif;
+    --Playfair: 'Playfair Display', serif;
+    --Hubot: Hubot-Sans, sans-serif;
+    --Mona: Mona-Sans, sans-serif;
+    --footer-height: 100px;
+
+    --color-primary: rgba(0, 0, 0, 0.5);
+    /*--link-color: #00abb1;*/
+    --link-color: #56a8f5;
+    /*--accent-color: #3a787a;*/
+    --accent-color: #1c73e8;
+    --perano: #acccef;
+    --dark: #1a1a1a;
+    --dark-blue: #24292f;
+    --link-normal: 0.7;
+    --link-active: 1;
+    --focus-color: #1a73e8;
+    --transparent: #1fe0; /* <== fully transparent shorthand || longhand ==> #11ffee00; */
+    --off-yellow-dark: #fefce899;
+    --off-yellow-light: #fefce8;
+    --chartreuse: #7fff00;
+    --chartreuse-dark: #7fff0099;
+    --crimson: #d01253;
+    --heliotrope: #c05af2;
+    --selective-yellow: #f7b500;
+    --cornflower-blue: #56a8f5;
+    --apple: #2cc740;
+    --caribbean-green: #01CCAC;
+
+    /* heights */
+    --hHeight: 100px;
+    --fHeight: 100px;
+
+    /* widths */
+    --pageWidth: 1276px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a, a:after, a:before, abbr, abbr:after, abbr:before, acronym, acronym:after, acronym:before, address, address:after, address:before, article, article:after, article:before, aside, aside:after, aside:before, b, b:after, b:before, bdo, bdo:after, bdo:before, big, big:after, big:before, blockquote, blockquote:after, blockquote:before, br, br:after, br:before, button, button:after, button:before, canvas, canvas:after, canvas:before, cite, cite:after, cite:before, code, code:after, code:before, dd, dd:after, dd:before, dfn, dfn:after, dfn:before, div, div:after, div:before, dl, dl:after, dl:before, dt, dt:after, dt:before, em, em:after, em:before, fieldset, fieldset:after, fieldset:before, figcaption, figcaption:after, figcaption:before, figure, figure:after, figure:before, footer, footer:after, footer:before, form, form:after, form:before, h1, h1:after, h1:before, h2, h2:after, h2:before, h3, h3:after, h3:before, h4, h4:after, h4:before, h5, h5:after, h5:before, h6, h6:after, h6:before, header, header:after, header:before, hr, hr:after, hr:before, i, i:after, i:before, img, img:after, img:before, input, input:after, input:before, kbd, kbd:after, kbd:before, label, label:after, label:before, li, li:after, li:before, main, main:after, main:before, map, map:after, map:before, nav, nav:after, nav:before, noscript, noscript:after, noscript:before, object, object:after, object:before, ol, ol:after, ol:before, output, output:after, output:before, p, p:after, p:before, picture, picture:after, picture:before, pre, pre:after, pre:before, q, q:after, q:before, samp, samp:after, samp:before, script, script:after, script:before, section, section:after, section:before, select, select:after, select:before, small, small:after, small:before, span, span:after, span:before, strong, strong:after, strong:before, sub, sub:after, sub:before, sup, sup:after, sup:before, svg, svg:after, svg:before, table, table:after, table:before, textarea, textarea:after, textarea:before, tfoot, tfoot:after, tfoot:before, time, time:after, time:before, tt, tt:after, tt:before, ul, ul:after, ul:before, var, var:after, var:before, video, video:after, video:before {
+    --webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -24,6 +74,8 @@ body {
 }
 
 a {
+    display: inline-flex;
+    flex-direction: row;
     color: var(--link-active);
     font-weight: 500;
     font-family: inherit;
@@ -136,6 +188,9 @@ h6 {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -163,7 +218,16 @@ header .wrapper {
     width: 100%;
 }
 
+#site-navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #site-branding-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -199,6 +263,9 @@ header .wrapper {
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     /*gap: 2rem;*/
 }
@@ -240,10 +307,17 @@ header nav ul li a {
 }
 
 #client-location-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: .1rem;
 }
 
 #time-data, #weather-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: 500;
 }
 
@@ -319,6 +393,27 @@ footer {
     font-size: clamp(0.8rem, 1vw, 1rem);
     background-color: #0d1116;
     color: var(--off-yellow-dark);
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer .wrapper div:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer .wrapper div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #scroll-down-container {
@@ -591,6 +686,8 @@ button:hover, .button:hover, .skill .button:hover {
 }
 
 #skills-wrapper {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 2rem 0;
     /*padding: 0 0 2rem 0;*/
@@ -599,6 +696,8 @@ button:hover, .button:hover, .skill .button:hover {
 
 #skills-categories {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 3rem 1rem;
     width: 100%;
     gap: 1rem;
@@ -802,4 +901,167 @@ form input:focus, form textarea:focus {
     padding: .3em;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+/* spinning logo animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* reverse spinning logo animation */
+@keyframes spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes scroll-up-and-down {
+    100% {
+        bottom: 50px;
+    }
+
+    0% {
+        bottom: 10px;
+    }
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes freeze {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes prompt-down {
+    100% {
+        bottom: 0;
+    }
+
+    0% {
+        bottom: 10px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1231px) {
+    .skill {
+        flex-basis: min(600px, 100%);
+    }
+}
+
+
+
+
+
+
+
+.screen {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .screen {
+        width: 100%;
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .screen {
+        width: 100%;
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .screen {
+        width: 100%;
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .screen {
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .screen {
+        width: 100%;
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .screen {
+        width: 100%;
+        max-width: 1920px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .screen {
+        width: 100%;
+        max-width: 2560px;
+    }
+}
+
+@media (min-width: 3840px) {
+    .screen {
+        width: 100%;
+        max-width: 3840px;
+    }
 }
