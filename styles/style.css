@@ -151,7 +151,7 @@ header {
 
 header .wrapper {
     display: grid;
-    grid-template: 100% / 1fr auto 1fr;
+    grid-template: 100% / auto 1fr auto;
     height: 100%;
     width: 100%;
 }
@@ -222,7 +222,6 @@ nav ul li {
 header nav ul li a {
     color: var(--link-color);
     text-decoration: none;
-    text-transform: capitalize;
     opacity: var(--link-active);
     color: red;
     text-align: center;
@@ -236,6 +235,8 @@ header nav ul li a {
     font-weight: 700;
     color: var(--cornflower-blue);
     opacity: var(--link-active);
+    /*border-bottom: solid 2px var(--caribbean-green);*/
+    /*padding-bottom: 20px;*/
 }
 
 #client-location-wrapper {
