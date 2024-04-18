@@ -81,7 +81,7 @@ const quoteAuthor = document.getElementById("author");
 if (!isToday()) {
     const TOTAL_IMAGES = 100;
     const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-    const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg` || "assets/images/backgrounds/dynamic/35.jpeg";
+    const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
 
     render(imageElement, backgroundImage);
     saveDailyData("dateNumber", getDate().dateNumber);
