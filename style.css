@@ -946,11 +946,6 @@ form input:focus, form textarea:focus {
 }
 
 
-
-
-
-
-
 /* spinning logo animation */
 @keyframes spin {
     0% {
@@ -1039,11 +1034,6 @@ form input:focus, form textarea:focus {
         flex-basis: min(600px, 100%);
     }
 }
-
-
-
-
-
 
 
 .screen {
