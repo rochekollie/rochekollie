@@ -2,9 +2,9 @@
 
 **Fullstack Web Developer**
 
-I build websites to empower people and enrich their lives.
+I build websites to **empower people and enrich lives**.
 
-## Tech stack 💻
+## Tech stack 🧩
 *   **HTML:** The foundation of web content.
 *   **CSS:** Making things look pretty and organized.
 *   **JavaScript:** Adding interactivity and dynamic features!
@@ -15,7 +15,7 @@ I build websites to empower people and enrich their lives.
 
 ## My Approach 🎓
 
-## Projects 🧩
+## Stuffs I'm building 💻
 
 - 🌐 **[www.rochekollie.com](https://rochekollie.com)**
 
