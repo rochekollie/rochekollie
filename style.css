@@ -1,3 +1,5 @@
+@import url('./lazy.css');
+
 :root {
     --system-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --Aclonica: 'Aclonica', sans-serif;
@@ -135,6 +137,8 @@ h6 {
     justify-content: space-between;
     align-items: center;
     flex: 1 1 auto;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 @media (max-width: 768px) {
@@ -145,13 +149,14 @@ h6 {
 }
 
 .daily-component {
-    min-width: 100vw;
+    width: 100%;
+    height: 100%;
     min-height: 100vh;
-    max-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    padding: 1rem;
+    gap: 1rem;
+    color: #fff;
 }
 
 #daily-background {
@@ -350,18 +355,15 @@ header nav ul li a {
 #client-location-wrapper {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: .1rem;
     color: #fff;
     font-size: 20px;
 }
 
 #time-data, #weather-data {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     gap: 0.5rem;
     font-weight: 500;
 }
@@ -375,7 +377,7 @@ header nav ul li a {
     width: 3px;
     border: solid 1px #4b6c8c;
     border-radius: 50%;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 main {
