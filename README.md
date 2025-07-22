@@ -2,7 +2,7 @@
 
 🌐 **[www.rochekollie.com](https://rochekollie.com)**
 
-Hello there! I'm Roche Kollie, a front-end engineer who loves making websites that are not only functional but also look great and are easy to use. I'm passionate about using technology to create things that make a positive difference in people's lives.
+Building products and servicees to empower people and enrich their lives.
 
 ## What I Do 💻
 
