@@ -11,7 +11,7 @@
     <meta content="Roche Kollie" name="author">
     <meta content="Roche Kollie, Web Developer, Software Engineer"
           name="keywords">
-    <link href="./assets/images/profiles/rochekollie_professional_profile_photo.png" rel="shortcut icon">
+    <link href="./assets/images/profiles/rochekollie.jpeg" rel="shortcut icon">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,45 +22,80 @@
 </head>
 
 <body>
-<!-- Landing Page -->
 <div id="landing-page">
-    <div class="scroll-snap-wrapper">
-        <img id="page-background" src="" alt="">
+    <div class="daily-component">
+        <img id="daily-background" src="" alt="">
         <div id="page-wrapper">
-            <!-- <header> -->
-            <!--     <div class="component-wrapper"> -->
-            <!--         <div> -->
-            <!--             <a id="logo-wrapper" href="./"> -->
-            <!--                 <img id="logo" alt="Roche Kollie profile picture" -->
-            <!--                      src="assets/images/profiles/profile.png"> -->
-            <!--                 <h1 id="app-name">Roche Kollie</h1> -->
-            <!--             </a> -->
-            <!--         </div> -->
-            <!--         <nav> -->
-            <!--             <ul> -->
-            <!--                 <li><a href="#hero-wrapper">About Me</a></li> -->
-            <!--                 <li><a href="#contact-wrapper">Contact Me</a></li> -->
-            <!--                 <li><a href="#projects-wrapper">My Projects</a></li> -->
-            <!--             </ul> -->
-            <!--         </nav> -->
-            <!--         <div> -->
-            <!--             <p id="time-data"> -->
-            <!--                 <span id="date"></span> -->
-            <!--                 <span id="time"></span> -->
-            <!--             </p> -->
-            <!--             &lt;!&ndash;            <p id="location-data">&ndash;&gt; -->
-            <!--             &lt;!&ndash;              <span id="city">Sun Valley</span>&ndash;&gt; -->
-            <!--             &lt;!&ndash;              <span id="temp">64<sup>&deg;</sup></span>&ndash;&gt; -->
-            <!--             &lt;!&ndash;            </p>&ndash;&gt; -->
-            <!--         </div> -->
-            <!--     </div> -->
-            <!-- </header> -->
+            <header>
+                <div class="component-wrapper">
+                    <div>
+                        <a id="logo-wrapper" href="./">
+                            <img id="logo" alt="Roche Kollie profile picture"
+                                 src="assets/images/profiles/profile.png">
+                            <h1 id="app-name">Roche Kollie</h1>
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#hero-wrapper">About Me</a></li>
+                            <li><a href="#contact-wrapper">Contact Me</a></li>
+                            <li><a href="#projects-wrapper">My Projects</a></li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <p id="time-data">
+                            <span id="date"></span>
+                            <span id="time"></span>
+                        </p>
+                        &lt;!&ndash;            <p id="location-data">&ndash;&gt;
+                        &lt;!&ndash;              <span id="city">Sun Valley</span>&ndash;&gt;
+                        &lt;!&ndash;              <span id="temp">64<sup>&deg;</sup></span>&ndash;&gt;
+                        &lt;!&ndash;            </p>&ndash;&gt;
+                    </div>
+                </div>
+            </header>
             <main>
                 <div class="wrapper">
                     <div id="main-content">
+                        <div id="client-location-wrapper">
+                            <p id="time-data">
+                                <span id="date"></span>
+                                <span class="dot"></span>
+                                <span id="time"></span>
+                                <span class="dot"></span>
+                            </p>
+                            <p id="weather-data">
+                                <span id="city">Baltimore</span>
+                                <span id="temp">77<sup>&deg;</sup></span>
+                            </p>
+                        </div>
                         <div id="quote-wrapper">
-                            <p id="quote"></p>
-                            <p id="author"></p>
+                            <p id="quote">We make our own fortunes and we call them fate.</p>
+                            <p id="author">Benjamin Disraeli</p>
+                            <div id="scroll-down-container">
+                                <a href="#hero-wrapper">
+                                    <svg id="scroll-down-icon"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         height="40" width="40">
+                                        <path
+                                            d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>
+                                    </svg>
+                                </a>
+                                <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                                <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="client-location-wrapper">
+                            <div>
+                                <p>&copy;2023</p>
+                                <a href="https://twitter.com/rochekollie">Roche
+                                    Kollie</a>
+                            </div>
+                            <div>
+                                <p>Photo powered by</p>
+                                <a href="https://unsplash.com/">Unsplash</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,8 +103,7 @@
         </div>
     </div>
 </div>
-<!-- Main Page -->
-<div id="main-page">
+<!-- <div id="main-page">
     <div class="scroll-snap-wrapper">
         <header id="header">
             <div class="wrapper">
@@ -77,7 +111,7 @@
                     <a href="./">
                         <img id="logo"
                              alt="Roche Kollie profile picture"
-                             src="./assets/images/profiles/rochekollie_social_profile_photo.jpeg">
+                             src="./assets/images/profiles/rochekollie.jpeg">
                         <a href="#header" id="site-title">Roche Kollie</a>
                     </a>
                 </div>
@@ -103,14 +137,14 @@
                 <div id="client-location-wrapper">
                     <p id="time-data">
                         <span id="date"></span>
-                        <!-- <span class="dot"></span> -->
-                        <!-- <span id="time"></span> -->
-                        <!-- <span class="dot"></span> -->
+                        <span class="dot"></span>
+                        <span id="time"></span>
+                        <span class="dot"></span>
                     </p>
-                    <!-- <p id="weather-data"> -->
-                    <!--     <span id="city">Baltimore</span> -->
-                    <!--     <span id="temp">77<sup>&deg;</sup></span> -->
-                    <!-- </p> -->
+                    <p id="weather-data">
+                        <span id="city">Baltimore</span>
+                        <span id="temp">77<sup>&deg;</sup></span>
+                    </p>
                 </div>
             </div>
         </header>
@@ -125,7 +159,6 @@
                 </button>
             </div>
         </section>
-        <!-- Skills Section -->
         <section id="skills-wrapper">
             <div class="wrapper">
                 <h2 class="heading-2">Things I Do </h2>
@@ -209,7 +242,6 @@
                 </div>
             </div>
         </section>
-        <!-- Contact Section Wrapper -->
         <section id="contact-wrapper">
             <div class="wrapper">
                 <h2 class="heading-2">Get In Touch</h2>
@@ -239,202 +271,199 @@
                 </form>
             </div>
         </section>
-        <!-- Projects Section -->
-        <!--        <section id="projects-wrapper">-->
-        <!--            <div class="wrapper">-->
-        <!--                <h2 class="secondary-heading">Feature Projects</h2>-->
-        <!--            </div>-->
-        <!--            <div id="projects">-->
-        <!--                <div class="wrapper">-->
-        <!--                    <div class="flex-container">-->
+               <section id="projects-wrapper">
+                   <div class="wrapper">
+                       <h2 class="secondary-heading">Feature Projects</h2>
+                   </div>
+                   <div id="projects">
+                       <div class="wrapper">
+                           <div class="flex-container">
 
-        <!--                        &lt;!&ndash;  Whizzy Kid  &ndash;&gt;-->
-        <!--                        <section>-->
-        <!--                            <div class="project-title">-->
-        <!--                                <h2 class="project-name">WhizzyKid</h2>-->
-        <!--                            </div>-->
-        <!--                            <div class="project-info">-->
-        <!--                                <h3>Description</h3>-->
-        <!--                                <p>-->
-
-        <!--                                </p>-->
-        <!--                                <h3>Languages</h3>-->
-        <!--                                <p>-->
-        <!--                                    <span class="lang">HTML5</span>-->
-        <!--                                    <span class="lang">CSS3</span>-->
-        <!--                                    <span class="lang">JavaScript</span>-->
-        <!--                                </p>-->
-        <!--                                <h3>Updated</h3>-->
-        <!--                                <p class="date">Sept. 18, 2021</p>-->
-        <!--                            </div>-->
-        <!--                            <button class="secondary-button" type="button">View-->
-        <!--                                Project-->
-        <!--                            </button>-->
-        <!--                        </section>-->
-
-        <!--                        &lt;!&ndash;  Beyond These Walls  &ndash;&gt;-->
-        <!--                        <section>-->
-        <!--                            <div class="project-title">-->
-        <!--                                <h2 class="project-name">Single Page-->
-        <!--                                    Static Site</h2>-->
-        <!--                            </div>-->
-        <!--                            <div class="project-info">-->
-        <!--                                <h3>Description</h3>-->
-        <!--                                <p>-->
-        <!--                                    A responsive website about an art-->
-        <!--                                    mural project in-->
-        <!--                                    Portsmouth, Ohio.-->
-        <!--                                </p>-->
-        <!--                                <p>Lorem ipsum dolor, sit amet-->
-        <!--                                    consectetur adipisicing elit.-->
-        <!--                                    Facere ipsum quas porro odit-->
-        <!--                                    voluptatibus nemo tenetur-->
-        <!--                                    consectetur ipsa tempore-->
-        <!--                                    accusantium, ullam possimus ducimus-->
-        <!--                                    cum doloremque magni recusandae et-->
-        <!--                                    neque sapiente illo dolor-->
-        <!--                                    dolorem! Quasi vitae dolore pariatur-->
-        <!--                                    magnam recusandae-->
-        <!--                                    distinctio placeat dolorem aut-->
-        <!--                                    ratione ullam unde eius, quod-->
-        <!--                                    quo saepe?</p>-->
-        <!--                                <p>Lorem ipsum dolor sit amet,-->
-        <!--                                    consectetur adipisicing elit.-->
-        <!--                                    Aperiam sequi eum a magnam mollitia-->
-        <!--                                    dolor blanditiis minus.-->
-        <!--                                    Tempore accusantium nobis impedit,-->
-        <!--                                    in veniam et tenetur-->
-        <!--                                    quaerat quis amet repudiandae-->
-        <!--                                    distinctio fuga illum, magnam-->
-        <!--                                    ad iusto accusamus vel quae.-->
-        <!--                                    Cupiditate, in hic harum eos,-->
-        <!--                                    vero molestiae, suscipit placeat-->
-        <!--                                    quam labore neque debitis-->
-        <!--                                    voluptatum consectetur incidunt-->
-        <!--                                    illum. Provident molestiae-->
-        <!--                                    quia, veritatis dolorum eveniet-->
-        <!--                                    itaque placeat commodi,-->
-        <!--                                    numquam cumque laboriosam ipsum-->
-        <!--                                    quos, autem deleniti laborum-->
-        <!--                                    voluptatibus eaque aspernatur-->
-        <!--                                    asperiores! Hic, neque aliquam-->
-        <!--                                    officia adipisci blanditiis-->
-        <!--                                    temporibus animi accusamus eos-->
-        <!--                                    asperiores voluptatum mollitia dolor-->
-        <!--                                    nostrum repellendus-->
-        <!--                                    ullam suscipit nesciunt? Recusandae-->
-        <!--                                    neque exercitationem-->
-        <!--                                    voluptatem odio.</p>-->
-        <!--                                <h3>Languages</h3>-->
-        <!--                                <p>-->
-        <!--                                    <span class="lang">HTML5</span>-->
-        <!--                                    <span class="lang">CSS3</span>-->
-        <!--                                    <span class="lang">JavaScript</span>-->
-        <!--                                </p>-->
-        <!--                                <h3>Updated</h3>-->
-        <!--                                <p class="date">-->
-        <!--                                    Sept. 28, 2021-->
-        <!--                                </p>-->
-        <!--                            </div>-->
-        <!--                            <button class="secondary-button" type="button">View-->
-        <!--                                Project-->
-        <!--                            </button>-->
-        <!--                        </section>-->
-        <!--                        &lt;!&ndash;  Restaurant Menu  &ndash;&gt;-->
-        <!--                        <section>-->
-        <!--                            <div class="project-title">-->
-        <!--                                <h2 class="project-name">Restaurant-->
-        <!--                                    Website</h2>-->
-        <!--                            </div>-->
-        <!--                            <div class="project-info">-->
-        <!--                                <h3>Description</h3>-->
-        <!--                                <p>-->
-        <!--                                    A CSS flexbox project about creating-->
-        <!--                                    a restaurant-->
-        <!--                                    menu-->
-        <!--                                    sampled after Chick-fil-A menus.-->
-        <!--                                </p>-->
-        <!--                                <h3>Languages</h3>-->
-        <!--                                <p>-->
-        <!--                                    <span class="lang">HTML5</span>-->
-        <!--                                    <span class="lang">CSS3</span>-->
-        <!--                                </p>-->
-        <!--                                <h3 class="date">Updated</h3>-->
-        <!--                                <p>-->
-        <!--                                    Sept. 30, 2021-->
-        <!--                                </p>-->
-        <!--                            </div>-->
-        <!--                            <button class="secondary-button" type="button">View-->
-        <!--                                Project-->
-        <!--                            </button>-->
-        <!--                        </section>-->
-        <!--                        &lt;!&ndash;  Art Directed Images  &ndash;&gt;-->
-        <!--                        <section>-->
-        <!--                            <div class="project-title">-->
-        <!--                                <h2 class="project-name">Art Directed-->
-        <!--                                    Images</h2>-->
-        <!--                            </div>-->
-        <!--                            <div class="project-info">-->
-        <!--                                <h3>Description</h3>-->
-        <!--                                <p>-->
-        <!--                                    A project creating cards with CSS-->
-        <!--                                    that show an image-->
-        <!--                                    of the-->
-        <!--                                    subject that has been "art directed"-->
-        <!--                                    to work on-->
-        <!--                                    different-->
-        <!--                                    screen sizes.-->
-        <!--                                </p>-->
-        <!--                                <h3>Languages</h3>-->
-        <!--                                <p>-->
-        <!--                                    <span class="lang">HTML5</span>-->
-        <!--                                    <span class="lang">CSS3</span>-->
-        <!--                                </p>-->
-        <!--                                <h3>Updated</h3>-->
-        <!--                                <p>-->
-        <!--                                    Oct. 2, 2021-->
-        <!--                                </p>-->
-        <!--                            </div>-->
-        <!--                            <button class="secondary-button" type="button">View-->
-        <!--                                Project-->
-        <!--                            </button>-->
-        <!--                        </section>-->
-        <!--                        &lt;!&ndash;  Mount Nimba Strict Nature Reserve  &ndash;&gt;-->
-        <!--                        <section>-->
-        <!--                            <div class="project-title">-->
-        <!--                                <h2 class="project-name">Mount Nimba-->
-        <!--                                    Strict Nature Reserve</h2>-->
-        <!--                            </div>-->
-        <!--                            <div class="project-info">-->
-        <!--                                <h3>Description</h3>-->
-        <!--                                <p>-->
-        <!--                                    A UNESCO World Heritage Site using-->
-        <!--                                    HiDPI switching, web-->
-        <!--                                    fonts-->
-        <!--                                    and color to communicate what is-->
-        <!--                                    unique about the site, and-->
-        <!--                                    media-->
-        <!--                                    queries where appropriate.-->
-        <!--                                </p>-->
-        <!--                                <h3>Languages</h3>-->
-        <!--                                <p>-->
-        <!--                                    <span class="lang">HTML5</span>-->
-        <!--                                    <span class="lang">CSS3</span>-->
-        <!--                                    <span class="lang">JavaScript</span>-->
-        <!--                                </p>-->
-        <!--                                <h3>Updated</h3>-->
-        <!--                                <p>-->
-        <!--                                    Oct. 6, 2021-->
-        <!--                                </p>-->
-        <!--                            </div>-->
-        <!--                            <button class="secondary-button" type="button">View-->
-        <!--                                Project-->
-        <!--                            </button>-->
-        <!--                        </section>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </section>-->
+                               &lt;!&ndash;  Whizzy Kid  &ndash;&gt;
+                               <section>
+                                   <div class="project-title">
+                                       <h2 class="project-name">WhizzyKid</h2>
+                                   </div>
+                                   <div class="project-info">
+                                       <h3>Description</h3>
+                                       <p>
+                                       </p>
+                                       <h3>Languages</h3>
+                                       <p>
+                                           <span class="lang">HTML5</span>
+                                           <span class="lang">CSS3</span>
+                                           <span class="lang">JavaScript</span>
+                                       </p>
+                                       <h3>Updated</h3>
+                                       <p class="date">Sept. 18, 2021</p>
+                                   </div>
+                                   <button class="secondary-button" type="button">View
+                                       Project
+                                   </button>
+                               </section>
+                               &lt;!&ndash;  Beyond These Walls  &ndash;&gt;
+                               <section>
+                                   <div class="project-title">
+                                       <h2 class="project-name">Single Page
+                                           Static Site</h2>
+                                   </div>
+                                   <div class="project-info">
+                                       <h3>Description</h3>
+                                       <p>
+                                           A responsive website about an art
+                                           mural project in
+                                           Portsmouth, Ohio.
+                                       </p>
+                                       <p>Lorem ipsum dolor, sit amet
+                                           consectetur adipisicing elit.
+                                           Facere ipsum quas porro odit
+                                           voluptatibus nemo tenetur
+                                           consectetur ipsa tempore
+                                           accusantium, ullam possimus ducimus
+                                           cum doloremque magni recusandae et
+                                           neque sapiente illo dolor
+                                           dolorem! Quasi vitae dolore pariatur
+                                           magnam recusandae
+                                           distinctio placeat dolorem aut
+                                           ratione ullam unde eius, quod
+                                           quo saepe?</p>
+                                       <p>Lorem ipsum dolor sit amet,
+                                           consectetur adipisicing elit.
+                                           Aperiam sequi eum a magnam mollitia
+                                           dolor blanditiis minus.
+                                           Tempore accusantium nobis impedit,
+                                           in veniam et tenetur
+                                           quaerat quis amet repudiandae
+                                           distinctio fuga illum, magnam
+                                           ad iusto accusamus vel quae.
+                                           Cupiditate, in hic harum eos,
+                                           vero molestiae, suscipit placeat
+                                           quam labore neque debitis
+                                           voluptatum consectetur incidunt
+                                           illum. Provident molestiae
+                                           quia, veritatis dolorum eveniet
+                                           itaque placeat commodi,
+                                           numquam cumque laboriosam ipsum
+                                           quos, autem deleniti laborum
+                                           voluptatibus eaque aspernatur
+                                           asperiores! Hic, neque aliquam
+                                           officia adipisci blanditiis
+                                           temporibus animi accusamus eos
+                                           asperiores voluptatum mollitia dolor
+                                           nostrum repellendus
+                                           ullam suscipit nesciunt? Recusandae
+                                           neque exercitationem
+                                           voluptatem odio.</p>
+                                       <h3>Languages</h3>
+                                       <p>
+                                           <span class="lang">HTML5</span>
+                                           <span class="lang">CSS3</span>
+                                           <span class="lang">JavaScript</span>
+                                       </p>
+                                       <h3>Updated</h3>
+                                       <p class="date">
+                                           Sept. 28, 2021
+                                       </p>
+                                   </div>
+                                   <button class="secondary-button" type="button">View
+                                       Project
+                                   </button>
+                               </section>
+                               &lt;!&ndash;  Restaurant Menu  &ndash;&gt;
+                               <section>
+                                   <div class="project-title">
+                                       <h2 class="project-name">Restaurant
+                                           Website</h2>
+                                   </div>
+                                   <div class="project-info">
+                                       <h3>Description</h3>
+                                       <p>
+                                           A CSS flexbox project about creating
+                                           a restaurant
+                                           menu
+                                           sampled after Chick-fil-A menus.
+                                       </p>
+                                       <h3>Languages</h3>
+                                       <p>
+                                           <span class="lang">HTML5</span>
+                                           <span class="lang">CSS3</span>
+                                       </p>
+                                       <h3 class="date">Updated</h3>
+                                       <p>
+                                           Sept. 30, 2021
+                                       </p>
+                                   </div>
+                                   <button class="secondary-button" type="button">View
+                                       Project
+                                   </button>
+                               </section>
+                               &lt;!&ndash;  Art Directed Images  &ndash;&gt;
+                               <section>
+                                   <div class="project-title">
+                                       <h2 class="project-name">Art Directed
+                                           Images</h2>
+                                   </div>
+                                   <div class="project-info">
+                                       <h3>Description</h3>
+                                       <p>
+                                           A project creating cards with CSS
+                                           that show an image
+                                           of the
+                                           subject that has been "art directed"
+                                           to work on
+                                           different
+                                           screen sizes.
+                                       </p>
+                                       <h3>Languages</h3>
+                                       <p>
+                                           <span class="lang">HTML5</span>
+                                           <span class="lang">CSS3</span>
+                                       </p>
+                                       <h3>Updated</h3>
+                                       <p>
+                                           Oct. 2, 2021
+                                       </p>
+                                   </div>
+                                   <button class="secondary-button" type="button">View
+                                       Project
+                                   </button>
+                               </section>
+                               &lt;!&ndash;  Mount Nimba Strict Nature Reserve  &ndash;&gt;
+                               <section>
+                                   <div class="project-title">
+                                       <h2 class="project-name">Mount Nimba
+                                           Strict Nature Reserve</h2>
+                                   </div>
+                                   <div class="project-info">
+                                       <h3>Description</h3>
+                                       <p>
+                                           A UNESCO World Heritage Site using
+                                           HiDPI switching, web
+                                           fonts
+                                           and color to communicate what is
+                                           unique about the site, and
+                                           media
+                                           queries where appropriate.
+                                       </p>
+                                       <h3>Languages</h3>
+                                       <p>
+                                           <span class="lang">HTML5</span>
+                                           <span class="lang">CSS3</span>
+                                           <span class="lang">JavaScript</span>
+                                       </p>
+                                       <h3>Updated</h3>
+                                       <p>
+                                           Oct. 6, 2021
+                                       </p>
+                                   </div>
+                                   <button class="secondary-button" type="button">View
+                                       Project
+                                   </button>
+                               </section>
+                           </div>
+                       </div>
+        </div>
+        </section>
         <footer>
             <div class="wrapper">
                 <div>
@@ -451,9 +480,9 @@
                                 d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>
                         </svg>
                     </a>
-                    <!-- <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24"> -->
-                    <!--   <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/> -->
-                    <!-- </svg> -->
+                    <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                    <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/>
+                    </svg>
                 </div>
                 <div>
                     <p>Photo powered by</p>
@@ -462,7 +491,7 @@
             </div>
         </footer>
     </div>
-</div>
+</div> -->
 <script src="./main.js" type="module"></script>
 <!--<script src="modules/debug-reset.js"></script>-->
 <script src="./modules/behaviors.js"></script>

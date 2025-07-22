@@ -118,14 +118,16 @@ h6 {
 #landing-page {
     width: 100%;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 
-#landing-page:first-child { /* <== the first scroll-snap-wrapper */
+#landing-page:first-child { /* <== the first daily-component */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -142,7 +144,7 @@ h6 {
     }
 }
 
-.scroll-snap-wrapper {
+.daily-component {
     min-width: 100vw;
     min-height: 100vh;
     max-width: 1200px;
@@ -152,7 +154,7 @@ h6 {
     scroll-snap-stop: always;
 }
 
-#page-background {
+#daily-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -346,10 +348,14 @@ header nav ul li a {
 }
 
 #client-location-wrapper {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap: .1rem;
+    color: #fff;
+    font-size: 20px;
 }
 
 #time-data, #weather-data {
@@ -388,9 +394,9 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 #quote-wrapper {
