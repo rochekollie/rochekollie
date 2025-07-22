@@ -1,25 +1,34 @@
-# Portfolio Website for Roche Kollie
+# Roche Kollie
 
 🌐 **[www.rochekollie.com](https://rochekollie.com)**
 
-Passionate about using technology through innovation to empower people and enrigh their lives. Roche Kollie is a front-end engineer with a strong foundation in HTML, CSS, JavaScript, and related technologies.
+Hello there! I'm Roche Kollie, a front-end engineer who loves making websites that are not only functional but also look great and are easy to use. I'm passionate about using technology to create things that make a positive difference in people's lives.
 
-## 🛠️ Skills
-- HTML5 - Structuring web content like a boss!
-- CSS3 - Styling web pages for that pixel-perfect look.
-- JavaScript (ES6+) - Mastered the art; TypeScript is next on the list.
-- JS Frameworks: React ❤️ (also open to Angular, Vue.js)
-- CSS Preprocessors: Sass, Less - Making CSS coding a breeze.
-- Build Tools: Webpack, Vite - Automating the magic behind the scenes.
-- Testing: Jest, Mocha, Selenium - Ensuring code quality with unit and integration tests.
+## What I Do 💻
 
-## 💼 Experience
-Roche Kollie has contributed to a variety of projects, showcasing a commitment to delivering high-quality front-end solutions. Previous work includes collaborating with cross-functional teams to bring creative visions to life and optimizing web applications for performance and user experience.
+I focus on building the parts of websites you see and interact with. I'm really comfortable with the core technologies of the web:
 
-## 📚 Education
-Always eager to stay at the forefront of web development trends, Roche Kollie actively seeks out opportunities for professional growth. Whether experimenting with the latest JavaScript features or exploring emerging design patterns, continuous learning is a cornerstone of Roche's approach to development.
+*   **HTML:** The foundation of web content.
+*   **CSS:** Making things look pretty and organized.
+*   **JavaScript:** Adding interactivity and dynamic features. I'm quite good with modern JavaScript (ES6+) and am learning TypeScript too!
 
-## 🤝 Projects
-Excited about the prospect of collaborating with like-minded professionals, Roche Kollie is open to new opportunities and challenges. Passionate about contributing to innovative projects and creating impactful digital experiences, Roche is ready to bring expertise and enthusiasm to the front-end development landscape.
+I also have experience with:
 
-Connect with Roche Kollie on [LinkedIn](https://linkedin.com/in/rochekollie), [X](https://x.com/rochekollie), [Discord](https://discord.com/rochekollie) to explore potential collaborations or discuss exciting projects in the realm of front-end software development.
+*   **React:** My go-to JavaScript library for building user interfaces. I'm open to working with Angular or Vue.js as well.
+*   **CSS Preprocessors (Sass, Less):** They help me write CSS more efficiently.
+*   **Build Tools (Webpack, Vite):** I use them to manage and optimize project files.
+*   **Testing (Jest, Mocha, Selenium):** I believe in writing tests to ensure the code works as expected.
+
+## My Approach ✨
+
+I enjoy collaborating with others to turn ideas into reality. I'm always looking for ways to improve and learn new things in the ever-evolving world of web development. I like to keep things simple and build user-friendly experiences.
+
+## Let's Connect! 👋
+
+I'm always open to chatting about new opportunities or interesting projects. Feel free to reach out on:
+
+*   [LinkedIn](https://linkedin.com/in/rochekollie)
+*   [X](https://x.com/rochekollie)
+*   [Discord](https://discord.com/rochekollie)
+
+Looking forward to connecting!
