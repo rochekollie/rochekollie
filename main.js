@@ -6,7 +6,7 @@ import { getDate, getRandomColor, getContrastYIQ } from './modules/utilities.js'
  * @param key  - the key to save the data to.
  * @param data - the data to save.
  */
-const saveDailyData = (key, data) => {
+const saveLocalStorage = (key, data) => {
   localStorage.setItem(key, data);
 };
 
@@ -15,7 +15,7 @@ const saveDailyData = (key, data) => {
  * @param key - the key to retrieve the data from.
  * @returns {object} - the data retrieved from the local storage.
  */
-const getDailyData = (key) => localStorage.getItem(key);
+const getLocalStorage = (key) => localStorage.getItem(key);
 
 /**
  * Runs a given function at the interval of a given time in milliseconds.
@@ -32,17 +32,17 @@ const setTimeInterval = (callback, interval) => {
 const clientLocationLanguage = navigator.language || 'en-US';
 
 const date = document.getElementById('date');
-// const time = document.getElementById("time"); / TURN OFF TEMPORARILY
+const time = document.getElementById("time");
 
 // set initial date and time
 date.textContent = getDate(clientLocationLanguage).shortDateText;
-// time.textContent = getDate(clientLocationLanguage).shortTimeText; / TURN OFF TEMPORARILY
+time.textContent = getDate(clientLocationLanguage).shortTimeText;
 
 // update date and time every second
 setTimeInterval(() => {
   try {
     date.textContent = getDate(clientLocationLanguage).shortDateText;
-    // time.textContent = getDate(clientLocationLanguage).shortTimeText;   / TURN OFF TEMPORARILY
+    time.textContent = getDate(clientLocationLanguage).shortTimeText;
   } catch (error) {
     console.log(error);
   }
@@ -59,61 +59,68 @@ const getDailyQuote = async () => {
   return await response.json();
 };
 
+
 /**
  * Checks if the current date is the same as the date saved in the local storage.
  * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
  */
 const isToday = () => {
   const currentDate = getDate('en-US').dateNumber;
-  return currentDate === parseInt(getDailyData('dateNumber'), 10);
+  return currentDate === parseInt(getLocalStorage('dateNumber'), 10);
 };
 
-const imageElement = document.getElementById('page-background');
+const landingPage = document.getElementById('landing-page');
+
+console.log(landingPage)
+
+
+const imageElement = document.getElementById('daily-background');
 const quoteElement = document.getElementById('quote');
 const quoteAuthor = document.getElementById('author');
 
-// if the date changes, update the page
-if (!isToday()) {
+//if the date changes, update the page
+//if (!isToday()) {
   const TOTAL_IMAGES = 100;
   const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
   const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
 
+  //render(imageElement, backgroundImage);
   render(imageElement, backgroundImage);
-  saveDailyData('dateNumber', getDate().dateNumber);
-  saveDailyData('backgroundImage', backgroundImage);
+  saveLocalStorage('dateNumber', getDate().dateNumber);
+  saveLocalStorage('backgroundImage', backgroundImage);
 
   getDailyQuote().then((response) => {
     const { author, content } = response;
-    render(quoteElement, content || 'We make our own fortunes and we call them fate.');
-    render(quoteAuthor, author || 'Benjamin Disraeli');
-    saveDailyData('quote', content);
-    saveDailyData('author', author);
+    render(quoteElement, content);
+    render(quoteAuthor, author);
+    saveLocalStorage('quote', content);
+    saveLocalStorage('author', author);
   });
-} else {
-  const image = getDailyData('backgroundImage');
-  const quote = getDailyData('quote');
-  const author = getDailyData('author');
-  render(imageElement, image);
-  render(quoteElement, quote);
-  render(quoteAuthor, author);
-}
+//} else {
+  // const image = getLocalStorage('backgroundImage');
+  // const quote = getLocalStorage('quote');
+  // const author = getLocalStorage('author');
+  // render(imageElement, image);
+  // render(quoteElement, quote);
+  // render(quoteAuthor, author);
+//}
 
 const logo = document.getElementById('logo');
-logo.addEventListener('mouseleave', () => {
-  logo.classList.add('reverse-spin');
-});
+// logo.addEventListener('mouseleave', () => {
+//   logo.classList.add('reverse-spin');
+// });
 
 // stay the nav link active when the link is clicked
 const navLinks = document.querySelectorAll('nav ul li a');
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.forEach((link) => {
-      link.classList.remove('active');
-    });
-    link.classList.add('active');
-  });
-});
+// navLinks.forEach((link) => {
+//   link.addEventListener('click', () => {
+//     navLinks.forEach((link) => {
+//       link.classList.remove('active');
+//     });
+//     link.classList.add('active');
+//   });
+// });
 
 // style the filled form input and textarea border color when the input loses focus and the input is not empty
 const formInputs = document.querySelectorAll('input, textarea');
