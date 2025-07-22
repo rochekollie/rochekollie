@@ -134,9 +134,9 @@ h6 {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between;
     align-items: center;
-    flex: 1 1 auto;
+    flex: 1 1 auto; */
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
