@@ -41,12 +41,14 @@ time.textContent = getDate(clientLocationLanguage).shortTimeText;
 // update date and time every second
 setTimeInterval(() => {
   try {
+    console.log(getDate(clientLocationLanguage).shortDateText);
+    console.log(getDate(clientLocationLanguage).shortTimeText);
     date.textContent = getDate(clientLocationLanguage).shortDateText;
     time.textContent = getDate(clientLocationLanguage).shortTimeText;
   } catch (error) {
     console.log(error);
   }
-}, 1000);
+}, 60000);
 
 /**
  * Gets a random quote from the API and returns the data in a JSON format.
@@ -68,10 +70,6 @@ const isToday = () => {
   const currentDate = getDate('en-US').dateNumber;
   return currentDate === parseInt(getLocalStorage('dateNumber'), 10);
 };
-
-const landingPage = document.getElementById('landing-page');
-
-console.log(landingPage)
 
 
 const imageElement = document.getElementById('daily-background');
