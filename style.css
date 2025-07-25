@@ -1,7 +1,7 @@
-@import url('./lazy.css');
+@import url('./utility.css');
 
 :root {
-    --system-font: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --system-font: 
     --Aclonica: 'Aclonica', sans-serif;
     --Inter: 'Inter', sans-serif;
     --Martian: 'Martian Mono', monospace;
@@ -66,7 +66,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: var(--Mona), var(--system-font);
+    font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -117,7 +117,7 @@ h6 {
     color: #000;
 }
 
-#landing-page {
+#daily-page {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -129,7 +129,7 @@ h6 {
 }
 
 
-#landing-page:first-child { /* <== the first daily-component */
+#daily-page:first-child { /* <== the first daily-widget */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -142,13 +142,13 @@ h6 {
 }
 
 @media (max-width: 768px) {
-    #landing-page {
+    #daily-page {
         height: 100%;
         display: none;
     }
 }
 
-.daily-component {
+.daily-widget {
     width: 100%;
     height: 100%;
     min-height: 100vh;
