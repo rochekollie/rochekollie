@@ -360,6 +360,23 @@ header nav ul li a {
     font-size: 20px;
 }
 
+/* make #time glassy or glasmorphism or like apple liquid glass */
+
+#time {
+    /* Add glassmorphism styles */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+}
+
+#date {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
 #time-data, #weather-data {
     /* display: flex;
     justify-content: center;

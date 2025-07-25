@@ -41,14 +41,12 @@ time.textContent = getDate(clientLocationLanguage).shortTimeText;
 // update date and time every second
 setTimeInterval(() => {
   try {
-    console.log(getDate(clientLocationLanguage).shortDateText);
-    console.log(getDate(clientLocationLanguage).shortTimeText);
     date.textContent = getDate(clientLocationLanguage).shortDateText;
     time.textContent = getDate(clientLocationLanguage).shortTimeText;
   } catch (error) {
     console.log(error);
   }
-}, 60000);
+}, 1000);
 
 /**
  * Gets a random quote from the API and returns the data in a JSON format.
