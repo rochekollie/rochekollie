@@ -58,21 +58,21 @@
                 <!-- <div class="wrapper"> -->
                     <!-- <div id="main-content"> -->
                         <div class="flex justify-content-space-between align-items-center">
-                            <p id="date"></p>
-                            <p id="weather">
-                                <span id="city">York,</span>
-                                <span id="temp">77<sup>&deg;</sup></span>
+                            <p id="date-component"></p>
+                            <p id="weather-component">
+                                <span id="city-component">York,</span>
+                                <span id="temp-component">77<sup>&deg;</sup></span>
                             </p>
                         </div>
                         <div id="quote-wrapper">
-                            <p id="time"></p>
-                            <p id="quote">We make our own fortunes and we call them fate.</p>
-                            <p id="author">Benjamin Disraeli</p>
+                            <p id="time-component"></p>
+                            <p id="quote-component">We make our own fortunes and we call them fate.</p>
+                            <p id="author-component">Benjamin Disraeli</p>
                         </div>
                         <div class="flex justify-content-space-between align-items-center">
                             <div>
-                                <p>&copy;2023
-                                <a href="https://twitter.com/rochekollie">Roche
+                                <p>&copy;<span id="copyright"></span>
+                                <a href="https://twitter.com/rochekollie">Made with &hearts; by Roche
                                     Kollie</a>
                                 </p>
                             </div>
@@ -491,7 +491,7 @@
         </footer>
     </div>
 </div> -->
-<script src="./main.js" type="module"></script>
+<script src="./index.js" type="module"></script>
 <!--<script src="modules/debug-reset.js"></script>-->
 <script src="./modules/behaviors.js"></script>
 </body>

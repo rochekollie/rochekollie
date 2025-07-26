@@ -1,3 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a, a:after, a:before, abbr, abbr:after, abbr:before, acronym, acronym:after, acronym:before, address, address:after, address:before, article, article:after, article:before, aside, aside:after, aside:before, b, b:after, b:before, bdo, bdo:after, bdo:before, big, big:after, big:before, blockquote, blockquote:after, blockquote:before, br, br:after, br:before, button, button:after, button:before, canvas, canvas:after, canvas:before, cite, cite:after, cite:before, code, code:after, code:before, dd, dd:after, dd:before, dfn, dfn:after, dfn:before, div, div:after, div:before, dl, dl:after, dl:before, dt, dt:after, dt:before, em, em:after, em:before, fieldset, fieldset:after, fieldset:before, figcaption, figcaption:after, figcaption:before, figure, figure:after, figure:before, footer, footer:after, footer:before, form, form:after, form:before, h1, h1:after, h1:before, h2, h2:after, h2:before, h3, h3:after, h3:before, h4, h4:after, h4:before, h5, h5:after, h5:before, h6, h6:after, h6:before, header, header:after, header:before, hr, hr:after, hr:before, i, i:after, i:before, img, img:after, img:before, input, input:after, input:before, kbd, kbd:after, kbd:before, label, label:after, label:before, li, li:after, li:before, main, main:after, main:before, map, map:after, map:before, nav, nav:after, nav:before, noscript, noscript:after, noscript:before, object, object:after, object:before, ol, ol:after, ol:before, output, output:after, output:before, p, p:after, p:before, picture, picture:after, picture:before, pre, pre:after, pre:before, q, q:after, q:before, samp, samp:after, samp:before, script, script:after, script:before, section, section:after, section:before, select, select:after, select:before, small, small:after, small:before, span, span:after, span:before, strong, strong:after, strong:before, sub, sub:after, sub:before, sup, sup:after, sup:before, svg, svg:after, svg:before, table, table:after, table:before, textarea, textarea:after, textarea:before, tfoot, tfoot:after, tfoot:before, time, time:after, time:before, tt, tt:after, tt:before, ul, ul:after, ul:before, var, var:after, var:before, video, video:after, video:before {
+    --webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
 .center {
     text-align: center;
 }
