@@ -1,28 +1,3 @@
-export const getDate = (locales) => {
-  const d = new Date();
-  return {
-    seconds: d.getSeconds(),
-    minutes: d.getMinutes(),
-    hour: d.getHours(),
-    shortDay: d.toLocaleString('default', {weekday: 'short'}),
-    longDay: d.toLocaleString('default', {weekday: 'long'}),
-    dateNumber: d.getDate(),
-    monthNumber: d.getMonth() + 1,
-    shortMonth: d.toLocaleString('default', {month: 'short'}),
-    LongMonth: d.toLocaleString('default', {month: 'long'}),
-    shortYear: parseInt(d.toLocaleString('default', {year: '2-digit'})),
-    longYear: d.getFullYear(),
-    meridian: d.getHours() >= 12 ? 'PM' : 'AM',
-    timeText: d.toLocaleTimeString(locales),
-    dateText: d.toLocaleDateString(locales),
-    shortDateText: d.toLocaleDateString(locales, {weekday: 'short', month: 'short', day: 'numeric'}),
-    longDateText: d.toLocaleDateString(locales, {weekday: 'long', month: 'long', day: 'numeric'}),
-    shortTimeText: d.toLocaleTimeString(locales, {hour: 'numeric', minute: 'numeric'}),
-    longTimeText: d.toLocaleTimeString(locales, {hour: 'numeric', minute: 'numeric', second: 'numeric'}),
-  };
-};
-
-
 /**
  * Generate a random hex color
  * @returns {string} - hex color
@@ -47,4 +22,28 @@ export const getContrastYIQ = (hexColor) => {
   const b = parseInt(hexColor.substr(5, 2), 16);
   const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
   return (yiq >= 128) ? 'black' : 'white';
+}
+
+export const mergeSort = (a, b) => {
+  const result = [];
+  let i = 0; // index of a
+  let j = 0; // index of b
+  while (i < a.length && j < b.length) { // while both arrays have elements
+    if (a[i] < b[j]) {
+      result.push(a[i]);
+      i++;
+    } else {
+      result.push(b[j]);
+      j++;
+    }
+  }
+  while (i < a.length) {
+    result.push(a[i]);
+    i++;
+  }
+  while (j < b.length) {
+    result.push(b[j]);
+    j++;
+  }
+  return result;
 }
