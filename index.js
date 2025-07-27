@@ -1,43 +1,50 @@
-import { dailyWidget} from './modules/dailyWidget.js';
+import { koreDb} from './kore/kore.js'
 
-const dateComponent = document.getElementById('date-component');
-const timeComponent = document.getElementById('time-component');
+const backgroundComponent = document.getElementById('daily-image');
+const day = document.getElementById('day');
+const month = document.getElementById('month');
+const date = document.getElementById('date');
+const city = document.getElementById('city');
+const temperature = document.getElementById('temperature');
+const weather = document.getElementById('weather');
+const time = document.getElementById('time');
+const quote = document.getElementById('quote');
+const author = document.getElementById('author');
 
-
-// preload the date and time
 window.onload = function () {
+  const db = koreDb.read('__01db17__');
+  console.log(db);
+  //if the date changes, fetch new quote and background image
+  if (isNewDay(db.dateNumber)) {
+    // const dailyImage = getDailyImage().then((response) => {
+    //   return { photographer, image } = response;
+    // });
+    const dailyQuote = getDailyQuote().then((response) => {
+        return { author, content } = response;
+    });
 
-  //if the date changes, update the page
-if (isNewDay()) {
-  const TOTAL_IMAGES = 100;
-  const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-  const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
+    const TOTAL_IMAGES = 100;
+    const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
+    const localBackgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
+    const photographer = 'Unsplash.com'
 
-  // load the background image
-  imageElement.src = backgroundImage;
-  saveLocalStorage('dateNumber', dailyWidget.dateNumber);
-  saveLocalStorage('backgroundImage', backgroundImage);
+    // Dislay the data from storage
+    backgroundComponent.src = localBackgroundImage;
 
-  getDailyQuote().then((response) => {
-    const { author, content } = response;
-    quoteElement.textContent = content;
-    quoteAuthor.textContent = author;
-    saveLocalStorage('quote', content);
-    saveLocalStorage('author', author);
-  });
-} else {
-  const backgroundImage = getLocalStorage('backgroundImage');
-  const quote = getLocalStorage('quote');
-  const author = getLocalStorage('author');
-  imageElement.src = backgroundImage;
-  quoteElement.textContent =  quote;
-  quoteAuthor.textContent = author;
+    // Save the widget to the database widgets
+    koreDb.write('__01db17__', db);
+    console.log(db);
+  } else {
+    const db = koreDb.read()
+    // Dislay the data from storage
+    backgroundComponent.src = db.backgroundImage;
+  }
 }
 
 
   try {
-    dateComponent.textContent = dailyWidget.longDateText;
-    timeComponent.textContent = dailyWidget.shortTimeText;
+    //dateComponent.textContent = dailyWidget.longDateText;
+    //timeComponent.textContent = dailyWidget.shortTimeText;
 
     // Set copyright year here
     document.getElementById('copyright').textContent = new Date().getFullYear();
@@ -46,35 +53,7 @@ if (isNewDay()) {
     console.log(error);
   }
 
-  
-};
-
 // Update the date and time every second
-setInterval(() => {
-  try {
-    // Update the date object within the dailyWidget
-    dailyWidget._date = new Date(); 
-    dateComponent.textContent = dailyWidget.shortDateText;
-    timeComponent.textContent = dailyWidget.shortTimeText;
-  } catch (error) {
-    console.log(error);
-  }
-}, 1000);
-
-
-/**
- * Saves given data to the local storage.
- * @param key  - the key to save the data to.
- * @param data - the data to save.
- */
-const saveLocalStorage = (key, data) => localStorage.setItem(key, data);
-
-/**
- * Retrieves data from the local storage.
- * @param key - the key to retrieve the data from.
- * @returns {object} - the data retrieved from the local storage.
- */
-const getLocalStorage = key => localStorage.getItem(key);
 
 /**
  * Gets a random quote from the API and returns the data in a JSON format.
@@ -89,15 +68,22 @@ const getDailyQuote = async () => {
 
 
 /**
+ * Gets a imagefrom the API and returns the data in a JSON format.
+ * @returns {Promise<Response>} - the data in a JSON format.
+ */
+const getDailyImage = async () => {
+  const characterLimit = 50;
+  const promise = fetch(`https://api.quotable.io/random?maxLength=${characterLimit}`);
+  const response = await promise;
+  return await response.json();
+};
+
+
+/**
  * Checks if the current date is the same as the date saved in the local storage.
  * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
  */
-const isNewDay = () => dailyWidget.dateNumber !== parseInt(getLocalStorage('dateNumber'), 10);
-
-
-const imageElement = document.getElementById('daily-background');
-const quoteElement = document.getElementById('quote-component');
-const quoteAuthor = document.getElementById('author-component');
+const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 10);
 
 
 

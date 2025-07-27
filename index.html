@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Roche Kollie | Fullstack Web Developer</title>
-    <meta content="Roche Kollie is a fullstack web developer."
+    <title>Roche Kollie - Fullstack Web Developer</title>
+    <meta content="Full-stack web developer specializing in building scalable web applications."
           name="description">
     <meta content="Roche Kollie" name="author">
-    <meta content="Roche Kollie, Web Developer, Frontend Engineer"
+    <meta content="Roche Kollie, Full-stack web developer Web Developer, Frontend Engineer"
           name="keywords">
     <link href="./assets/images/profiles/rochekollie.jpeg" rel="shortcut icon">
     <!-- Google fonts -->
@@ -22,52 +22,27 @@
 </head>
 
 <body>
-<div id="daily-page">
+<img id="daily-image" src="" alt="">
     <div class="daily-widget flex flex-direction-column justify-content-space-between">
-        <img id="daily-background" src="" alt="">
-        <!-- <div id="page-wrapper"> -->
-            <!-- <header>
-                <div class="component-wrapper">
-                    <div>
-                        <a id="logo-wrapper" href="./">
-                            <img id="logo" alt="Roche Kollie profile picture"
-                                 src="assets/images/profiles/profile.png">
-                            <h1 id="app-name">Roche Kollie</h1>
-                        </a>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#hero-wrapper">About Me</a></li>
-                            <li><a href="#contact-wrapper">Contact Me</a></li>
-                            <li><a href="#projects-wrapper">My Projects</a></li>
-                        </ul>
-                    </nav>
-                    <div>
-                        <p id="time-data">
-                            <span id="date"></span>
-                            <span id="time"></span>
-                        </p>
-                        &lt;!&ndash;            <p id="location-data">&ndash;&gt;
-                        &lt;!&ndash;              <span id="city">Sun Valley</span>&ndash;&gt;
-                        &lt;!&ndash;              <span id="temp">64<sup>&deg;</sup></span>&ndash;&gt;
-                        &lt;!&ndash;            </p>&ndash;&gt;
-                    </div>
-                </div>
-            </header> -->
-            <!-- <main> -->
-                <!-- <div class="wrapper"> -->
-                    <!-- <div id="main-content"> -->
-                        <div class="flex justify-content-space-between align-items-center">
-                            <p id="date-component"></p>
-                            <p id="weather-component">
-                                <span id="city-component">York,</span>
-                                <span id="temp-component">77<sup>&deg;</sup></span>
-                            </p>
+                        <div id="date-component" class="flex justify-content-space-between align-items-center">
+                            <p id="day"></p>
+                            <p id="month"></p>
+                            <p id="date"></p>
                         </div>
-                        <div id="quote-wrapper">
-                            <p id="time-component"></p>
-                            <p id="quote-component">We make our own fortunes and we call them fate.</p>
-                            <p id="author-component">Benjamin Disraeli</p>
+                        <div id="weather-component">
+                            <p id="city">York</p>
+                            <p id="temperature">77<sup>&deg;</sup></p>
+                            <p id="weather">Sunny</p>
+                        </div>
+                        <div id="time-component">
+                            <p id="hour"></p>
+                            <p id="minutes"></p>
+                            <p id="seconds"></p>
+                            <p id="meridiem"></p>
+                            </div>
+                        <div id="quote-component">
+                            <p id="content">We make our own fortunes and we call them fate.</p>
+                            <p id="author">Benjamin Disraeli</p>
                         </div>
                         <div class="flex justify-content-space-between align-items-center">
                             <div>
@@ -96,13 +71,8 @@
                                 </p>
                             </div>
                         </div>
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </main> -->
-        <!-- </div> -->
     </div>
 </div>
-<!-- <div id="main-page">
     <div class="scroll-snap-wrapper">
         <header id="header">
             <div class="wrapper">
@@ -490,10 +460,8 @@
             </div>
         </footer>
     </div>
-</div> -->
+</div>
 <script src="./index.js" type="module"></script>
-<!--<script src="modules/debug-reset.js"></script>-->
-<script src="./modules/behaviors.js"></script>
 </body>
 
 </html>
