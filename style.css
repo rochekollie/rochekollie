@@ -47,7 +47,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100;
     height: 100%;
     font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
@@ -56,7 +56,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #000;
-    background-color: #000;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -345,39 +348,48 @@ header nav ul li a {
 
 /* make #time glassy or glasmorphism or like apple liquid glass */
 
-#time {
-    /* Add glassmorphism styles */
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding: 10px;
-}
 
-#date {
+#date-component, #time-component {
+    font-family: var(--Inter);
     font-size: clamp(0.8rem, 1vw, 1rem);
-}
-
-#time-data, #weather-data {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    gap: 0.5rem;
-    font-weight: 500;
 }
 
 #city {
     margin-left: .3rem; /* to align with previous p element  */
 }
 
-.dot {
-    height: 3px;
-    width: 3px;
-    border: solid 1px #4b6c8c;
-    border-radius: 50%;
-    /* display: inline-block; */
+#quote-wrapper {
+    font-family: var(--Inter);
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#quote-component {
+    font-family: inherit;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    line-height: 1.1;
+    max-width: 25ch;
+}
+
+#author-component, #time-component {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #ffffff99;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#author-component {
+    font-family: var(--Playfair);
 }
 
 main {
@@ -399,37 +411,6 @@ main {
     /* flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
-}
-
-#quote-wrapper {
-    font-family: var(--Inter);
-    margin: 100px auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#quote {
-    font-family: inherit;
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    line-height: 1.1;
-    max-width: 25ch;
-}
-
-#author {
-    font-family: var(--Inter);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffffff99;
-    color: rgba(255, 255, 255, 0.7);
-    text-align: center;
-    margin-top: 1rem;
 }
 
 footer {
@@ -492,6 +473,13 @@ footer .wrapper div:last-child {
     position: absolute;
     cursor: pointer;
     pointer-events: all;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
 }
 
 #scroll-down-icon:hover {

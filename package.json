@@ -1,11 +1,12 @@
 {
   "name": "rochekollie",
   "version": "1.0.0",
-  "description": "Enthusiastic about building products and services to empower people and enrich their lives.",
+  "description": "Full-stack web developer specializing in building scalable web applications.",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "live-server"
+    "start": "live-server",
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
