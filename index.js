@@ -19,9 +19,9 @@ window.onload = function () {
     // const dailyImage = getDailyImage().then((response) => {
     //   return { photographer, image } = response;
     // });
-    const dailyQuote = getDailyQuote().then((response) => {
-        return { author, content } = response;
-    });
+    // const dailyQuote = getDailyQuote().then((response) => {
+    //     return { author, content } = response;
+    // });
 
     const TOTAL_IMAGES = 100;
     const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
