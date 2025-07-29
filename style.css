@@ -485,6 +485,27 @@ footer .wrapper div:last-child {
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 10px;
+
+
+
+    --h-padding: 23px;
+    --v-padding: 9px;
+    padding: var(--v-padding) var(--h-padding) calc(var(--v-padding) + 1px);
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, var(--opacity-stop-2));
+    border: 2px solid rgba(255, 255, 255, var(--opacity-stop-6));
+    border-radius: var(--radius-round);
+    box-shadow: 0 0 12px #00000026;
+    color: #fff;
+    cursor: pointer;
+    font-size: .9375rem;
+    font-weight: 500;
+    outline: none;
+    transition: background-color .1s ease;
+    gap: 5px;
 }
 
 #scroll-down-icon:hover {
@@ -735,6 +756,10 @@ button:hover, .button:hover, .skill .button:hover {
     padding: 2rem 0;
     /*padding: 0 0 2rem 0;*/
     background-color: #fff;
+}
+
+#hearts {
+    color: rgb(249, 28, 106);
 }
 
 #skills-categories {
