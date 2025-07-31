@@ -1,8 +1,6 @@
 @import url('./utility.css');
 
 :root {
-    --system-font: 
-    --Aclonica: 'Aclonica', sans-serif;
     --Inter: 'Inter', sans-serif;
     --Martian: 'Martian Mono', monospace;
     --Montserrat: 'Montserrat', sans-serif;
@@ -61,71 +59,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-a {
-    display: inline-flex;
-    flex-direction: row;
-    color: var(--link-color);
-    font-weight: 500;
-    font-family: inherit;
-    text-decoration: none;
-    /*opacity: var(--link-normal);*/
-}
-
-a:link,
-a:visited {
-    color: var(--link-active);
-}
-
-a:hover,
-a:active,
-a:focus {
-    color: var(--accent-color);
-}
-
-p {
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: inherit;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #000;
-}
-
-#daily-page {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
 }
 
-
-#daily-page:first-child { /* <== the first daily-widget */
-    height: 100vh;
-    width: 100vw;
+#daily-widget {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
+    justify-content: space-between;
+    color: #fff;
     align-items: center;
-    flex: 1 1 auto; */
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -135,28 +85,17 @@ h6 {
     }
 }
 
-.daily-widget {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 1rem;
-    gap: 1rem;
-    color: #fff;
-}
-
 #daily-background {
-    position: fixed;
-    top: 0;
-    left: 0;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    z-index: -100;
+    /* z-index: -100; */
 }
 
 #page-wrapper {
@@ -164,22 +103,6 @@ h6 {
     height: 100%;
     display: grid;
     grid-template: var(--hHeight) calc(100vh - calc(var(--hHeight) + var(--fHeight))) var(--fHeight) / 100%;
-}
-
-.wrapper {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1276px;
-    height: 100%;
-}
-
-.container {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1276px;
-    height: 100%;
 }
 
 header {
@@ -191,19 +114,9 @@ header {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background-color: var(--dark);
-    font-family: var(--Montserrat);
-    font-size: 0.9rem;
-    font-weight: 400;
-    border-bottom: solid 2px #141414;
-    box-shadow: 0 0.7rem 0.7rem rgb(0 0 0 / 30%);
-}
-
-header .wrapper {
-    display: grid;
-    grid-template: 100% / auto 1fr auto;
-    height: 100%;
-    width: 100%;
+    background-color: transparent;
+    /* border-bottom: solid 2px #141414; */
+    /* box-shadow: 0 0.7rem 0.7rem rgb(0 0 0 / 30%); */
 }
 
 #site-branding-wrapper,
@@ -374,16 +287,6 @@ header nav ul li a {
     text-align: center;
 }
 
-#quote-component {
-    font-family: inherit;
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    line-height: 1.1;
-    max-width: 25ch;
-}
-
 #author-component, #time-component {
     font-size: 1.7rem;
     font-weight: 700;
@@ -398,13 +301,13 @@ header nav ul li a {
 }
 
 main {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    /* scroll-snap-align: start; */
+    /* scroll-snap-stop: always; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #main-content {
@@ -419,6 +322,7 @@ main {
 }
 
 footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,30 +330,9 @@ footer {
     padding: 1rem;
     overflow: hidden;
     font-family: var(--Inter);
-    font-size: clamp(0.8rem, 1vw, 1rem);
-    background-color: #0d1116;
-    color: var(--off-yellow-dark);
-}
-
-footer .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-footer .wrapper div:first-child {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-footer .wrapper div:last-child {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.5rem;
+    /* background-color: #0d1116; */
+    background-color: transparent;
+    /* color: var(--off-yellow-dark); */
 }
 
 #scroll-down-container {
@@ -485,14 +368,10 @@ footer .wrapper div:last-child {
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 10px;
-
-
-
     --h-padding: 23px;
     --v-padding: 9px;
     padding: var(--v-padding) var(--h-padding) calc(var(--v-padding) + 1px);
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, var(--opacity-stop-2));
@@ -524,6 +403,47 @@ footer .wrapper div:last-child {
     animation: freeze 0.5s ease-in-out;
     transition: all 0.3s ease-in-out;
     animation-iteration-count: infinite;
+}
+
+a {
+    display: inline-flex;
+    flex-direction: row;
+    color: var(--link-color);
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    /*opacity: var(--link-normal);*/
+}
+
+a:link,
+a:visited {
+    color: var(--link-active);
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: var(--accent-color);
+}
+
+p {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
 }
 
 /* #################### Main Page  #################### */

@@ -20,62 +20,54 @@
         rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
 </head>
-
-<body>
-<img id="daily-image" src="" alt="">
-<div class="daily-widget flex flex-direction-column justify-content-space-between">
+<body class="flex flex-direction-column justify-content-space-between">
+    <div id="daily-widget">
     <header>
-                        <div id="date-component" class="flex align-items-center">
-                            <p id="day">Monday,</p>
-                            <p id="month">July</p>
-                            <p id="date">28</p>
-                        </div>
-                        <div class="flex align-items-center" id="weather-component">
-                            <p id="city">York</p>
-                            <p id="temperature">77<sup>&deg;</sup></p>
-                            <p id="weather">Sunny</p>
-                        </div>
-                    </header>
-                        <div id="time-component">
-                            <p id="hour"></p>
-                            <p id="minutes"></p>
-                            <p id="seconds"></p>
-                            <p id="meridiem"></p>
-                            </div>
-                        <div id="quote-component">
-                            <p id="content">We make our own fortunes and we call them fate.</p>
-                            <p id="author">Benjamin Disraeli</p>
-                        </div>
-                        <div class="flex justify-content-space-between align-items-center">
-                            <div>
-                                <p>&copy;<span id="copyright"></span> Made with <span id="hearts">&hearts;</span> by 
-                                <a href="https://twitter.com/rochekollie">Roche
-                                    Kollie</a>
-                                </p>
-                            </div>
-                            <div id="scroll-down-container">
-                                <a href="#hero-wrapper">
-                                    <svg id="scroll-down-icon"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         height="40" width="40">
-                                        <path
-                                            d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>
-                                    </svg>
-                                </a>
-                                <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-                                <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <p>Photo by
-                                    <a href="https://unsplash.com/">Jane Patterson</a>
-
-                                </p>
-                            </div>
-                        </div>
-    </div>
+        <div id="date-component" class="flex align-items-center">
+            <p id="day">Monday,</p>
+            <p id="month">July</p>
+            <p id="date">28</p>
+        </div>
+        <div class="flex align-items-center" id="weather-component">
+            <p id="city">York</p>
+            <p id="temperature">77<sup>&deg;</sup></p>
+            <p id="weather">Sunny</p>
+        </div>
+    </header>
+    <main>
+        <div id="time-component">
+            <p id="hour"></p>
+            <p id="minutes"></p>
+            <p id="seconds"></p>
+            <p id="meridiem"></p>
+        </div>
+        <div id="quote-component" class="flex flex-direction-column justify-content-center align-items-center">
+            <p id="content">We make our own fortunes and we call them fate.</p>
+            <p id="author">Benjamin Disraeli</p>
+        </div>
+        <div class="flex justify-content-space-between align-items-center">
+            <div id="scroll-down-container">
+                <a href="#hero-wrapper">
+                    <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
+                        <path d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>
+                    </svg>
+                </a>
+                <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                <path d="M12 19.625 4.375 12l1.075-1.075 5.8 5.825V4.375h1.5V16.75l5.8-5.825L19.625 12Z"/>
+                </svg>
+            </div>
+        </div>
+    </main>
+    <footer class="flex justify-content-space-between align-items-center">
+        <p>&copy;<span id="copyright"></span> Made with <span id="hearts">&hearts;</span> by 
+            <a href="https://twitter.com/rochekollie">Roche Kollie</a>
+        </p>
+        <p>Photo by
+            <a href="https://unsplash.com/">Jane Patterson</a>
+        </p>
+    </footer>
 </div>
-    <div class="scroll-snap-wrapper">
+    <!-- <div class="scroll-snap-wrapper">
         <header id="header">
             <div class="wrapper">
                 <div id="site-branding-wrapper">
@@ -462,7 +454,7 @@
             </div>
         </footer>
     </div>
-</div>
+</div> -->
 <script src="./index.js" type="module"></script>
 </body>
 
