@@ -269,7 +269,7 @@ header nav ul li a {
 }
 
 #date-component, #weather-component {
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 #city {
@@ -345,6 +345,7 @@ footer {
 }
 
 #scroll-down-icon {
+    padding: 0.5rem;
     width: auto;
     height: auto;
     fill: #fff;
@@ -368,17 +369,17 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 10px;
-    --h-padding: 23px;
-    --v-padding: 9px;
-    padding: var(--v-padding) var(--h-padding) calc(var(--v-padding) + 1px);
+    /* --h-padding: 23px;
+    --v-padding: 9px; */
+    /* padding: var(--v-padding) var(--h-padding) calc(var(--v-padding) + 1px); */
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, var(--opacity-stop-2));
-    border: 2px solid rgba(255, 255, 255, var(--opacity-stop-6));
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-round);
-    box-shadow: 0 0 12px #00000026;
-    color: #fff;
+    /* box-shadow: 0 0 12px #00000026; */
+    fill: #fff;
     cursor: pointer;
     font-size: .9375rem;
     font-weight: 500;
@@ -394,13 +395,9 @@ footer {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
     border: solid 1px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 0.5rem;
-    width: auto;
-    height: auto;
+    border-radius: 50%;
     text-decoration: 0.1rem underline dashed #fff;
     --webkit-text-decoration: 0.1rem underline dashed #fff;
-    animation: freeze 0.5s ease-in-out;
     transition: all 0.3s ease-in-out;
     animation-iteration-count: infinite;
 }
