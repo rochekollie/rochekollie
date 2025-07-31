@@ -1,65 +1,64 @@
 export const dateFormatter = {
   get date() {
-      return new Date().getDate();
+    return new Date().getDate();
   },
 
-  get day(){
-      return new Date().toLocaleString(undefined, {weekday: 'long'});
+  get day() {
+    return new Date().toLocaleString(undefined, { weekday: 'long' });
   },
 
-  get month(){
-      return new Date().toLocaleString(undefined, {month: 'long'});
+  get month() {
+    return new Date().toLocaleString(undefined, { month: 'long' });
   },
 
-  get year(){
-      return new Date().getFullYear();
+  get year() {
+    return new Date().getFullYear();
   },
-  
+
   get meridian() {
     return new Date().getHours() >= 12 ? 'PM' : 'AM';
   },
 
-  get time(){
+  get time() {
     return new Date().toLocaleTimeString();
   },
 
-  get monthNumber(){
-      return new Date().getMonth() + 1;
+  get monthNumber() {
+    return new Date().getMonth() + 1;
   },
 
-  get dateText(){
+  get dateText() {
     return new Date().toLocaleDateString();
   },
 
-  get shortDay(){
-    return new Date().toLocaleString(undefined, {weekday: 'short'});
+  get shortDay() {
+    return new Date().toLocaleString(undefined, { weekday: 'short' });
   },
 
-  get shortMonth(){
-    return new Date().toLocaleString(undefined, {month: 'short'});
+  get shortMonth() {
+    return new Date().toLocaleString(undefined, { month: 'short' });
   },
 
-  get shortYear(){
-    return parseInt(new Date().toLocaleString(undefined, {year: '2-digit'}));
+  get shortYear() {
+    return parseInt(new Date().toLocaleString(undefined, { year: '2-digit' }), 10);
   },
 
-  
-  get shortDateText(){
-    return new Date().toLocaleDateString(undefined, {weekday: 'short', month: 'short', day: 'numeric'});
+  get shortDateText() {
+    return new Date().toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
   },
 
-  get longDateText(){
-    return new Date().toLocaleDateString(undefined, {weekday: 'long', month: 'long', day: 'numeric'});
+  get longDateText() {
+    return new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
   },
 
-  get shortTimeText(){
-    return new Date().toLocaleTimeString(undefined, {hour: 'numeric', minute: 'numeric'});
+  get shortTimeText() {
+    return new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: 'numeric' });
   },
 
-  get longTimeText(){
-    return new Date().toLocaleTimeString(undefined, {hour: 'numeric', minute: 'numeric', second: 'numeric'});
+  get longTimeText() {
+    return new Date().toLocaleTimeString(undefined, { hour: 'numeric', minute: 'numeric', second: 'numeric' });
   },
-}
+};
 
 export const koreDb = {
   /**
@@ -67,7 +66,7 @@ export const koreDb = {
    * @param key  - the key to save the data to.
    * @param data - the data to save.
   */
-  write(db){
+  write(db) {
     localStorage.setItem(db, JSON.stringify(db));
   },
 
@@ -76,28 +75,28 @@ export const koreDb = {
    * @param key - the key to retrieve the data from.
    * @returns {object} - the data retrieved from the local storage.
   */
-  read(db){
+  read(db) {
     if (!localStorage.getItem(db)) {
       const widget = {
-          day: dateFormatter.day,
-          month: dateFormatter.month,
-          date: dateFormatter.date,
-          year: dateFormatter.year,
-          backgroundImage: db.backgroundImage,
-          photographer: db.backgroundImage,
-          quote: db.backgroundImage,
-          author: db.backgroundImage,
-          preference: 
+        day: dateFormatter.day,
+        month: dateFormatter.month,
+        date: dateFormatter.date,
+        year: dateFormatter.year,
+        backgroundImage: db.backgroundImage,
+        photographer: db.backgroundImage,
+        quote: db.backgroundImage,
+        author: db.backgroundImage,
+        preference:
             {
               theme: db.preference.theme,
-              font: db.preference.font
-            }
+              font: db.preference.font,
+            },
       };
       localStorage.setItem(db, JSON.stringify(widget));
     }
     return JSON.parse(localStorage.getItem(db));
-  }
-}
+  },
+};
 
 /**
  * Generate a random hex color
@@ -110,7 +109,7 @@ export const getRandomColor = () => {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
-}
+};
 
 /**
  * Generate a random hex color
@@ -123,7 +122,7 @@ export const getContrastYIQ = (hexColor) => {
   const b = parseInt(hexColor.substr(5, 2), 16);
   const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
   return (yiq >= 128) ? 'black' : 'white';
-}
+};
 
 export const mergeSort = (a, b) => {
   const result = [];
@@ -147,4 +146,4 @@ export const mergeSort = (a, b) => {
     j++;
   }
   return result;
-}
+};

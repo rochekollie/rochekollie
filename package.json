@@ -146,6 +146,7 @@
     "path-key": "^3.1.1",
     "path-parse": "^1.0.7",
     "prelude-ls": "^1.2.1",
+    "prettier": "^3.6.2",
     "punycode": "^2.3.0",
     "queue-microtask": "^1.2.3",
     "regexp.prototype.flags": "^1.5.0",

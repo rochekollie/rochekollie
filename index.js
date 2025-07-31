@@ -1,4 +1,4 @@
-import { koreDb} from './kore/kore.js'
+import { koreDb } from './kore/kore.js';
 
 const backgroundComponent = document.getElementById('daily-image');
 const day = document.getElementById('day');
@@ -14,7 +14,7 @@ const author = document.getElementById('author');
 window.onload = function () {
   const db = koreDb.read('__01db17__');
   console.log(db);
-  //if the date changes, fetch new quote and background image
+  // if the date changes, fetch new quote and background image
   if (isNewDay(db.dateNumber)) {
     // const dailyImage = getDailyImage().then((response) => {
     //   return { photographer, image } = response;
@@ -26,7 +26,7 @@ window.onload = function () {
     const TOTAL_IMAGES = 100;
     const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
     const localBackgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
-    const photographer = 'Unsplash.com'
+    const photographer = 'Unsplash.com';
 
     // Dislay the data from storage
     backgroundComponent.src = localBackgroundImage;
@@ -35,23 +35,21 @@ window.onload = function () {
     koreDb.write('__01db17__', db);
     console.log(db);
   } else {
-    const db = koreDb.read()
+    const db = koreDb.read();
     // Dislay the data from storage
     backgroundComponent.src = db.backgroundImage;
   }
+};
+
+try {
+  // dateComponent.textContent = dailyWidget.longDateText;
+  // timeComponent.textContent = dailyWidget.shortTimeText;
+
+  // Set copyright year here
+  document.getElementById('copyright').textContent = new Date().getFullYear();
+} catch (error) {
+  console.log(error);
 }
-
-
-  try {
-    //dateComponent.textContent = dailyWidget.longDateText;
-    //timeComponent.textContent = dailyWidget.shortTimeText;
-
-    // Set copyright year here
-    document.getElementById('copyright').textContent = new Date().getFullYear();
-
-  } catch (error) {
-    console.log(error);
-  }
 
 // Update the date and time every second
 
@@ -66,7 +64,6 @@ const getDailyQuote = async () => {
   return await response.json();
 };
 
-
 /**
  * Gets a imagefrom the API and returns the data in a JSON format.
  * @returns {Promise<Response>} - the data in a JSON format.
@@ -78,14 +75,11 @@ const getDailyImage = async () => {
   return await response.json();
 };
 
-
 /**
  * Checks if the current date is the same as the date saved in the local storage.
  * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
  */
 const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 10);
-
-
 
 const logo = document.getElementById('logo');
 // logo.addEventListener('mouseleave', () => {
