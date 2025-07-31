@@ -1,6 +1,6 @@
-import { koreDb } from './kore/kore.js';
+import { koreDb } from './kore/kore';
 
-const backgroundComponent = document.getElementById('daily-image');
+const dailyWidget = document.getElementById('daily-widget');
 const day = document.getElementById('day');
 const month = document.getElementById('month');
 const date = document.getElementById('date');
@@ -11,9 +11,14 @@ const time = document.getElementById('time');
 const quote = document.getElementById('quote');
 const author = document.getElementById('author');
 
-window.onload = function () {
+/**
+ * Checks if the current date is the same as the date saved in the local storage.
+ * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
+ */
+const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 10);
+
+window.onload = () => {
   const db = koreDb.read('__01db17__');
-  console.log(db);
   // if the date changes, fetch new quote and background image
   if (isNewDay(db.dateNumber)) {
     // const dailyImage = getDailyImage().then((response) => {
@@ -29,15 +34,14 @@ window.onload = function () {
     const photographer = 'Unsplash.com';
 
     // Dislay the data from storage
-    backgroundComponent.src = localBackgroundImage;
+    dailyWidget.src = localBackgroundImage;
 
     // Save the widget to the database widgets
     koreDb.write('__01db17__', db);
-    console.log(db);
   } else {
     const db = koreDb.read();
     // Dislay the data from storage
-    backgroundComponent.src = db.backgroundImage;
+    dailyWidget.src = db.backgroundImage;
   }
 };
 
@@ -75,11 +79,6 @@ const getDailyImage = async () => {
   return await response.json();
 };
 
-/**
- * Checks if the current date is the same as the date saved in the local storage.
- * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
- */
-const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 10);
 
 const logo = document.getElementById('logo');
 // logo.addEventListener('mouseleave', () => {
