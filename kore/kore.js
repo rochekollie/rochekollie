@@ -66,8 +66,8 @@ export const koreDb = {
    * @param key  - the key to save the data to.
    * @param data - the data to save.
   */
-  write(db) {
-    localStorage.setItem(db, JSON.stringify(db));
+  write(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
   },
 
   /**
@@ -75,26 +75,27 @@ export const koreDb = {
    * @param key - the key to retrieve the data from.
    * @returns {object} - the data retrieved from the local storage.
   */
-  read(db) {
-    if (!localStorage.getItem(db)) {
-      const widget = {
-        day: dateFormatter.day,
-        month: dateFormatter.month,
-        date: dateFormatter.date,
-        year: dateFormatter.year,
-        backgroundImage: db.backgroundImage,
-        photographer: db.backgroundImage,
-        quote: db.backgroundImage,
-        author: db.backgroundImage,
-        preference:
-            {
-              theme: db.preference.theme,
-              font: db.preference.font,
-            },
-      };
-      localStorage.setItem(db, JSON.stringify(widget));
+  read(key) {
+    if (!localStorage.getItem(key)) {
+      // const widget = {
+      //   day: dateFormatter.day,
+      //   month: dateFormatter.month,
+      //   date: dateFormatter.date,
+      //   year: dateFormatter.year,
+      //   backgroundImage: key.backgroundImage,
+      //   photographer: key.backgroundImage,
+      //   quote: key.backgroundImage,
+      //   author: key.backgroundImage,
+      //   preference:
+      //       {
+      //         theme: key.preference.theme,
+      //         font: key.preference.font,
+      //       },
+      // };
+      localStorage.setItem(key, JSON.stringify(false));
+      // localStorage.setItem(key, JSON.stringify(widget));
     }
-    return JSON.parse(localStorage.getItem(db));
+    return JSON.parse(localStorage.getItem(key));
   },
 };
 
