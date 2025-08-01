@@ -1,4 +1,4 @@
-import { koreDb } from './kore/kore';
+import { koreDb } from './kore/kore.js';
 
 const dailyWidget = document.getElementById('daily-widget');
 const day = document.getElementById('day');
@@ -19,6 +19,7 @@ const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 1
 
 window.onload = () => {
   const db = koreDb.read('__01db17__');
+  console.log('DB says: ', db);
   // if the date changes, fetch new quote and background image
   if (isNewDay(db.dateNumber)) {
     // const dailyImage = getDailyImage().then((response) => {
@@ -28,13 +29,12 @@ window.onload = () => {
     //     return { author, content } = response;
     // });
 
+    // Get a random daily
     const TOTAL_IMAGES = 100;
     const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-    const localBackgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
-    const photographer = 'Unsplash.com';
+    const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
 
-    // Dislay the data from storage
-    dailyWidget.src = localBackgroundImage;
+    dailyWidget.style.backgroundImage = `url(${backgroundImage})`;
 
     // Save the widget to the database widgets
     koreDb.write('__01db17__', db);
