@@ -1,14 +1,8 @@
 import { keys } from './kore/keys.js';
-import { saveDatabase, getDatabase, dateFormatter } from './kore/kore.js';
+import { saveDailyWidget, getDailyWidget, dateFormatter } from './kore/kore.js';
 
 /**
- * Checks if the current date is the same as the date saved in the local storage.
- * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
- */
-const isNewDay = (date) => date !== new Date().toLocaleDateString();
-
-/**
- * Gets a imagefrom the API and returns the data in a JSON format.
+ * Gets a image from the API and returns the data in a JSON format.
  * @returns {Promise<Response>} - the data in a JSON format.
  */
 const getUnsplashImageByQuery = async (query) => {
@@ -20,47 +14,59 @@ const getUnsplashImageByQuery = async (query) => {
 // When the content loads,
 window.onload = () => {
   // set up the database.
-  let database = getDatabase('koreDb');
+  let dailyWidget = getDailyWidget();
   // Next, comapre the most recent date in the database with the current date:
-  if (database.date === undefined || isNewDay(database.date)) {
-    // If the most recent date in database is today is older than today,
-    // get a new background image usign Unsplash API for today
+  if (dailyWidget.date === undefined || dailyWidget.date !== new Date().toLocaleDateString()) {
     getUnsplashImageByQuery('background').then((response) => {
-      console.log(response);
       if (response && response.urls && response.urls.full) {
-        // if the the request is successful, save the image in the database
-        database.background.url = response.urls.full;
-        database.background.photographer = response.user.name;
+        dailyWidget.background.url = response.urls.full;
+        dailyWidget.background.photographer = response.user.name || 'Unsplash.com';
       } else {
-        // if the request fails, save a local image in the database
         const TOTAL_IMAGES = 100;
         const random = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-        database.backgroundImage = `assets/images/backgrounds/dynamic/${random}.jpeg`;
+        dailyWidget.background.url = `assets/images/backgrounds/dynamic/${random}.jpeg`;
+        dailyWidget.background.photographer = 'Unsplash.com';
       }
     }).catch((error) => {
       throw new Error(error);
     }).finally(() => {
-      // finally update the database and save the records
-      database.date = new Date().toLocaleDateString();
-      saveDatabase('koreDb', database);
+      dailyWidget.date = new Date().toLocaleDateString();
+      saveDailyWidget('dailyWidget', dailyWidget);
 
-      database = getDatabase('koreDb'); // get a fresh copy of the database
+      dailyWidget = getDailyWidget(); // get a fresh copy of the database
       // loads require data on the page
-      document.getElementById('daily-widget').style.backgroundImage = `url(${database.background.url})`;
+      document.getElementById('daily-widget').style.backgroundImage = `url(${dailyWidget.background.url})`;
       document.getElementById('day').textContent = dateFormatter.day;
       document.getElementById('month').textContent = dateFormatter.month;
       document.getElementById('date').textContent = dateFormatter.date;
-      document.getElementById('city').textContent = database.city;
-      document.getElementById('temperature').textContent = database.temperature;
-      document.getElementById('weather').textContent = database.weather;
-      document.getElementById('photographer').textContent = database.background.photographer;
+      document.getElementById('city').textContent = dailyWidget.city;
+      document.getElementById('temperature').textContent = dailyWidget.temperature;
+      document.getElementById('weather').textContent = dailyWidget.weather;
+      document.getElementById('photographer').textContent = dailyWidget.background.photographer;
+      document.getElementById('time').textContent = dateFormatter.time;
       document.getElementById('copyright').textContent = new Date().getFullYear();
 
-      console.log(database)
+      // display time
+      setInterval(() => {
+        document.getElementById('time').textContent = dateFormatter.time;
+      }, 1000);
+
+      console.log(dailyWidget);
     });
   } else {
     // loads the data from the database
-    database = getDatabase('koreDb');
+    dailyWidget = getDailyWidget(); // get a fresh copy of the database
+    // loads require data on the page
+    document.getElementById('daily-widget').style.backgroundImage = `url(${dailyWidget.background.url})`;
+    document.getElementById('day').textContent = dateFormatter.day;
+    document.getElementById('month').textContent = dateFormatter.month;
+    document.getElementById('date').textContent = dateFormatter.date;
+    document.getElementById('city').textContent = dailyWidget.city;
+    document.getElementById('temperature').textContent = dailyWidget.temperature;
+    document.getElementById('weather').textContent = dailyWidget.weather;
+    document.getElementById('photographer').textContent = dailyWidget.background.photographer;
+    document.getElementById('time').textContent = dateFormatter.time;
+    document.getElementById('copyright').textContent = new Date().getFullYear();
   }
 };
 

@@ -62,20 +62,19 @@ export const dateFormatter = {
 
 /**
    * Saves given data to the local storage.
-   * @param databaseName  - the key to save the data to.
-   * @param database - the data to save.
+   * @param widgetName  - the key to save the data to.
+   * @param widget - the data to save.
   */
-export const saveDatabase = (databaseName, database) => {
-  localStorage.setItem(databaseName, JSON.stringify(database));
+export const saveDailyWidget = (widgetName, widget) => {
+  localStorage.setItem(widgetName, JSON.stringify(widget));
 };
 
 /**
    * Retrieves data from the local storage.
-   * @param databaseName - the key to retrieve the data from.
    * @returns {object} - the data retrieved from the local storage.
   */
-export const getDatabase = (databaseName) => {
-  const database = {
+export const getDailyWidget = () => {
+  const widget = {
     date: '',
     background: {
       url: '',
@@ -89,10 +88,12 @@ export const getDatabase = (databaseName) => {
     theme: '',
   };
 
-  if (!localStorage.getItem(databaseName)) {
-    localStorage.setItem('koreDb', JSON.stringify(database));
+  const widgetName = 'dailyWidget';
+
+  if (!localStorage.getItem(widgetName)) {
+    localStorage.setItem(widgetName, JSON.stringify(widget));
   }
-  return JSON.parse(localStorage.getItem(databaseName));
+  return JSON.parse(localStorage.getItem(widgetName));
 };
 
 /**
