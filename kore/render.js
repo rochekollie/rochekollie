@@ -6,61 +6,61 @@
 export function render(element, content) {
   const HTMLTags = {
     texts: [
-      "H1",
-      "H2",
-      "H3",
-      "H4",
-      "H5",
-      "H6",
-      "P",
-      "SPAN",
-      "DIV",
-      "PRE",
-      "LI",
-      "DT",
-      "DD",
-      "BLOCKQUOTE",
-      "CAPTION",
-      "FIGCAPTION",
-      "LABEL",
-      "LEGEND",
-      "BUTTON",
-      "OPTION",
-      "TEXTAREA",
-      "TITLE"
+      'H1',
+      'H2',
+      'H3',
+      'H4',
+      'H5',
+      'H6',
+      'P',
+      'SPAN',
+      'DIV',
+      'PRE',
+      'LI',
+      'DT',
+      'DD',
+      'BLOCKQUOTE',
+      'CAPTION',
+      'FIGCAPTION',
+      'LABEL',
+      'LEGEND',
+      'BUTTON',
+      'OPTION',
+      'TEXTAREA',
+      'TITLE',
     ],
-    values: ["INPUT", "SELECT", "TEXTAREA"],
+    values: ['INPUT', 'SELECT', 'TEXTAREA'],
     srcs: [
-      "IMG",
-      "A",
-      "IFRAME",
-      "VIDEO",
-      "AUDIO",
-      "SOURCE",
-      "TRACK",
-      "EMBED",
-      "OBJECT",
-      "PARAM",
-      "SCRIPT",
-      "LINK",
-      "STYLE",
-      "CANVAS",
-      "SVG",
-      "MATH",
-      "FRAME",
-      "IFRAME",
-      "APPLET",
-      "AREA",
-      "BASE",
-      "BGSOUND",
-      "IMAGE"
+      'IMG',
+      'A',
+      'IFRAME',
+      'VIDEO',
+      'AUDIO',
+      'SOURCE',
+      'TRACK',
+      'EMBED',
+      'OBJECT',
+      'PARAM',
+      'SCRIPT',
+      'LINK',
+      'STYLE',
+      'CANVAS',
+      'SVG',
+      'MATH',
+      'FRAME',
+      'IFRAME',
+      'APPLET',
+      'AREA',
+      'BASE',
+      'BGSOUND',
+      'IMAGE',
     ],
-    hrefs: ["A", "AREA", "BASE"],
-    data: ["OBJECT"],
-    customTags: []
-  }
+    hrefs: ['A', 'AREA', 'BASE'],
+    data: ['OBJECT'],
+    customTags: [],
+  };
 
-  console.log(Object.values(HTMLTags))
+  console.log(Object.values(HTMLTags));
 
   // if (Object.values(HTMLTags).includes(element.nodeName)){
   //   console.log(element.nodeName)
@@ -91,7 +91,6 @@ export function render(element, content) {
 //   }
 }
 
-
 /**
  * Display a text or image content within a specified HTMLElement.
  * @param element - The HTMLElement to display the content in.
@@ -104,7 +103,7 @@ export function update(element, callbackFunc, interval) {
     console.log(error);
   }
 
-  if (interval){
+  if (interval) {
     setInterval(() => {
       try {
         callbackFunc();
@@ -112,6 +111,6 @@ export function update(element, callbackFunc, interval) {
       } catch (error) {
         console.log(error);
       }
-    }, interval)
+    }, interval);
   }
 }

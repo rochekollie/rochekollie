@@ -1,61 +1,68 @@
-import { koreDb } from './kore/kore.js';
-
-const dailyWidget = document.getElementById('daily-widget');
-const day = document.getElementById('day');
-const month = document.getElementById('month');
-const date = document.getElementById('date');
-const city = document.getElementById('city');
-const temperature = document.getElementById('temperature');
-const weather = document.getElementById('weather');
-const time = document.getElementById('time');
-const quote = document.getElementById('quote');
-const author = document.getElementById('author');
+import { keys } from './kore/keys.js';
+import { saveDatabase, getDatabase, dateFormatter } from './kore/kore.js';
 
 /**
  * Checks if the current date is the same as the date saved in the local storage.
  * @returns {boolean} - true if the current date is the same as the date saved in the local storage.
  */
-const isNewDay = (dateNumber) => new Date().getDate() !== parseInt(dateNumber, 10);
+const isNewDay = (date) => date !== new Date().toLocaleDateString();
 
-window.onload = () => {
-  const db = koreDb.read('__01db17__');
-  console.log('DB says: ', db);
-  // if the date changes, fetch new quote and background image
-  if (isNewDay(db.dateNumber)) {
-    // const dailyImage = getDailyImage().then((response) => {
-    //   return { photographer, image } = response;
-    // });
-    // const dailyQuote = getDailyQuote().then((response) => {
-    //     return { author, content } = response;
-    // });
-
-    // Get a random daily
-    const TOTAL_IMAGES = 100;
-    const randomNumber = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-    const backgroundImage = `assets/images/backgrounds/dynamic/${randomNumber}.jpeg`;
-
-    dailyWidget.style.backgroundImage = `url(${backgroundImage})`;
-
-    // Save the widget to the database widgets
-    koreDb.write('__01db17__', db);
-  } else {
-    const db = koreDb.read();
-    // Dislay the data from storage
-    dailyWidget.src = db.backgroundImage;
-  }
+/**
+ * Gets a imagefrom the API and returns the data in a JSON format.
+ * @returns {Promise<Response>} - the data in a JSON format.
+ */
+const getUnsplashImageByQuery = async (query) => {
+  const promise = fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`);
+  const response = await promise;
+  return response.json();
 };
 
-try {
-  // dateComponent.textContent = dailyWidget.longDateText;
-  // timeComponent.textContent = dailyWidget.shortTimeText;
+// When the content loads,
+window.onload = () => {
+  // set up the database.
+  let database = getDatabase('koreDb');
+  // Next, comapre the most recent date in the database with the current date:
+  if (database.date === undefined || isNewDay(database.date)) {
+    // If the most recent date in database is today is older than today,
+    // get a new background image usign Unsplash API for today
+    getUnsplashImageByQuery('background').then((response) => {
+      console.log(response);
+      if (response && response.urls && response.urls.full) {
+        // if the the request is successful, save the image in the database
+        database.background.url = response.urls.full;
+        database.background.photographer = response.user.name;
+      } else {
+        // if the request fails, save a local image in the database
+        const TOTAL_IMAGES = 100;
+        const random = Math.floor(Math.random() * TOTAL_IMAGES + 1);
+        database.backgroundImage = `assets/images/backgrounds/dynamic/${random}.jpeg`;
+      }
+    }).catch((error) => {
+      throw new Error(error);
+    }).finally(() => {
+      // finally update the database and save the records
+      database.date = new Date().toLocaleDateString();
+      saveDatabase('koreDb', database);
 
-  // Set copyright year here
-  document.getElementById('copyright').textContent = new Date().getFullYear();
-} catch (error) {
-  console.log(error);
-}
+      database = getDatabase('koreDb'); // get a fresh copy of the database
+      // loads require data on the page
+      document.getElementById('daily-widget').style.backgroundImage = `url(${database.background.url})`;
+      document.getElementById('day').textContent = dateFormatter.day;
+      document.getElementById('month').textContent = dateFormatter.month;
+      document.getElementById('date').textContent = dateFormatter.date;
+      document.getElementById('city').textContent = database.city;
+      document.getElementById('temperature').textContent = database.temperature;
+      document.getElementById('weather').textContent = database.weather;
+      document.getElementById('photographer').textContent = database.background.photographer;
+      document.getElementById('copyright').textContent = new Date().getFullYear();
 
-// Update the date and time every second
+      console.log(database)
+    });
+  } else {
+    // loads the data from the database
+    database = getDatabase('koreDb');
+  }
+};
 
 /**
  * Gets a random quote from the API and returns the data in a JSON format.
@@ -67,18 +74,6 @@ const getDailyQuote = async () => {
   const response = await promise;
   return await response.json();
 };
-
-/**
- * Gets a imagefrom the API and returns the data in a JSON format.
- * @returns {Promise<Response>} - the data in a JSON format.
- */
-const getDailyImage = async () => {
-  const characterLimit = 50;
-  const promise = fetch(`https://api.quotable.io/random?maxLength=${characterLimit}`);
-  const response = await promise;
-  return await response.json();
-};
-
 
 const logo = document.getElementById('logo');
 // logo.addEventListener('mouseleave', () => {
@@ -97,15 +92,14 @@ const navLinks = document.querySelectorAll('nav ul li a');
 //   });
 // });
 
-// style the filled form input and textarea border color when the input loses focus and the input is not empty
-const formInputs = document.querySelectorAll('input, textarea');
-
-formInputs.forEach((input) => {
-  input.addEventListener('blur', () => {
-    if (input.value !== '') {
-      input.classList.add('filled');
+// style the form text fields controls as the state changes
+const textControls = document.querySelectorAll('input, textarea');
+textControls.forEach((control) => {
+  control.addEventListener('blur', () => {
+    if (control.value !== '') {
+      control.classList.add('filled');
     } else {
-      input.classList.remove('filled');
+      control.classList.remove('filled');
     }
   });
 });

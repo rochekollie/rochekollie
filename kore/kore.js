@@ -60,43 +60,39 @@ export const dateFormatter = {
   },
 };
 
-export const koreDb = {
-  /**
+/**
    * Saves given data to the local storage.
-   * @param key  - the key to save the data to.
-   * @param data - the data to save.
+   * @param databaseName  - the key to save the data to.
+   * @param database - the data to save.
   */
-  write(key, data) {
-    localStorage.setItem(key, JSON.stringify(data));
-  },
+export const saveDatabase = (databaseName, database) => {
+  localStorage.setItem(databaseName, JSON.stringify(database));
+};
 
-  /**
+/**
    * Retrieves data from the local storage.
-   * @param key - the key to retrieve the data from.
+   * @param databaseName - the key to retrieve the data from.
    * @returns {object} - the data retrieved from the local storage.
   */
-  read(key) {
-    if (!localStorage.getItem(key)) {
-      // const widget = {
-      //   day: dateFormatter.day,
-      //   month: dateFormatter.month,
-      //   date: dateFormatter.date,
-      //   year: dateFormatter.year,
-      //   backgroundImage: key.backgroundImage,
-      //   photographer: key.backgroundImage,
-      //   quote: key.backgroundImage,
-      //   author: key.backgroundImage,
-      //   preference:
-      //       {
-      //         theme: key.preference.theme,
-      //         font: key.preference.font,
-      //       },
-      // };
-      localStorage.setItem(key, JSON.stringify(false));
-      // localStorage.setItem(key, JSON.stringify(widget));
-    }
-    return JSON.parse(localStorage.getItem(key));
-  },
+export const getDatabase = (databaseName) => {
+  const database = {
+    date: '',
+    background: {
+      url: '',
+      photographer: '',
+    },
+    quote: {
+      content: '',
+      author: '',
+      keywords: [],
+    },
+    theme: '',
+  };
+
+  if (!localStorage.getItem(databaseName)) {
+    localStorage.setItem('koreDb', JSON.stringify(database));
+  }
+  return JSON.parse(localStorage.getItem(databaseName));
 };
 
 /**
@@ -106,7 +102,7 @@ export const koreDb = {
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i + 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
