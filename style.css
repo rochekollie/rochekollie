@@ -264,13 +264,23 @@ header nav ul li a {
 /* make #time glassy or glasmorphism or like apple liquid glass */
 
 
-#date-component, #time-component {
-    font-family: var(--Inter);
+#date-component{
+    /* font-family: var(--Inter); */
     font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 #date-component, #weather-component {
     gap: 0.25rem;
+}
+
+#time {
+    font-size: clamp(1rem, 3vw, 3.5rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.99);
+}
+
+#photographer {
+    text-transform: capitalize;
 }
 
 #city {
@@ -285,7 +295,6 @@ header nav ul li a {
     line-height: 1;
     margin: 1rem auto;
     max-width: 30ch;
-    text-shadow: 
 }
 
 #author-component, #time-component {
