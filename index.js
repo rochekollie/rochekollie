@@ -11,6 +11,18 @@ const getUnsplashImageByQuery = async (query) => {
   return response.json();
 };
 
+/**
+ * Gets a random quote from the API and returns the data in a JSON format.
+ * @returns {Promise<Response>} - the data in a JSON format.
+ */
+const getDailyQuote = async () => {
+  const characterLimit = 50;
+  // const promise = fetch(`https://api.quotable.io/random?maxLength=${characterLimit}`);
+  const promise = fetch('https://api.quotable.io/search/quotes/?query=sunny&limit=50&page=1');
+  const response = await promise;
+  return response.json();
+};
+
 // When the content loads,
 window.onload = () => {
   // display time
@@ -20,17 +32,16 @@ window.onload = () => {
 
   // set up the database.
   let dailyWidget = getDailyWidget();
-  // Next, comapre the most recent date in the database with the current date:
   if (dailyWidget.date === undefined || dailyWidget.date !== new Date().toLocaleDateString()) {
     getUnsplashImageByQuery('background').then((response) => {
       if (response && response.urls && response.urls.full) {
         dailyWidget.background.url = response.urls.full;
-        dailyWidget.background.photographer = response.user.name || 'Unsplash.com';
+        dailyWidget.background.owner = response.user.name || 'Unsplash.com';
       } else {
         const TOTAL_IMAGES = 100;
         const random = Math.floor(Math.random() * TOTAL_IMAGES + 1);
         dailyWidget.background.url = `assets/images/backgrounds/dynamic/${random}.jpeg`;
-        dailyWidget.background.photographer = 'Unsplash.com';
+        dailyWidget.background.owner = 'Unsplash.com';
       }
     }).catch((error) => {
       throw new Error(error);
@@ -47,9 +58,30 @@ window.onload = () => {
       document.getElementById('city').textContent = dailyWidget.city;
       document.getElementById('temperature').textContent = dailyWidget.temperature;
       document.getElementById('weather').textContent = dailyWidget.weather;
-      document.getElementById('photographer').textContent = dailyWidget.background.photographer;
+      document.getElementById('owner').textContent = dailyWidget.background.owner;
       document.getElementById('time').textContent = dateFormatter.shortTimeText;
       document.getElementById('copyright').textContent = new Date().getFullYear();
+    });
+
+    // get daily quote
+    getDailyQuote().then((response) => {
+      if (response) {
+        console.log(response);
+        //dailyWidget.quote.content = response.content;
+        //dailyWidget.quote.author = response.author;
+      } else {
+        //dailyWidget.quote.content = 'Empower people and enrich lives.';
+        //dailyWidget.quote.author = 'Roche Kollie';
+      }
+    }).catch((error) => {
+      throw new Error(error);
+    }).finally(() => {
+      dailyWidget.date = new Date().toLocaleDateString();
+      saveDailyWidget('dailyWidget', dailyWidget);
+
+      dailyWidget = getDailyWidget(); // get a fresh copy of the database
+      document.getElementById('quote').textContent = dailyWidget.quote.content;
+      document.getElementById('author').textContent = dailyWidget.quote.author;
     });
   } else {
     // loads the data from the database
@@ -62,23 +94,12 @@ window.onload = () => {
     document.getElementById('city').textContent = dailyWidget.city;
     document.getElementById('temperature').textContent = dailyWidget.temperature;
     document.getElementById('weather').textContent = dailyWidget.weather;
-    document.getElementById('photographer').textContent = dailyWidget.background.photographer;
+    document.getElementById('owner').textContent = dailyWidget.background.owner;
     document.getElementById('time').textContent = dateFormatter.shortTimeText;
     document.getElementById('copyright').textContent = new Date().getFullYear();
   }
 
   console.log(getDailyWidget());
-};
-
-/**
- * Gets a random quote from the API and returns the data in a JSON format.
- * @returns {Promise<Response>} - the data in a JSON format.
- */
-const getDailyQuote = async () => {
-  const characterLimit = 50;
-  const promise = fetch(`https://api.quotable.io/random?maxLength=${characterLimit}`);
-  const response = await promise;
-  return await response.json();
 };
 
 const logo = document.getElementById('logo');
