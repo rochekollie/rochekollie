@@ -13,6 +13,11 @@ const getUnsplashImageByQuery = async (query) => {
 
 // When the content loads,
 window.onload = () => {
+  // display time
+  setInterval(() => {
+    document.getElementById('time').textContent = dateFormatter.shortTimeText;
+  }, 1000);
+
   // set up the database.
   let dailyWidget = getDailyWidget();
   // Next, comapre the most recent date in the database with the current date:
@@ -43,15 +48,8 @@ window.onload = () => {
       document.getElementById('temperature').textContent = dailyWidget.temperature;
       document.getElementById('weather').textContent = dailyWidget.weather;
       document.getElementById('photographer').textContent = dailyWidget.background.photographer;
-      document.getElementById('time').textContent = dateFormatter.time;
+      document.getElementById('time').textContent = dateFormatter.shortTimeText;
       document.getElementById('copyright').textContent = new Date().getFullYear();
-
-      // display time
-      setInterval(() => {
-        document.getElementById('time').textContent = dateFormatter.time;
-      }, 1000);
-
-      console.log(dailyWidget);
     });
   } else {
     // loads the data from the database
@@ -65,9 +63,11 @@ window.onload = () => {
     document.getElementById('temperature').textContent = dailyWidget.temperature;
     document.getElementById('weather').textContent = dailyWidget.weather;
     document.getElementById('photographer').textContent = dailyWidget.background.photographer;
-    document.getElementById('time').textContent = dateFormatter.time;
+    document.getElementById('time').textContent = dateFormatter.shortTimeText;
     document.getElementById('copyright').textContent = new Date().getFullYear();
   }
+
+  console.log(getDailyWidget());
 };
 
 /**
