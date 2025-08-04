@@ -78,14 +78,14 @@ export const getDailyWidget = () => {
     date: '',
     background: {
       url: '',
-      photographer: '',
+      owner: '',
     },
     quote: {
       content: '',
       author: '',
-      keywords: [],
+      keywords: ['background'],
     },
-    theme: '',
+    theme: 'auto',
   };
 
   const widgetName = 'dailyWidget';
