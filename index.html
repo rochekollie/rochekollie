@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Roche Kollie - Fullstack Web Developer</title>
-    <meta content="Full-stack web developer specializing in building scalable web applications."
-          name="description">
-    <meta content="Roche Kollie" name="author">
-    <meta content="Roche Kollie, Full-stack web developer Web Developer, Frontend Engineer"
-          name="keywords">
-    <link href="./assets/images/profiles/rochekollie.jpeg" rel="shortcut icon">
+    <meta
+      content="Full-stack web developer specializing in building scalable web applications."
+      name="description"
+    />
+    <meta content="Roche Kollie" name="author" />
+    <meta
+      content="Roche Kollie, Full-stack web developer Web Developer, Frontend Engineer"
+      name="keywords"
+    />
+    <link
+      href="./assets/images/profiles/rochekollie.jpeg"
+      rel="shortcut icon"
+    />
     <!-- Google fonts -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,53 +25,67 @@
         href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet"> -->
 
-
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
-        <!-- main styles -->
-    <link href="./style.css" rel="stylesheet">
-</head>
-<body class="flex flex-direction-column justify-content-space-between">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main styles -->
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-direction-column justify-content-space-between">
     <div id="daily-widget">
-    <header>
+      <header>
         <div id="date-component" class="flex align-items-center">
-            <p id="day">Monday,</p>
-            <p id="month">July</p>
-            <p id="date">28</p>
+          <p id="date"></p>
         </div>
         <div class="flex align-items-center" id="weather-component">
-            <p id="temperature">77<sup>&deg;</sup></p>
-            <p id="weather">Sunny,</p>
-            <p id="city">York</p>
+          <p id="temperature">77<sup>&deg;</sup></p>
+          <p id="weather">Sunny,</p>
+          <p id="city">York</p>
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <div id="time-component">
-            <p id="time"></p>
+          <p id="time"></p>
         </div>
-        <div id="quote-component" class="flex flex-direction-column justify-content-center align-items-center">
-            <p id="quote">We make our own fortunes and we call them fate.</p>
-            <a href="#" id="author">Benjamin Disraeli</a>
+        <div id="render"></div>
+        <div
+          id="quote-component"
+          class="flex flex-direction-column justify-content-center align-items-center"
+        >
+          <p id="quote">Empower people and enrich lives.</p>
+          <a href="#" id="author">Roche Kollie</a>
         </div>
-    </main>
-    <footer class="flex justify-content-space-between align-items-center">
-        <p>&copy;<span id="copyright"></span> Made with <span id="hearts">&hearts;</span> by 
-            <a href="https://twitter.com/rochekollie">Roche Kollie</a>
+      </main>
+      <footer class="flex justify-content-space-between align-items-center">
+        <p>
+          &copy;<span id="copyright"></span> Made with
+          <span id="hearts">&hearts;</span> by
+          <a href="https://twitter.com/rochekollie">Roche Kollie</a>
         </p>
-        <div id="scroll-down-container">
-            <a href="#hero-wrapper">
-                <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40">
-                    <path d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"/>
-                </svg>
-            </a>
+        <!-- <div id="scroll-down-container">
+          <a href="#hero-wrapper">
+            <svg
+              id="scroll-down-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="40"
+              width="40"
+            >
+              <path
+                d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"
+              />
+            </svg>
+          </a>
+        </div> -->
+        <button id="refresh">Refresh</button>
+        <p>
+          Photo by
+          <a id="owner" href="https://unsplash.com/">Unsplash.com</a>
+        </p>
+      </footer>
     </div>
-        <p>Photo by
-            <a id="owner" href="https://unsplash.com/">Unsplash.com</a>
-        </p>
-    </footer>
-</div>
     <!-- <div class="scroll-snap-wrapper">
         <header id="header">
             <div class="wrapper">
@@ -454,7 +474,6 @@
         </footer>
     </div>
 </div> -->
-<script src="./index.js" type="module"></script>
-</body>
-
+    <script src="./index.js" type="module"></script>
+  </body>
 </html>
