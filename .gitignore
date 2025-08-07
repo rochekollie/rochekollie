@@ -5,6 +5,9 @@
 ./kore/keys.js
 keys.js
 
+./kore/playground.html
+./kore/render.js
+
 # idx
 .idx
 
