@@ -97,8 +97,8 @@ export const dailyWidget = {
     owner: '',
   },
   quote: {
-    content: 'Empower people and enrich lives.',
-    author: 'Roche Kollie',
+    content: 'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    author: 'Winston Churchill',
     keywords: [],
   },
   theme: {
