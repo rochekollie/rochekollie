@@ -16,10 +16,6 @@ export const dailyQuotes = [
     author: 'Theodore Roosevelt',
   },
   {
-    quote: 'The only thing we have to fear is fear itself.',
-    author: 'Franklin D. Roosevelt',
-  },
-  {
     quote: 'The only limit to our realization of tomorrow will be our doubts of today.',
     author: 'Franklin D. Roosevelt',
   },
@@ -30,14 +26,6 @@ export const dailyQuotes = [
   {
     quote: 'The only thing we have to fear is fear itself.',
     author: 'Franklin D. Roosevelt',
-  },
-  {
-    quote: 'The only limit to our realization of tomorrow will be our doubts of today.',
-    author: 'Franklin D. Roosevelt',
-  },
-  {
-    quote: 'Success is not in what you have, but who you are.',
-    author: 'Bo Bennett',
   },
 ];
 
