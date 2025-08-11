@@ -1,165 +1,90 @@
-import { keys } from "./kore_modules/keys.js";
+/* eslint-disable import/extensions */
+/* eslint-disable no-console */
+import { keys } from './kore/keys.js';
 import {
+  dateFormatter,
   saveDailyWidget,
   getDailyWidget,
-  dateFormatter,
-} from "./kore_modules/kore_modules.js";
+} from './kore/kore.js';
 
-/**
- * Gets a image from the API and returns the data in a JSON format.
- * @returns {Promise<Response>} - the data in a JSON format.
- */
-const getUnsplashImageByQuery = async (query) => {
-  const promise = fetch(
-    `https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`
-  );
-  const response = await promise;
-  return response.json();
-};
-
-/**
- * Gets a random quote from the API and returns the data in a JSON format.
- * @returns {Promise<Response>} - the data in a JSON format.
- */
-const getDailyQuote = async () => {
-  const characterLimit = 50;
-  // const promise = fetch(`https://api.quotable.io/random?maxLength=${characterLimit}`);
-  const promise = fetch(
-    "http://api.quotable.io/search/quotes/?query=love&limit=50&page=1"
-  );
-  const response = await promise;
-  return response.json();
-};
-
-// When the content loads,
+// when the content loads,
 window.onload = () => {
-
-  // refresh page
-  document.getElementById('refresh').addEventListener(('click'), (button) => {
+  // Debug button - Forcefully clear local storage.
+  document.getElementById('debug-button').addEventListener('click', () => {
     localStorage.clear();
     window.location.reload();
   });
 
   // display time
-  const dateElement = document.getElementById("date");
-  const timeElement = document.getElementById("time");
+  const dateComponent = document.getElementById('date');
+  const timeComponent = document.getElementById('time');
 
-  dateElement.textContent = dateFormatter.longDateText;
-  timeElement.textContent = dateFormatter.shortTimeText;
+  dateComponent.textContent = dateFormatter.longDateText;
+  timeComponent.textContent = dateFormatter.shortTimeText;
   setInterval(() => {
-    dateElement.textContent = dateFormatter.longDateText;
-    timeElement.textContent = dateFormatter.shortTimeText;
+    dateComponent.textContent = dateFormatter.longDateText;
+    timeComponent.textContent = dateFormatter.shortTimeText;
   }, 1000);
 
+  const dailyWidget = getDailyWidget('dailyWidget');
+
   // set up the database.
-  let dailyWidget = getDailyWidget();
-  if (
-    dailyWidget.date === undefined ||
-    dailyWidget.date !== new Date().toLocaleDateString()
-  ) {
-    getUnsplashImageByQuery("oceans")
-      .then((response) => {
-        if (response && response.urls && response.urls.full) {
-          dailyWidget.background.url = response.urls.full;
-          dailyWidget.background.owner = response.user.name;
-        } else {
-          const TOTAL_IMAGES = 100;
-          const random = Math.floor(Math.random() * TOTAL_IMAGES + 1);
-          dailyWidget.background.url = `assets/images/backgrounds/dynamic/${random}.jpeg`;
-          dailyWidget.background.owner = "Unsplash.com";
-        }
+  if (dailyWidget.date === undefined || dailyWidget.date !== new Date().toLocaleDateString()) {
+    console.log('The date has changed. Fetching new data.');
+    const randomArrayOfAerials = ['aerial ocean view', 'aerial nature view', 'aerial landscape view', 'aerial mountain view', 'aerial mountain view', 'aerial mountainview'];
+    const randomIndex = Math.floor(Math.random() * randomArrayOfAerials.length);
+    const query = randomArrayOfAerials[randomIndex];
+    const imageResponse = fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`);
+    // const quoteResponse = fetch('http://api.quotable.io/search/quotes/?query=love&limit=50&page=1');
+
+    Promise.all([imageResponse/** , quoteResponse */])
+      .then((response) => Promise.all(response.map((res) => res.json())))
+      .then((data) => {
+        const widget = dailyWidget;
+        widget.date = new Date().toLocaleDateString();
+
+        // get and display the background image
+        widget.background.url = data[0].urls.full;
+        widget.background.owner = data[0].user.name;
+        document.getElementById('daily-widget').style.backgroundImage = `url(${widget.background.url})`;
+        document.getElementById('owner').textContent = widget.background.owner;
+        document.getElementById('copyright').textContent = new Date().getFullYear();
+
+        // get and display the quote
+        // const quote = data[1].results[Math.floor(Math.random() * data[1].results.length)];
+        // widget.quote.text = quote.content;
+        // widget.quote.author = quote.author;
+        // document.getElementById('quote').textContent = widget.quote.text;
+        // document.getElementById('author').textContent = widget.quote.author;
+
+        // save the data
+        saveDailyWidget('dailyWidget', widget);
+        console.log('Daily widget saved.');
+        console.log(dailyWidget);
       })
       .catch((error) => {
-        throw new Error(error);
+        // log error and use the default local data.
+        console.log(`${error}`);
+        console.log('Using default data.');
+        document.getElementById('daily-widget').style.backgroundImage = `url(${dailyWidget.background.url})`;
+        document.getElementById('owner').textContent = dailyWidget.background.owner;
+        document.getElementById('copyright').textContent = new Date().getFullYear();
+        document.getElementById('quote').textContent = dailyWidget.quote.text;
+        document.getElementById('author').textContent = dailyWidget.quote.author;
+        // throw new Error(error.message);
       })
       .finally(() => {
-        dailyWidget.date = new Date().toLocaleDateString();
-        saveDailyWidget("dailyWidget", dailyWidget);
-
-        dailyWidget = getDailyWidget(); // get a fresh copy of the database
-        // loads require data on the page
-        document.getElementById("daily-widget").style.backgroundImage =
-          `url(${dailyWidget.background.url})`;
-        document.getElementById("city").textContent = dailyWidget.city;
-        document.getElementById("temperature").textContent =
-          dailyWidget.temperature;
-        document.getElementById("weather").textContent = dailyWidget.weather;
-        document.getElementById("owner").textContent =
-          dailyWidget.background.owner;
-        document.getElementById("copyright").textContent =
-          new Date().getFullYear();
+        console.log('Finally done fetching.');
       });
-
-    // get daily quote
-    getDailyQuote()
-      .then((response) => {
-        if (response) {
-          console.log(response);
-          //dailyWidget.quote.content = response.content;
-          //dailyWidget.quote.author = response.author;
-        } else {
-          //dailyWidget.quote.content = 'Empower people and enrich lives.';
-          //dailyWidget.quote.author = 'Roche Kollie';
-        }
-      })
-      .catch((error) => {
-        //throw new Error(error);
-        console.log(error.message);
-      })
-      .finally(() => {
-        dailyWidget.date = new Date().toLocaleDateString();
-        saveDailyWidget("dailyWidget", dailyWidget);
-
-        dailyWidget = getDailyWidget(); // get a fresh copy of the database
-        document.getElementById("quote").textContent =
-          dailyWidget.quote.content;
-        document.getElementById("author").textContent =
-          dailyWidget.quote.author;
-      });
-  } else {
-    // loads the data from the database
-    dailyWidget = getDailyWidget(); // get a fresh copy of the database
-    // loads require data on the page
-    document.getElementById("daily-widget").style.backgroundImage =
-      `url(${dailyWidget.background.url})`;
-    document.getElementById("quote").textContent = dailyWidget.quote.content;
-    document.getElementById("author").textContent = dailyWidget.quote.author;
-    document.getElementById("city").textContent = dailyWidget.city;
-    document.getElementById("temperature").textContent =
-      dailyWidget.temperature;
-    document.getElementById("weather").textContent = dailyWidget.weather;
-    document.getElementById("owner").textContent = dailyWidget.background.owner;
-    document.getElementById("copyright").textContent = new Date().getFullYear();
+  } else { // if the date is the same, use the saved widget.
+    console.log('The date is the same. Using the saved widget.');
+    console.log('Saved data:');
+    console.log(dailyWidget);
+    const widget = getDailyWidget('dailyWidget');
+    document.getElementById('daily-widget').style.backgroundImage = `url(${widget.background.url})`;
+    document.getElementById('owner').textContent = widget.background.owner;
+    document.getElementById('copyright').textContent = new Date().getFullYear();
+    document.getElementById('quote').textContent = widget.quote.text;
+    document.getElementById('author').textContent = widget.quote.author;
   }
-};
-
-console.log(getDailyWidget());
-
-const logo = document.getElementById("logo");
-// logo.addEventListener('mouseleave', () => {
-//   logo.classList.add('reverse-spin');
-// });
-
-// stay the nav link active when the link is clicked
-const navLinks = document.querySelectorAll("nav ul li a");
-
-// navLinks.forEach((link) => {
-//   link.addEventListener('click', () => {
-//     navLinks.forEach((link) => {
-//       link.classList.remove('active');
-//     });
-//     link.classList.add('active');
-//   });
-// });
-
-// style the form text fields controls as the state changes
-const textControls = document.querySelectorAll("input, textarea");
-textControls.forEach((control) => {
-  control.addEventListener("blur", () => {
-    if (control.value !== "") {
-      control.classList.add("filled");
-    } else {
-      control.classList.remove("filled");
-    }
-  });
-});
+}; // end of window.onload

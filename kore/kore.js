@@ -1,3 +1,19 @@
+/**
+ * Fetches data from the given url and returns it as a JSON object or text
+ * @param url - the url to fetch data from
+ * @param application - the application type of the data to fetch
+ * @returns {Promise<any|string>} - the data fetched from the url
+ */
+export const fetchData = async (url, application) => {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(response.status.toString());
+  if (application === 'json') {
+    return response.json();
+  } if (application === 'text') {
+    return response.text();
+  }
+};
+
 export const dateFormatter = {
   get date() {
     return new Date().getDate();
@@ -70,33 +86,95 @@ export const saveDailyWidget = (widgetName, widget) => {
 };
 
 /**
-   * Retrieves data from the local storage.
-   * @returns {object} - the data retrieved from the local storage.
-  */
+ * Returns the daily widget data from the local storage.
+ * If the data does not exist, it is created with default values.
+ * @returns {object} - the data retrieved from the local storage.
+ */
+export const dailyWidget = {
+  date: '',
+  background: {
+    url: '',
+    owner: '',
+  },
+  quote: {
+    content: '',
+    author: '',
+    keywords: [],
+  },
+  theme: {
+    options: ['auto', 'light', 'dark'],
+    appearance: '',
+  },
+};
+
+/**
+ * Returns the daily widget data from the local storage.
+ * If the data does not exist, it is created with default values.
+ * @returns {object} - the data retrieved from the local storage.
+ */
 export const getDailyWidget = () => {
-  const widget = {
-    date: '',
-    background: {
-      url: '',
-      owner: '',
-    },
-    quote: {
-      content: '',
-      author: '',
-      keywords: [],
-    },
-    theme: {
-      options: ['auto', 'light', 'dark'],
-      appearance: '',
-    },
-  };
-
-  const widgetName = 'dailyWidget';
-
-  if (!localStorage.getItem(widgetName)) {
-    localStorage.setItem(widgetName, JSON.stringify(widget));
+  const widget = localStorage.getItem('dailyWidget');
+  if (widget) {
+    return JSON.parse(widget);
   }
-  return JSON.parse(localStorage.getItem(widgetName));
+  return dailyWidget;
+};
+
+/**
+ * Gets a image from the API and returns the data in a JSON format.
+ * @returns {Promise<Response>} - the data in a JSON format.
+ */
+export const getDailyImage = async (query) => {
+  try {
+    const promise = fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`);
+    const response = await promise;
+
+    if (!response.ok) {
+      console.error(`Failed to fetch image: ${response.status}`);
+      // You can also check response.statusText for more details
+      throw new Error(`Failed to fetch image: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('An error occurred while fetching the image:', error);
+    throw error; // Re-throw the error or handle it appropriately
+  }
+};
+
+/**
+ * Gets a random quote from the API and returns the data in a JSON format.
+ * @returns {Promise<Response>} - the data in a JSON format.
+ */
+export const getDailyQuote = async () => {
+  const promise = fetch('http://api.quotable.io/search/quotes/?query=love&limit=50&page=1');
+  const response = await promise;
+  return response.json();
+};
+
+export const getRandomElement = (array) => {
+  // Check if the array is empty
+  if (!array || array.length === 0) {
+    return undefined; // or throw an error, or return a default value
+  }
+  const randomIndex = Math.floor(Math.random() * array.length); // Added check for empty array
+  return array[randomIndex];
+};
+
+
+
+// stay the nav link active when the link is clicked
+// const navLinks = document.querySelectorAll('nav ul li a');
+
+export const setActiveLink = (links) => {
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      links.forEach((link) => {
+        link.classList.remove('active');
+      });
+      link.classList.add('active');
+    });
+  });
 };
 
 /**
@@ -165,10 +243,10 @@ export const mergeSort = (a, b) => {
 //   });
 //
 // });
-  // const scrollPositionY = window.scrollY;
-  // if (scrollPositionY > 0) {
-  //   toggleBrand.style.display = 'none';
-  // }
+// const scrollPositionY = window.scrollY;
+// if (scrollPositionY > 0) {
+//   toggleBrand.style.display = 'none';
+// }
 
 //   console.log('The current scroll position is ' + scrollPositionY);
 // });
