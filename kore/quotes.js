@@ -1,9 +1,5 @@
 export const dailyQuotes = [
   {
-    quote: 'Empower people and enrich lives.',
-    author: 'Roche Kollie',
-  },
-  {
     quote: 'The only way to do great work is to love what you do.',
     author: 'Steve Jobs',
   },
