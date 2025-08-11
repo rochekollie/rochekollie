@@ -5,12 +5,13 @@ import {
   dateFormatter,
   saveDailyWidget,
   getDailyWidget,
+  getRandomElement,
 } from './kore/kore.js';
 
 // when the content loads,
 window.onload = () => {
   // Debug button - Forcefully clear local storage.
-  document.getElementById('debug-button').addEventListener('click', () => {
+  document.getElementById('scroll-down-icon').addEventListener('click', () => {
     localStorage.clear();
     window.location.reload();
   });
@@ -32,8 +33,7 @@ window.onload = () => {
   if (dailyWidget.date === undefined || dailyWidget.date !== new Date().toLocaleDateString()) {
     console.log('The date has changed. Fetching new data.');
     const randomArrayOfAerials = ['aerial ocean view', 'aerial nature view', 'aerial landscape view', 'aerial mountain view', 'aerial mountain view', 'aerial mountainview'];
-    const randomIndex = Math.floor(Math.random() * randomArrayOfAerials.length);
-    const query = randomArrayOfAerials[randomIndex];
+    const query = getRandomElement(randomArrayOfAerials);
     const imageResponse = fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`);
     // const quoteResponse = fetch('http://api.quotable.io/search/quotes/?query=love&limit=50&page=1');
 
@@ -84,7 +84,7 @@ window.onload = () => {
     document.getElementById('daily-widget').style.backgroundImage = `url(${widget.background.url})`;
     document.getElementById('owner').textContent = widget.background.owner;
     document.getElementById('copyright').textContent = new Date().getFullYear();
-    document.getElementById('quote').textContent = widget.quote.text;
+    document.getElementById('quote').textContent = widget.quote.content;
     document.getElementById('author').textContent = widget.quote.author;
   }
 }; // end of window.onload

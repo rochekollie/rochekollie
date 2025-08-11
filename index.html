@@ -12,8 +12,10 @@
     <link href="./assets/images/profiles/rochekollie.jpeg" rel="shortcut icon" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap"
+        rel="stylesheet">
     <!-- main styles -->
     <link href="./style.css" rel="stylesheet" />
 </head>
@@ -21,46 +23,33 @@
 <body class="flex flex-direction-column justify-content-space-between">
     <div id="daily-widget">
         <header>
-            <div id="date" class="flex align-items-center"></div>
-            <div class="flex align-items-center" id="weather-component">
-                <p id="temperature">77<sup>&deg;</sup></p>
-                <p id="weather">Sunny,</p>
-                <p id="city">York</p>
+            <div id="date" class="meta-components flex align-items-center"></div>
+            <div id="weather" class="meta-components flex align-items-center">
+                77<sup>&deg;</sup></p>
+                Sunny, York
             </div>
         </header>
         <main>
-            <div id="time-component">
-                <p id="time"></p>
-                <p id="date"></p>
-            </div>
-            <div id="render"></div>
+            <div id="time"></div>
             <div id="quote-component" class="flex flex-direction-column justify-content-center align-items-center">
-                <p id="quote">Empower people and enrich lives.</p>
-                <a href="#" id="author">Roche Kollie</a>
+                <p id="quote"></p>
+                <a href="#" id="author"></a>
             </div>
         </main>
         <footer class="flex justify-content-space-between align-items-center">
-            <p>
-                &copy;<span id="copyright"></span> Made with
-                <span id="hearts">&hearts;</span> by
+            <p class="meta-components"> &copy;<span id="copyright"></span> <span id="hearts">&hearts;</span>
                 <a href="https://twitter.com/rochekollie">Roche Kollie</a>
             </p>
-            <!-- <div id="scroll-down-container">
-          <a href="#hero-wrapper">
-            <svg
-              id="scroll-down-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="40"
-              width="40"
-            >
-              <path
-                d="M20 33.333 6.667 20l1.958-1.958 10 10V6.667h2.75v21.375l10-10L33.333 20Z"
-              />
-            </svg>
-          </a>
-        </div> -->
-            <button id="debug-button">Get new data</button>
-            <p>
+            <div id="scroll-down-container">
+                <a href="#hero-wrapper">
+                    <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#e3e3e3">
+                        <path
+                            d="M480-80 200-360l56-57 184 184v-287h80v287l184-183 56 56L480-80Zm-40-520v-120h80v120h-80Zm0-200v-80h80v80h-80Z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="meta-components">
                 Photo by
                 <a id="owner" href="https://unsplash.com/">Unsplash.com</a>
             </p>
@@ -68,4 +57,5 @@
     </div>
     <script src="./index.js" type="module"></script>
 </body>
+
 </html>

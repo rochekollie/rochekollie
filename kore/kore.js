@@ -97,8 +97,8 @@ export const dailyWidget = {
     owner: '',
   },
   quote: {
-    content: '',
-    author: '',
+    content: 'Empower people and enrich lives.',
+    author: 'Roche Kollie',
     keywords: [],
   },
   theme: {
@@ -161,19 +161,22 @@ export const getRandomElement = (array) => {
   return array[randomIndex];
 };
 
-
-
-// stay the nav link active when the link is clicked
-// const navLinks = document.querySelectorAll('nav ul li a');
-
+/**
+ * Set active link in navigation bar
+ * @param {*} links - array of links
+ * @returns {void} - void
+ */
 export const setActiveLink = (links) => {
+  // Remove the active class from all links
   links.forEach((link) => {
-    link.addEventListener('click', () => {
-      links.forEach((link) => {
-        link.classList.remove('active');
-      });
+    link.classList.remove('active');
+  });
+
+  // Add the active class to the clicked link
+  links.forEach((link) => {
+    if (link.href === window.location.href) {
       link.classList.add('active');
-    });
+    }
   });
 };
 
