@@ -97,8 +97,8 @@ export const dailyWidget = {
     owner: '',
   },
   quote: {
-    content: 'Success is not final, failure is not fatal: It is the courage to continue that counts.',
-    author: 'Winston Churchill',
+    content: 'All I can say about life is, Oh God, enjoy it!',
+    author: 'Bob Newhart',
     keywords: [],
   },
   theme: {

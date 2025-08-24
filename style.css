@@ -107,7 +107,7 @@ h6 {
     font-size: clamp(1rem, 1vw, 1em);
     text-transform: capitalize;
     color: #fff;
-    opacity: 0.85;
+    opacity: 0.5;
     font-weight: 500;
     gap: 0.25rem;
 }
@@ -138,7 +138,7 @@ h6 {
     font-size: clamp(1.2rem, 1.4vw, 1.5em);
     font-weight: 500;
     color: #fff;
-    opacity: 0.85;
+    opacity: 0.5;
     line-height: 1;
     margin: .25rem auto;
     max-width: 30ch;

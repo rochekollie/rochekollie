@@ -35,9 +35,9 @@ window.onload = () => {
     const randomArrayOfAerials = ['aerial ocean view', 'aerial nature view', 'aerial landscape view', 'aerial mountain view', 'aerial mountain view', 'aerial mountainview'];
     const query = getRandomElement(randomArrayOfAerials);
     const imageResponse = fetch(`https://api.unsplash.com/photos/random?query=${query}&client_id=${keys.unsplash.key}`);
-    // const quoteResponse = fetch('http://api.quotable.io/search/quotes/?query=love&limit=50&page=1');
+    const quoteResponse = fetch('http://api.quotable.io/search/quotes/?query=love&limit=50&page=1');
 
-    Promise.all([imageResponse/** , quoteResponse */])
+    Promise.all([imageResponse, quoteResponse])
       .then((response) => Promise.all(response.map((res) => res.json())))
       .then((data) => {
         const widget = dailyWidget;
@@ -51,11 +51,11 @@ window.onload = () => {
         document.getElementById('copyright').textContent = new Date().getFullYear();
 
         // get and display the quote
-        // const quote = data[1].results[Math.floor(Math.random() * data[1].results.length)];
-        // widget.quote.text = quote.content;
-        // widget.quote.author = quote.author;
-        // document.getElementById('quote').textContent = widget.quote.text;
-        // document.getElementById('author').textContent = widget.quote.author;
+        const quote = data[1].results[Math.floor(Math.random() * data[1].results.length)];
+        widget.quote.text = quote.content;
+        widget.quote.author = quote.author;
+        document.getElementById('quote').textContent = widget.quote.text;
+        document.getElementById('author').textContent = widget.quote.author;
 
         // save the data
         saveDailyWidget('dailyWidget', widget);

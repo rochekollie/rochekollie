@@ -20,10 +20,14 @@ const getDailyQuote = async (query) => {
 getDailyQuote(tag)
   .then((response) => {
     const { results } = response;
-    console.log(getRandomElement(results));
+    console.log(results);
+    const quote = results[Math.floor(Math.random() * results.length)];
+    console.log(quote);
+    //document.getElementById('quote').textContent = quote.content;
+    //document.getElementById('author').textContent = quote.author;
   })
   .catch((error) => {
-    throw new Error(error);
+    console.log(error);
   })
   .finally(() => {
     console.log('done fetching');
