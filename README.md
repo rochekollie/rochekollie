@@ -19,7 +19,7 @@ I also have experience with:
 *   **Build Tools (Webpack, Vite):** I use them to manage and optimize project files.
 *   **Testing (Jest, Mocha, Selenium):** I believe in writing tests to ensure the code works as expected.
 
-## My Approach ✨
+## My Approach 🎓
 
 I enjoy collaborating with others to turn ideas into reality. I'm always looking for ways to improve and learn new things in the ever-evolving world of web development. I like to keep things simple and build user-friendly experiences.
 
