@@ -161,6 +161,47 @@ export const getRandomElement = (array) => {
   return array[randomIndex];
 };
 
+export const imageQueries = [
+  // Ocean & Water
+  'aerial ocean waves minimal',
+  'aerial calm sea surface',
+  'aerial tropical turquoise water',
+  'aerial coastlines with negative space',
+  'aerial lake with reflections',
+
+  // Mountains & Hills
+  'aerial mountain range with clouds',
+  'aerial snow covered mountains minimal',
+  'aerial rolling hills and valleys',
+  'aerial desert mountains at sunrise',
+
+  // Forests & Fields
+  'aerial misty forest minimal',
+  'aerial autumn forest top view',
+  'aerial green farmland patterns',
+  'aerial open grass field',
+
+  // Deserts & Sand
+  'aerial desert sand dunes minimal',
+  'aerial desert landscape with shadows',
+  'aerial rocky desert patterns',
+
+  // Ice & Snow
+  'aerial frozen lake minimal',
+  'aerial glacier patterns abstract',
+  'aerial snowy forest top view',
+
+  // Sky & Clouds
+  'aerial view above the clouds',
+  'aerial sunset sky gradient',
+  'aerial dawn horizon minimal',
+
+  // Abstract Natural Patterns
+  'aerial salt flats minimal',
+  'aerial volcanic landscape abstract',
+  'aerial winding river patterns',
+];
+
 /**
  * Set active link in navigation bar
  * @param {*} links - array of links
