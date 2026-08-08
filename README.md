@@ -15,7 +15,7 @@ Full-stack web developer specializing in **building scalable web applications**.
 
 ## Stuffs I'm building 💻
 
-- 🌐 **[www.rochekollie.com](https://rochekollie.com)**
+- 🌐 **[www.rochekollie.com](https://cleverhigh.org)**
 
 ## Let's Connect 👋
 
