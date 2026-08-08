@@ -1,6 +1,6 @@
-# Hello, I'm Roche!
+# Hello, world!
 
-Full-stack web developer specializing in **building scalable web applications**.
+I'm Roche, a full-stack web developer specializing in **building scalable web applications**.
 
 ## Favorite stack 🧩
 *   HTML
