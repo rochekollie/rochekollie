@@ -35,12 +35,17 @@
 
             <header class="wallpaper-header">
                 <div id="date" class="meta-components"></div>
-                <div id="weather" class="meta-components live-weather-widget" title="Live weather • Click to toggle °F / °C" role="button" tabindex="0">
+                <div id="weather" class="meta-components live-weather-widget"
+                    title="Live weather • Click to toggle °F / °C" role="button"
+                    tabindex="0">
                     <span id="weather-icon" class="weather-icon">☀️</span>
-                    <span id="weather-temp" class="weather-temp">--<sup>&deg;</sup></span>
-                    <span id="weather-condition" class="weather-condition">Loading...</span>
+                    <span id="weather-temp"
+                        class="weather-temp">--<sup>&deg;</sup></span>
+                    <span id="weather-condition"
+                        class="weather-condition">Loading...</span>
                     <span class="weather-dot">&bull;</span>
-                    <span id="weather-location" class="weather-location">Detecting...</span>
+                    <span id="weather-location"
+                        class="weather-location">Detecting...</span>
                 </div>
             </header>
 
@@ -105,23 +110,25 @@
 
                     <nav class="main-menu" aria-label="Main Navigation">
                         <ul class="nav-list">
-                            <li><a href="#hero-wrapper"
-                                    class="nav-link active">Home</a></li>
-                            <li><a href="#skills-wrapper"
-                                    class="nav-link">Skills</a></li>
                             <li><a href="#projects-wrapper"
                                     class="nav-link">Projects</a></li>
-                            <li><a href="#about-wrapper"
-                                    class="nav-link">About</a></li>
+                            <li><a href="#case-studies" class="nav-link">Case
+                                    Studies</a></li>
                             <li><a href="#contact-wrapper"
-                                    class="nav-link">Contact</a></li>
+                                    class="nav-link">Blog</a></li>
+                            <li><a href="#contact-wrapper"
+                                    class="nav-link">Contact Me</a></li>
                             <li><a href="#contact-wrapper"
                                     class="nav-btn hire-me-btn">Hire Me</a></li>
+                            <li><a href="#contact-wrapper"
+                                    class="nav-btn signup-login-btn">Signup/Login</a>
+                            </li>
                         </ul>
                     </nav>
 
                     <div class="header-actions">
-                        <div id="nav-live-widget" class="nav-live-pill" title="Live local weather & time">
+                        <div id="nav-live-widget" class="nav-live-pill"
+                            title="Live local weather & time">
                             <span id="nav-weather-icon">☀️</span>
                             <span id="nav-weather-temp">--&deg;</span>
                             <span class="pill-dot">&bull;</span>
@@ -225,7 +232,11 @@
                                     <h3 class="dev-name">Roche Kollie</h3>
                                     <p class="dev-role">Software & Web Engineer
                                     </p>
-                                    <span class="dev-location" id="dev-card-location">📍 <span id="dev-card-city">York, PA</span> &bull; <span id="dev-card-status">Remote</span></span>
+                                    <span class="dev-location"
+                                        id="dev-card-location">📍 <span
+                                            id="dev-card-city">York, PA</span>
+                                        &bull; <span
+                                            id="dev-card-status">Remote</span></span>
                                 </div>
                             </div>
 
@@ -239,7 +250,8 @@
                                 </div>
                                 <div class="terminal-code">
                                     <p><span class="c-keyword">const</span>
-                                        <span class="c-var">stack</span> = {</p>
+                                        <span class="c-var">stack</span> = {
+                                    </p>
                                     <p class="indent-1"><span
                                             class="c-prop">frontend</span>:
                                         [<span class="c-str">'React'</span>,
@@ -368,6 +380,9 @@
 
             <!-- FEATURED PROJECTS SECTION -->
             <section id="projects-wrapper" class="content-section">
+                <div id="case-studies"
+                    style="position: relative; top: -70px; visibility: hidden;">
+                </div>
                 <div class="section-container">
                     <div class="section-header text-center">
                         <h2 class="section-title">Featured Projects</h2>
@@ -377,83 +392,145 @@
                     </div>
 
                     <div class="projects-grid">
-                        <!-- WhizzyKid -->
+                        <!-- Epael.com -->
                         <article class="project-card">
-                            <div class="project-badge">Featured</div>
-                            <h3 class="project-title">WhizzyKid</h3>
+                            <div class="project-badge">Web Application</div>
+                            <h3 class="project-title">Epael.com</h3>
                             <p class="project-desc">
-                                An engaging and interactive educational web
-                                application engineered for young learners with
-                                accessible navigation, dynamic modules, and
-                                cheerful animations.
+                                A modern, high-performance web platform
+                                engineered for streamlined digital workflows,
+                                fast load times, and an intuitive user-centric
+                                interface.
                             </p>
-                            <div class="project-meta">
-                                <div class="tag-group">
-                                    <span class="tag">HTML5</span>
-                                    <span class="tag">CSS3</span>
-                                    <span class="tag">JavaScript</span>
-                                </div>
-                                <span class="project-date">Sept 2021</span>
+                            <div class="project-actions">
+                                <a href="https://epael.com" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-project btn-project-primary">
+                                    <span>View Project</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7">
+                                        </line>
+                                        <polyline points="7 7 17 7 17 17">
+                                        </polyline>
+                                    </svg>
+                                </a>
+                                <a href="#contact-wrapper"
+                                    class="btn-project btn-project-secondary">
+                                    <span>Case Study</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z">
+                                        </path>
+                                        <path
+                                            d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z">
+                                        </path>
+                                    </svg>
+                                </a>
                             </div>
                         </article>
 
-                        <!-- Restaurant Website -->
+                        <!-- CleverHigh.org -->
                         <article class="project-card">
-                            <div class="project-badge">Design & Layout</div>
-                            <h3 class="project-title">Restaurant Experience</h3>
+                            <div class="project-badge">EdTech Hub</div>
+                            <h3 class="project-title">CleverHigh.org</h3>
                             <p class="project-desc">
-                                A responsive modern restaurant menu and ordering
-                                experience modeled with flexible CSS layouts,
-                                mouthwatering imagery, and smooth category
-                                filtering.
+                                An innovative education platform delivering
+                                structured learning pathways, interactive
+                                digital resources, and empowering tools for
+                                students and educators.
                             </p>
-                            <div class="project-meta">
-                                <div class="tag-group">
-                                    <span class="tag">CSS Flexbox</span>
-                                    <span class="tag">JavaScript</span>
-                                    <span class="tag">Responsive</span>
-                                </div>
-                                <span class="project-date">Sept 2021</span>
+                            <div class="project-actions">
+                                <a href="https://cleverhigh.org" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-project btn-project-primary">
+                                    <span>View Project</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7">
+                                        </line>
+                                        <polyline points="7 7 17 7 17 17">
+                                        </polyline>
+                                    </svg>
+                                </a>
+                                <a href="#contact-wrapper"
+                                    class="btn-project btn-project-secondary">
+                                    <span>Case Study</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z">
+                                        </path>
+                                        <path
+                                            d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z">
+                                        </path>
+                                    </svg>
+                                </a>
                             </div>
                         </article>
 
-                        <!-- Single Page Static Site -->
+                        <!-- Whizzkid.org -->
                         <article class="project-card">
-                            <div class="project-badge">Art & Culture</div>
-                            <h3 class="project-title">Beyond These Walls</h3>
-                            <p class="project-desc">
-                                A storytelling single-page web experience
-                                showcasing the public art mural project in
-                                Portsmouth, Ohio, featuring rich narrative
-                                sections and responsive imagery.
-                            </p>
-                            <div class="project-meta">
-                                <div class="tag-group">
-                                    <span class="tag">Semantic HTML</span>
-                                    <span class="tag">CSS Grid</span>
-                                    <span class="tag">Web Typography</span>
-                                </div>
-                                <span class="project-date">Oct 2021</span>
+                            <div class="project-badge">Interactive Learning
                             </div>
-                        </article>
-
-                        <!-- Mount Nimba -->
-                        <article class="project-card">
-                            <div class="project-badge">UNESCO Site</div>
-                            <h3 class="project-title">Mount Nimba Reserve</h3>
+                            <h3 class="project-title">Whizzkid.org</h3>
                             <p class="project-desc">
-                                An immersive digital showcase for the UNESCO
-                                World Heritage Site utilizing HiDPI responsive
-                                switching, fine typography, and media queries to
-                                present ecological beauty.
+                                An engaging, accessible educational web
+                                application crafted for young learners with
+                                gamified modules, cheerful responsive
+                                animations, and strict accessibility standards.
                             </p>
-                            <div class="project-meta">
-                                <div class="tag-group">
-                                    <span class="tag">HiDPI Switching</span>
-                                    <span class="tag">CSS3</span>
-                                    <span class="tag">Vanilla JS</span>
-                                </div>
-                                <span class="project-date">Oct 2021</span>
+                            <div class="project-actions">
+                                <a href="https://whizzkid.org" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn-project btn-project-primary">
+                                    <span>View Project</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7">
+                                        </line>
+                                        <polyline points="7 7 17 7 17 17">
+                                        </polyline>
+                                    </svg>
+                                </a>
+                                <a href="#contact-wrapper"
+                                    class="btn-project btn-project-secondary">
+                                    <span>Case Study</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        height="15" viewBox="0 0 24 24"
+                                        width="15" fill="none"
+                                        stroke="currentColor" stroke-width="2.2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z">
+                                        </path>
+                                        <path
+                                            d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z">
+                                        </path>
+                                    </svg>
+                                </a>
                             </div>
                         </article>
                     </div>
