@@ -2,7 +2,7 @@
 
   <!-- HERO BANNER / TYPING HEADER -->
   <a href="https://rochekollie.com">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=28&pause=1200&color=00FFD9&center=true&vCenter=true&width=750&height=70&lines=Hi%2C+I'm+Roche+Kollie+%F0%9F%91%8B;Building+digital+experiences+that+empower+people;Full-Stack+Web+Developer+%26+UI%2FUX+Engineer;Next.js+16+%E2%80%A2+React+19+%E2%80%A2+Strict+TypeScript" alt="Roche Kollie Header Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=28&pause=1200&color=00AB91&center=true&vCenter=true&width=750&height=70&lines=Hi%2C+I'm+Roche+Kollie+%F0%9F%91%8B;Building+digital+experiences+that+empower+people;Full-Stack+Web+Developer+%26+UI%2FUX+Engineer;Next.js+16+%E2%80%A2+React+19+%E2%80%A2+Strict+TypeScript" alt="Roche Kollie Header Typing SVG" />
   </a>
 
   <p align="center">
@@ -15,29 +15,29 @@
       <img src="https://img.shields.io/badge/Status-🟢_Available_for_Hire_%26_Freelance-00ab91?style=for-the-badge&labelColor=070b0e" alt="Available for hire badge" />
     </a>
     <a href="https://rochekollie.com">
-      <img src="https://img.shields.io/badge/Location-📍_Worldwide_%E2%80%A2_Remote-00ffd9?style=for-the-badge&labelColor=070b0e&color=00ffd9" alt="Location badge" />
+      <img src="https://img.shields.io/badge/Location-📍_Worldwide_%E2%80%A2_Remote-00ab91?style=for-the-badge&labelColor=070b0e&color=00ab91" alt="Location badge" />
     </a>
     <a href="https://rochekollie.com">
-      <img src="https://img.shields.io/badge/Stack-Next.js_16_%E2%80%A2_React_19_%E2%80%A2_TypeScript-026657?style=for-the-badge&labelColor=070b0e" alt="Tech stack badge" />
+      <img src="https://img.shields.io/badge/Stack-Next.js_16_%E2%80%A2_React_19_%E2%80%A2_TypeScript-00ab91?style=for-the-badge&labelColor=070b0e" alt="Tech stack badge" />
     </a>
   </p>
 
   <!-- SOCIAL / QUICK LINKS -->
   <p align="center">
     <a href="https://rochekollie.com" target="_blank">
-      <img src="https://img.shields.io/badge/Portfolio_Website-070b0e?style=for-the-badge&logo=googlechrome&logoColor=00ffd9&labelColor=070b0e" alt="Portfolio" />
+      <img src="https://img.shields.io/badge/Portfolio_Website-070b0e?style=for-the-badge&logo=googlechrome&logoColor=00ab91&labelColor=070b0e" alt="Portfolio" />
     </a>
     <a href="https://linkedin.com/in/rochekollie" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-070b0e?style=for-the-badge&logo=linkedin&logoColor=00ffd9&labelColor=070b0e" alt="LinkedIn" />
+      <img src="https://img.shields.io/badge/LinkedIn-070b0e?style=for-the-badge&logo=linkedin&logoColor=00ab91&labelColor=070b0e" alt="LinkedIn" />
     </a>
     <a href="https://x.com/rochekollie" target="_blank">
-      <img src="https://img.shields.io/badge/Twitter_%2F_X-070b0e?style=for-the-badge&logo=x&logoColor=00ffd9&labelColor=070b0e" alt="Twitter" />
+      <img src="https://img.shields.io/badge/Twitter_%2F_X-070b0e?style=for-the-badge&logo=x&logoColor=00ab91&labelColor=070b0e" alt="Twitter" />
     </a>
     <a href="https://discord.com/rochekollie" target="_blank">
-      <img src="https://img.shields.io/badge/Discord-070b0e?style=for-the-badge&logo=discord&logoColor=00ffd9&labelColor=070b0e" alt="Discord" />
+      <img src="https://img.shields.io/badge/Discord-070b0e?style=for-the-badge&logo=discord&logoColor=00ab91&labelColor=070b0e" alt="Discord" />
     </a>
     <a href="https://github.com/rochekollie" target="_blank">
-      <img src="https://img.shields.io/badge/GitHub-070b0e?style=for-the-badge&logo=github&logoColor=00ffd9&labelColor=070b0e" alt="GitHub" />
+      <img src="https://img.shields.io/badge/GitHub-070b0e?style=for-the-badge&logo=github&logoColor=00ab91&labelColor=070b0e" alt="GitHub" />
     </a>
   </p>
 
@@ -73,13 +73,13 @@ With expertise spanning frontend engineering, responsive design systems, and sca
 #### Frontend & UI Engineering
 
 <p>
-  <img src="https://img.shields.io/badge/Next.js_16-070b0e?style=for-the-badge&logo=nextdotjs&logoColor=00ffd9" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React_19-070b0e?style=for-the-badge&logo=react&logoColor=00ffd9" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-070b0e?style=for-the-badge&logo=typescript&logoColor=00ffd9" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript_ES6+-070b0e?style=for-the-badge&logo=javascript&logoColor=00ffd9" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-070b0e?style=for-the-badge&logo=html5&logoColor=00ffd9" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3_&_Grid-070b0e?style=for-the-badge&logo=css3&logoColor=00ffd9" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-070b0e?style=for-the-badge&logo=tailwindcss&logoColor=00ffd9" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Next.js_16-070b0e?style=for-the-badge&logo=nextdotjs&logoColor=00ab91" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React_19-070b0e?style=for-the-badge&logo=react&logoColor=00ab91" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-070b0e?style=for-the-badge&logo=typescript&logoColor=00ab91" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript_ES6+-070b0e?style=for-the-badge&logo=javascript&logoColor=00ab91" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/HTML5-070b0e?style=for-the-badge&logo=html5&logoColor=00ab91" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3_&_Grid-070b0e?style=for-the-badge&logo=css3&logoColor=00ab91" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-070b0e?style=for-the-badge&logo=tailwindcss&logoColor=00ab91" alt="Tailwind" />
 </p>
 
 #### Backend & Cloud Services
@@ -96,12 +96,12 @@ With expertise spanning frontend engineering, responsive design systems, and sca
 #### Tooling, Design & Workflow
 
 <p>
-  <img src="https://img.shields.io/badge/Figma-070b0e?style=for-the-badge&logo=figma&logoColor=38bdf8" alt="Figma" />
-  <img src="https://img.shields.io/badge/Git_&_GitHub-070b0e?style=for-the-badge&logo=git&logoColor=38bdf8" alt="Git" />
-  <img src="https://img.shields.io/badge/Vite-070b0e?style=for-the-badge&logo=vite&logoColor=38bdf8" alt="Vite" />
-  <img src="https://img.shields.io/badge/Turbopack-070b0e?style=for-the-badge&logo=vercel&logoColor=38bdf8" alt="Turbopack" />
-  <img src="https://img.shields.io/badge/Jest-070b0e?style=for-the-badge&logo=jest&logoColor=38bdf8" alt="Jest" />
-  <img src="https://img.shields.io/badge/macOS_&_Linux-070b0e?style=for-the-badge&logo=apple&logoColor=38bdf8" alt="macOS" />
+  <img src="https://img.shields.io/badge/Figma-070b0e?style=for-the-badge&logo=figma&logoColor=00ab91" alt="Figma" />
+  <img src="https://img.shields.io/badge/Git_&_GitHub-070b0e?style=for-the-badge&logo=git&logoColor=00ab91" alt="Git" />
+  <img src="https://img.shields.io/badge/Vite-070b0e?style=for-the-badge&logo=vite&logoColor=00ab91" alt="Vite" />
+  <img src="https://img.shields.io/badge/Turbopack-070b0e?style=for-the-badge&logo=vercel&logoColor=00ab91" alt="Turbopack" />
+  <img src="https://img.shields.io/badge/Jest-070b0e?style=for-the-badge&logo=jest&logoColor=00ab91" alt="Jest" />
+  <img src="https://img.shields.io/badge/macOS_&_Linux-070b0e?style=for-the-badge&logo=apple&logoColor=00ab91" alt="macOS" />
 </p>
 
 </div>
@@ -146,10 +146,10 @@ export const roche: DeveloperProfile = {
         Full-stack portfolio featuring a full-screen 100vh wallpaper landing experience modeled after the <em>Momentum</em> browser extension, CSS scroll snap navigation, daily 12:00 PM background reset, deterministic per-user random photo selection, and real-time live weather with IP geolocation.
       </p>
       <p>
-        <img src="https://img.shields.io/badge/Next.js_16-00ffd9?style=flat-square&labelColor=070b0e" alt="Next.js" />
-        <img src="https://img.shields.io/badge/React_19-00ffd9?style=flat-square&labelColor=070b0e" alt="React" />
-        <img src="https://img.shields.io/badge/TypeScript-00ffd9?style=flat-square&labelColor=070b0e" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Open--Meteo-00ffd9?style=flat-square&labelColor=070b0e" alt="Weather" />
+        <img src="https://img.shields.io/badge/Next.js_16-00ab91?style=flat-square&labelColor=070b0e" alt="Next.js" />
+        <img src="https://img.shields.io/badge/React_19-00ab91?style=flat-square&labelColor=070b0e" alt="React" />
+        <img src="https://img.shields.io/badge/TypeScript-00ab91?style=flat-square&labelColor=070b0e" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Open--Meteo-00ab91?style=flat-square&labelColor=070b0e" alt="Weather" />
       </p>
       <p>
         🔗 <a href="https://rochekollie.com"><strong>Live Demo</strong></a> &bull; <a href="https://github.com/rochekollie/rochekollie"><strong>Explore Repository</strong></a>
@@ -178,9 +178,9 @@ export const roche: DeveloperProfile = {
         A sleek and responsive restaurant menu and ordering experience designed with modular CSS layouts, dynamic category filtering, appetizing imagery, and seamless mobile responsiveness.
       </p>
       <p>
-        <img src="https://img.shields.io/badge/TypeScript-38bdf8?style=flat-square&labelColor=070b0e" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Flexbox-38bdf8?style=flat-square&labelColor=070b0e" alt="Flexbox" />
-        <img src="https://img.shields.io/badge/Responsive-38bdf8?style=flat-square&labelColor=070b0e" alt="Responsive" />
+        <img src="https://img.shields.io/badge/TypeScript-00ab91?style=flat-square&labelColor=070b0e" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Flexbox-00ab91?style=flat-square&labelColor=070b0e" alt="Flexbox" />
+        <img src="https://img.shields.io/badge/Responsive-00ab91?style=flat-square&labelColor=070b0e" alt="Responsive" />
       </p>
       <p>
         🔗 <a href="https://rochekollie.com#projects-wrapper"><strong>View Project</strong></a>
@@ -192,9 +192,9 @@ export const roche: DeveloperProfile = {
         A narrative storytelling single-page web application commemorating the public art mural project in Portsmouth, Ohio, featuring rich documentary text sections and responsive art galleries.
       </p>
       <p>
-        <img src="https://img.shields.io/badge/Semantic_HTML-00ffd9?style=flat-square&labelColor=070b0e" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS_Grid-00ffd9?style=flat-square&labelColor=070b0e" alt="Grid" />
-        <img src="https://img.shields.io/badge/Typography-00ffd9?style=flat-square&labelColor=070b0e" alt="Typography" />
+        <img src="https://img.shields.io/badge/Semantic_HTML-00ab91?style=flat-square&labelColor=070b0e" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS_Grid-00ab91?style=flat-square&labelColor=070b0e" alt="Grid" />
+        <img src="https://img.shields.io/badge/Typography-00ab91?style=flat-square&labelColor=070b0e" alt="Typography" />
       </p>
       <p>
         🔗 <a href="https://rochekollie.com#projects-wrapper"><strong>View Project</strong></a>
@@ -209,13 +209,13 @@ export const roche: DeveloperProfile = {
 
 <div align="center">
 
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=rochekollie&show_icons=true&title_color=00ffd9&icon_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ffd940&hide_border=false" alt="Roche's GitHub Stats" height="175" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=rochekollie&show_icons=true&title_color=00ab91&icon_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Roche's GitHub Stats" height="175" />
   &nbsp;
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=rochekollie&layout=compact&title_color=00ffd9&text_color=94a3b8&bg_color=070b0e&border_color=00ffd940&hide_border=false" alt="Top Languages" height="175" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=rochekollie&layout=compact&title_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Top Languages" height="175" />
 
   <br/><br/>
 
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rochekollie&theme=dark&background=070B0E&border=00FFD940&stroke=00FFD9&ring=00AB91&fire=00FFD9&currStreakNum=00FFD9&sideNums=94A3B8&currStreakLabel=00AB91&sideLabels=94A3B8&dates=64748B" alt="Roche's Streak Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rochekollie&theme=dark&background=070B0E&border=00AB9140&stroke=00AB91&ring=00AB91&fire=00AB91&currStreakNum=00AB91&sideNums=94A3B8&currStreakLabel=00AB91&sideLabels=94A3B8&dates=64748B" alt="Roche's Streak Stats" />
 
 </div>
 
@@ -228,7 +228,7 @@ I'm always excited to discuss innovative projects, engineering challenges, or po
 <div align="center">
 
   <a href="https://rochekollie.com#contact-wrapper">
-    <img src="https://img.shields.io/badge/Send_a_Message-Get_In_Touch-00ffd9?style=for-the-badge&labelColor=070b0e&logo=gmail&logoColor=00ffd9" alt="Contact Roche" />
+    <img src="https://img.shields.io/badge/Send_a_Message-Get_In_Touch-00ab91?style=for-the-badge&labelColor=070b0e&logo=gmail&logoColor=00ab91" alt="Contact Roche" />
   </a>
   &nbsp;&nbsp;
   <a href="https://linkedin.com/in/rochekollie">
@@ -236,7 +236,7 @@ I'm always excited to discuss innovative projects, engineering challenges, or po
   </a>
   &nbsp;&nbsp;
   <a href="https://x.com/rochekollie">
-    <img src="https://img.shields.io/badge/Twitter_%2F_X-Follow_%40rochekollie-38bdf8?style=for-the-badge&labelColor=070b0e&logo=x&logoColor=38bdf8" alt="Follow on Twitter" />
+    <img src="https://img.shields.io/badge/Twitter_%2F_X-Follow_%40rochekollie-00ab91?style=for-the-badge&labelColor=070b0e&logo=x&logoColor=00ab91" alt="Follow on Twitter" />
   </a>
 
   <br/><br/>
