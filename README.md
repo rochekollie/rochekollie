@@ -191,9 +191,9 @@ export const roche: DeveloperProfile = {
 
 <div align="center">
 
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=rochekollie&show_icons=true&title_color=00ab91&icon_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Roche's GitHub Stats" height="175" />
+  <img src="https://github-stats-extended.vercel.app/api?username=rochekollie&show_icons=true&title_color=00ab91&icon_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Roche's GitHub Stats" height="175" />
   &nbsp;
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=rochekollie&layout=compact&title_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Top Languages" height="175" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=rochekollie&layout=compact&title_color=00ab91&text_color=94a3b8&bg_color=070b0e&border_color=00ab9140&hide_border=false" alt="Top Languages" height="175" />
 
   <br/><br/>
 
