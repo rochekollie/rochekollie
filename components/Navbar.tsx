@@ -2,9 +2,15 @@
 
 import {formatTimeShort, getLiveWeather, getUserLocation} from '@/lib/kore';
 import {WeatherData} from '@/lib/types';
+import Link from 'next/link';
+import {usePathname, useRouter} from 'next/navigation';
 import React, {useCallback, useEffect, useState} from 'react';
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const isProjectsPage = pathname === '/projects';
+
   const [ localTime, setLocalTime ] = useState('');
   const [ city, setCity ] = useState('York, PA');
   const [ weather, setWeather ] = useState<WeatherData>({
@@ -85,9 +91,15 @@ export default function Navbar() {
 
   const handleReturnToWallpaper = (e: React.MouseEvent) => {
     e.preventDefault();
+    if (isProjectsPage) {
+      router.push('/');
+      return;
+    }
     const el = document.getElementById('daily-widget');
     if (el) {
       el.scrollIntoView({behavior: 'smooth'});
+    } else {
+      router.push('/');
     }
   };
 
@@ -116,30 +128,30 @@ export default function Navbar() {
       <header id="site-header" className="main-nav-header">
         <div className="nav-container">
           <div className="branding">
-            <a href="#hero-wrapper" className="brand-link" title="Roche Kollie - Home">
+            <Link href="/" className="brand-link" title="Roche Kollie - Home">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/assets/images/profiles/rochekollie.jpeg" alt="Roche Kollie" className="brand-avatar" />
               <span className="brand-name">Roche Kollie</span>
-            </a>
+            </Link>
           </div>
 
           <nav className="main-menu" aria-label="Main Navigation">
             <ul className="nav-list">
               <li>
-                <a
-                  href="#projects-wrapper"
-                  className={`nav-link ${ activeSection === 'projects-wrapper' ? 'active' : '' }`}
+                <Link
+                  href="/projects"
+                  className={`nav-link ${ isProjectsPage || activeSection === 'projects-wrapper' ? 'active' : '' }`}
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#case-studies"
-                  className={`nav-link ${ activeSection === 'case-studies' ? 'active' : '' }`}
+                <Link
+                  href={isProjectsPage ? '/#case-studies' : '#case-studies'}
+                  className={`nav-link ${ !isProjectsPage && activeSection === 'case-studies' ? 'active' : '' }`}
                 >
                   Case Studies
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -154,17 +166,20 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#contact-wrapper"
-                  className={`nav-link ${ activeSection === 'contact-wrapper' ? 'active' : '' }`}
+                <Link
+                  href={isProjectsPage ? '/#contact-wrapper' : '#contact-wrapper'}
+                  className={`nav-link ${ !isProjectsPage && activeSection === 'contact-wrapper' ? 'active' : '' }`}
                 >
                   Contact Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact-wrapper" className="nav-btn hire-me-btn">
+                <Link
+                  href={isProjectsPage ? '/#contact-wrapper' : '#contact-wrapper'}
+                  className="nav-btn hire-me-btn"
+                >
                   Hire Me
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -193,13 +208,13 @@ export default function Navbar() {
             <button
               id="back-to-wallpaper-btn"
               className="wallpaper-return-btn"
-              title="Return to wallpaper cover"
+              title={isProjectsPage ? 'Return to Home' : 'Return to wallpaper cover'}
               onClick={handleReturnToWallpaper}
             >
               <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="currentColor">
                 <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
               </svg>
-              <span>Wallpaper</span>
+              <span>{isProjectsPage ? 'Home' : 'Wallpaper'}</span>
             </button>
           </div>
         </div>
