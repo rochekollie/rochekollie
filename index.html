@@ -1,61 +1,573 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Roche Kollie - Fullstack Web Developer</title>
-    <meta content="Full-stack web developer specializing in building scalable web applications." name="description" />
-    <meta content="Roche Kollie" name="author" />
-    <meta content="Roche Kollie, Full-stack web developer Web Developer, Frontend Engineer" name="keywords" />
-    <link href="./assets/images/profiles/rochekollie.jpeg" rel="shortcut icon" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mozilla+Headline:wght@200..700&family=Mozilla+Text:wght@200..700&display=swap"
-        rel="stylesheet">
-    <!-- main styles -->
-    <link href="./style.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Roche Kollie - Fullstack Web Developer</title>
+        <meta
+            content="Full-stack web developer specializing in building scalable web applications."
+            name="description" />
+        <meta content="Roche Kollie" name="author" />
+        <meta
+            content="Roche Kollie, Full-stack web developer, Frontend Engineer, Momentum"
+            name="keywords" />
+        <link href="./assets/images/profiles/rochekollie.jpeg"
+            rel="shortcut icon" />
 
-<body class="flex flex-direction-column justify-content-space-between">
-    <div id="daily-widget">
-        <header>
-            <div id="date" class="meta-components flex align-items-center"></div>
-            <div id="weather" class="meta-components flex align-items-center">
-                77<sup>&deg;</sup></p>
-                Sunny, York
-            </div>
-        </header>
-        <main>
-            <div id="time"></div>
-            <div id="quote-component" class="flex flex-direction-column justify-content-center align-items-center">
-                <p id="quote"></p>
-                <a href="#" id="author"></a>
-            </div>
-        </main>
-        <footer class="flex justify-content-space-between align-items-center">
-            <p class="meta-components"> &copy;<span id="copyright"></span> <span id="hearts">&hearts;</span>
-                <a href="https://twitter.com/rochekollie">Roche Kollie</a>
-            </p>
-            <div id="scroll-down-container">
-                <a href="#hero-wrapper">
-                    <svg id="scroll-down-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                        width="24px" fill="#e3e3e3">
-                        <path
-                            d="M480-80 200-360l56-57 184 184v-287h80v287l184-183 56 56L480-80Zm-40-520v-120h80v120h-80Zm0-200v-80h80v80h-80Z" />
-                    </svg>
-                </a>
-            </div>
-            <p class="meta-components">
-                Photo by
-                <a id="owner" href="https://unsplash.com/">Unsplash.com</a>
-            </p>
-        </footer>
-    </div>
-    <script src="./index.js" type="module"></script>
-</body>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Mozilla+Headline:wght@400;600;700&family=Mozilla+Text:wght@300;400;500;600&display=swap"
+            rel="stylesheet">
+
+        <!-- Styles -->
+        <link href="./style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- SECTION 1: MOMENTUM WALLPAPER COVER PAGE -->
+        <div id="daily-widget" class="wallpaper-screen" role="region"
+            aria-label="Momentum Wallpaper Landing Page">
+            <div class="wallpaper-overlay"></div>
+
+            <header class="wallpaper-header">
+                <div id="date" class="meta-components"></div>
+                <div id="weather" class="meta-components live-weather-widget" title="Live weather • Click to toggle °F / °C" role="button" tabindex="0">
+                    <span id="weather-icon" class="weather-icon">☀️</span>
+                    <span id="weather-temp" class="weather-temp">--<sup>&deg;</sup></span>
+                    <span id="weather-condition" class="weather-condition">Loading...</span>
+                    <span class="weather-dot">&bull;</span>
+                    <span id="weather-location" class="weather-location">Detecting...</span>
+                </div>
+            </header>
+
+            <main class="wallpaper-center">
+                <div id="time" class="momentum-clock" aria-live="off">12:00
+                </div>
+                <div id="greeting" class="momentum-greeting">Good day, Roche.
+                </div>
+                <div id="quote-component" class="momentum-quote-box">
+                    <p id="quote" class="quote-text">The only way to do great
+                        work is to love what you do.</p>
+                    <p class="quote-author-line">— <span id="author">Steve
+                            Jobs</span></p>
+                </div>
+            </main>
+
+            <footer class="wallpaper-footer">
+                <div class="meta-components footer-left">
+                    <p>&copy;<span id="copyright"></span> <span
+                            id="hearts">&hearts;</span>
+                        <a href="https://x.com/rochekollie" target="_blank"
+                            rel="noopener noreferrer">Roche Kollie</a>
+                    </p>
+                </div>
+
+                <div id="scroll-down-container" class="scroll-prompt-container">
+                    <a href="#main-content" id="scroll-down-link"
+                        aria-label="Scroll down to main content">
+                        <span class="scroll-down-label">Explore Portfolio</span>
+                        <div class="scroll-down-arrow-circle">
+                            <svg id="scroll-down-icon"
+                                xmlns="http://www.w3.org/2000/svg" height="28"
+                                viewBox="0 0 24 24" width="28" fill="#ffffff">
+                                <path
+                                    d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="meta-components footer-right">
+                    <p>Photo by <a id="owner" href="https://unsplash.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">Unsplash</a></p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- SECTION 2: MAIN APP MENU AND CONTENT -->
+        <div id="main-content" class="content-screen" role="region"
+            aria-label="Main Application and Portfolio">
+            <!-- APP HEADER & NAVIGATION -->
+            <header id="site-header" class="main-nav-header">
+                <div class="nav-container">
+                    <div class="branding">
+                        <a href="#main-content" class="brand-link">
+                            <img src="./assets/images/profiles/rochekollie.jpeg"
+                                alt="Roche Kollie" class="brand-avatar" />
+                            <span class="brand-name">Roche Kollie</span>
+                        </a>
+                    </div>
+
+                    <nav class="main-menu" aria-label="Main Navigation">
+                        <ul class="nav-list">
+                            <li><a href="#hero-wrapper"
+                                    class="nav-link active">Home</a></li>
+                            <li><a href="#skills-wrapper"
+                                    class="nav-link">Skills</a></li>
+                            <li><a href="#projects-wrapper"
+                                    class="nav-link">Projects</a></li>
+                            <li><a href="#about-wrapper"
+                                    class="nav-link">About</a></li>
+                            <li><a href="#contact-wrapper"
+                                    class="nav-link">Contact</a></li>
+                            <li><a href="#contact-wrapper"
+                                    class="nav-btn hire-me-btn">Hire Me</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+                        <div id="nav-live-widget" class="nav-live-pill" title="Live local weather & time">
+                            <span id="nav-weather-icon">☀️</span>
+                            <span id="nav-weather-temp">--&deg;</span>
+                            <span class="pill-dot">&bull;</span>
+                            <span id="nav-weather-city">Local</span>
+                            <span class="pill-dot">&bull;</span>
+                            <span id="nav-local-time">--:--</span>
+                        </div>
+                        <button id="back-to-wallpaper-btn"
+                            class="wallpaper-return-btn"
+                            title="Return to wallpaper cover">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="18"
+                                viewBox="0 0 24 24" width="18"
+                                fill="currentColor">
+                                <path
+                                    d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                            </svg>
+                            <span>Wallpaper</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- HERO BANNER SECTION (SPREAD ACROSS THE PAGE) -->
+            <section id="hero-wrapper"
+                class="content-section hero-banner-section">
+                <div class="banner-ambient-glow glow-top-right"
+                    aria-hidden="true"></div>
+                <div class="banner-ambient-glow glow-bottom-left"
+                    aria-hidden="true"></div>
+                <div class="banner-grid-overlay" aria-hidden="true"></div>
+
+                <div class="banner-container">
+                    <!-- LEFT COLUMN: Headline, Mission, Action Buttons & Metrics -->
+                    <div class="banner-main-col">
+                        <div class="hero-badge">
+                            <span class="badge-pulse-dot"></span>
+                            <span>Full-Stack Web Developer &bull; Available for
+                                hire</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Building digital experiences that <span
+                                class="gradient-text">empower people</span> and
+                            enrich lives.
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Architecting modern, scalable web applications with
+                            intuitive UX design, robust backend systems, and
+                            high-performance frontend engineering.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#contact-wrapper" class="btn btn-primary">
+                                <span>Let's build together</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    height="20" viewBox="0 0 24 24" width="20"
+                                    fill="currentColor">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#projects-wrapper"
+                                class="btn btn-secondary">
+                                <span>View featured projects</span>
+                            </a>
+                        </div>
+
+                        <div class="banner-metrics-strip">
+                            <div class="metric-item">
+                                <span class="metric-value">5+</span>
+                                <span class="metric-label">Years of Craft</span>
+                            </div>
+                            <div class="metric-divider"></div>
+                            <div class="metric-item">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Quality &
+                                    Delivery</span>
+                            </div>
+                            <div class="metric-divider"></div>
+                            <div class="metric-item">
+                                <span class="metric-value">Full-Stack</span>
+                                <span class="metric-label">Frontend to Cloud
+                                    API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Standout Developer Profile & Tech Stack Showcase -->
+                    <div class="banner-card-col">
+                        <div class="interactive-dev-card">
+                            <div class="card-glow-border"></div>
+                            <div class="dev-card-header">
+                                <div class="dev-card-avatar-wrapper">
+                                    <img src="./assets/images/profiles/rochekollie.jpeg"
+                                        alt="Roche Kollie profile"
+                                        class="dev-card-avatar" />
+                                    <span class="avatar-status-dot"
+                                        title="Online & Available"></span>
+                                </div>
+                                <div class="dev-card-info">
+                                    <h3 class="dev-name">Roche Kollie</h3>
+                                    <p class="dev-role">Software & Web Engineer
+                                    </p>
+                                    <span class="dev-location" id="dev-card-location">📍 <span id="dev-card-city">York, PA</span> &bull; <span id="dev-card-status">Remote</span></span>
+                                </div>
+                            </div>
+
+                            <div class="dev-card-terminal">
+                                <div class="terminal-bar">
+                                    <span class="term-dot red"></span>
+                                    <span class="term-dot yellow"></span>
+                                    <span class="term-dot green"></span>
+                                    <span
+                                        class="term-title">stack.config.js</span>
+                                </div>
+                                <div class="terminal-code">
+                                    <p><span class="c-keyword">const</span>
+                                        <span class="c-var">stack</span> = {</p>
+                                    <p class="indent-1"><span
+                                            class="c-prop">frontend</span>:
+                                        [<span class="c-str">'React'</span>,
+                                        <span class="c-str">'ES6+'</span>, <span
+                                            class="c-str">'Modern CSS'</span>],
+                                    </p>
+                                    <p class="indent-1"><span
+                                            class="c-prop">backend</span>:
+                                        [<span class="c-str">'Node.js'</span>,
+                                        <span class="c-str">'Express'</span>,
+                                        <span class="c-str">'Python'</span>],
+                                    </p>
+                                    <p class="indent-1"><span
+                                            class="c-prop">design</span>: [<span
+                                            class="c-str">'UI/UX'</span>, <span
+                                            class="c-str">'Design
+                                            Systems'</span>],</p>
+                                    <p class="indent-1"><span
+                                            class="c-prop">focus</span>: <span
+                                            class="c-highlight">'Scalability &
+                                            Delight'</span></p>
+                                    <p>};</p>
+                                </div>
+                            </div>
+
+                            <div class="dev-card-tags">
+                                <span class="dev-tag">⚡ Fast Core Web
+                                    Vitals</span>
+                                <span class="dev-tag">🎯 Accessible UI</span>
+                                <span class="dev-tag">🔒 Scalable APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills-wrapper" class="content-section">
+                <div class="section-container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Things I Do</h2>
+                        <p class="section-desc">Full-cycle product engineering
+                            from conception to production delivery.</p>
+                    </div>
+
+                    <div class="cards-grid">
+                        <!-- UI/UX Designer -->
+                        <div class="card skill-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    height="36" viewBox="0 0 24 24" width="36"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.28 19.64 10.6 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">UI/UX Design</h3>
+                            <p class="card-text">
+                                I craft intuitive, accessible, and dynamic
+                                interfaces with modern aesthetic appeal.
+                                Experienced in rapid prototyping, wireframing,
+                                responsive layouts, and user-centered design
+                                systems.
+                            </p>
+                            <div class="tag-group">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Design Systems</span>
+                                <span class="tag">Responsive UI</span>
+                                <span class="tag">Accessibility</span>
+                            </div>
+                        </div>
+
+                        <!-- Frontend Developer -->
+                        <div class="card skill-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    height="36" viewBox="0 0 24 24" width="36"
+                                    fill="currentColor">
+                                    <path
+                                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Frontend Engineering</h3>
+                            <p class="card-text">
+                                Building performant, interactive web
+                                applications using modern JavaScript, React,
+                                semantic HTML5, and CSS architecture. Obsessed
+                                with snappy Core Web Vitals and polished
+                                interactions.
+                            </p>
+                            <div class="tag-group">
+                                <span class="tag">JavaScript (ES6+)</span>
+                                <span class="tag">React</span>
+                                <span class="tag">CSS Grid & Flexbox</span>
+                                <span class="tag">Vite</span>
+                            </div>
+                        </div>
+
+                        <!-- Backend Developer -->
+                        <div class="card skill-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    height="36" viewBox="0 0 24 24" width="36"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title">Backend Architecture</h3>
+                            <p class="card-text">
+                                Developing scalable RESTful and microservice
+                                backend APIs using Node.js, Express, Python, and
+                                cloud services. Focused on robust data models,
+                                security best practices, and high throughput.
+                            </p>
+                            <div class="tag-group">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Databases</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURED PROJECTS SECTION -->
+            <section id="projects-wrapper" class="content-section">
+                <div class="section-container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Featured Projects</h2>
+                        <p class="section-desc">Selected work highlighting web
+                            development, UI engineering, and design solutions.
+                        </p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- WhizzyKid -->
+                        <article class="project-card">
+                            <div class="project-badge">Featured</div>
+                            <h3 class="project-title">WhizzyKid</h3>
+                            <p class="project-desc">
+                                An engaging and interactive educational web
+                                application engineered for young learners with
+                                accessible navigation, dynamic modules, and
+                                cheerful animations.
+                            </p>
+                            <div class="project-meta">
+                                <div class="tag-group">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">CSS3</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                                <span class="project-date">Sept 2021</span>
+                            </div>
+                        </article>
+
+                        <!-- Restaurant Website -->
+                        <article class="project-card">
+                            <div class="project-badge">Design & Layout</div>
+                            <h3 class="project-title">Restaurant Experience</h3>
+                            <p class="project-desc">
+                                A responsive modern restaurant menu and ordering
+                                experience modeled with flexible CSS layouts,
+                                mouthwatering imagery, and smooth category
+                                filtering.
+                            </p>
+                            <div class="project-meta">
+                                <div class="tag-group">
+                                    <span class="tag">CSS Flexbox</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Responsive</span>
+                                </div>
+                                <span class="project-date">Sept 2021</span>
+                            </div>
+                        </article>
+
+                        <!-- Single Page Static Site -->
+                        <article class="project-card">
+                            <div class="project-badge">Art & Culture</div>
+                            <h3 class="project-title">Beyond These Walls</h3>
+                            <p class="project-desc">
+                                A storytelling single-page web experience
+                                showcasing the public art mural project in
+                                Portsmouth, Ohio, featuring rich narrative
+                                sections and responsive imagery.
+                            </p>
+                            <div class="project-meta">
+                                <div class="tag-group">
+                                    <span class="tag">Semantic HTML</span>
+                                    <span class="tag">CSS Grid</span>
+                                    <span class="tag">Web Typography</span>
+                                </div>
+                                <span class="project-date">Oct 2021</span>
+                            </div>
+                        </article>
+
+                        <!-- Mount Nimba -->
+                        <article class="project-card">
+                            <div class="project-badge">UNESCO Site</div>
+                            <h3 class="project-title">Mount Nimba Reserve</h3>
+                            <p class="project-desc">
+                                An immersive digital showcase for the UNESCO
+                                World Heritage Site utilizing HiDPI responsive
+                                switching, fine typography, and media queries to
+                                present ecological beauty.
+                            </p>
+                            <div class="project-meta">
+                                <div class="tag-group">
+                                    <span class="tag">HiDPI Switching</span>
+                                    <span class="tag">CSS3</span>
+                                    <span class="tag">Vanilla JS</span>
+                                </div>
+                                <span class="project-date">Oct 2021</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about-wrapper" class="content-section">
+                <div class="section-container about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="lead-text">
+                            Hello! I'm Roche, a developer committed to
+                            empowering people and enriching lives through high
+                            quality software.
+                        </p>
+                        <p>
+                            With expertise spanning frontend engineering,
+                            responsive design, and scalable backend services, I
+                            take pride in crafting software that feels
+                            effortless, looks beautiful, and performs reliably
+                            under the hood.
+                        </p>
+                        <p>
+                            When I'm not writing code, I enjoy exploring new web
+                            design trends, photography, and finding inspiration
+                            in daily life.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">100%</span>
+                            <span class="highlight-label">Commitment to
+                                Quality</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">Modern</span>
+                            <span class="highlight-label">Web Stack &
+                                Practices</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">Global</span>
+                            <span class="highlight-label">Design
+                                Perspective</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact-wrapper" class="content-section">
+                <div class="section-container contact-container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-desc">
+                            I am always open to new opportunities,
+                            collaborations, and conversations.
+                        </p>
+                    </div>
+
+                    <form class="contact-form" id="contact-form"
+                        onsubmit="event.preventDefault(); alert('Thank you for reaching out! Roche will get back to you shortly.'); this.reset();">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="contact-name">Name</label>
+                                <input id="contact-name" type="text"
+                                    placeholder="Your name" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="contact-email">Email</label>
+                                <input id="contact-email" type="email"
+                                    placeholder="your.email@example.com"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5"
+                                placeholder="Write something nice..."
+                                required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- MAIN FOOTER -->
+            <footer class="main-footer">
+                <div class="section-container footer-content">
+                    <div class="footer-info">
+                        <p>&copy; <span id="footer-year">2026</span> Roche
+                            Kollie. All rights reserved.</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://x.com/rochekollie" target="_blank"
+                            rel="noopener noreferrer">Twitter / X</a>
+                        <a href="https://linkedin.com/in/rochekollie"
+                            target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://discord.com/rochekollie"
+                            target="_blank"
+                            rel="noopener noreferrer">Discord</a>
+                        <a href="https://github.com/rochekollie" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        <script src="./index.js" type="module"></script>
+    </body>
 
 </html>
