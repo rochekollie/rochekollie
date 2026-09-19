@@ -2,6 +2,8 @@
 
 import {formatTimeShort, getLiveWeather, getUserLocation} from '@/lib/kore';
 import {WeatherData} from '@/lib/types';
+import {useAuth} from '@/lib/authContext';
+import {checkIsAdmin} from '@/lib/admin';
 import Link from 'next/link';
 import {usePathname, useRouter} from 'next/navigation';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -10,6 +12,21 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const isProjectsPage = pathname === '/projects';
+  const isProfilePage = pathname === '/profile';
+  const isAdminPage = pathname === '/admin';
+  const isSubPage = isProjectsPage || isProfilePage || isAdminPage;
+
+  const {
+    user,
+    signInWithEmail,
+    signUpWithEmail,
+    signInWithGoogle,
+    signInWithGithub,
+    signOutUser,
+    formatAuthError,
+  } = useAuth();
+
+  const isAdmin = checkIsAdmin(user);
 
   const [ localTime, setLocalTime ] = useState('');
   const [ city, setCity ] = useState('York, PA');
@@ -28,6 +45,7 @@ export default function Navbar() {
   const [ authPassword, setAuthPassword ] = useState('');
   const [ authName, setAuthName ] = useState('');
   const [ authFeedback, setAuthFeedback ] = useState('');
+  const [ isSubmittingAuth, setIsSubmittingAuth ] = useState(false);
 
   const [ blogModalOpen, setBlogModalOpen ] = useState(false);
   const [ blogEmail, setBlogEmail ] = useState('');
@@ -91,7 +109,7 @@ export default function Navbar() {
 
   const handleReturnToWallpaper = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (isProjectsPage) {
+    if (isSubPage) {
       router.push('/');
       return;
     }
@@ -103,16 +121,56 @@ export default function Navbar() {
     }
   };
 
-  const handleAuthSubmit = (e: React.FormEvent) => {
+  const handleAuthSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setAuthFeedback(
-      authTab === 'signin'
-        ? 'Welcome back! Authentication confirmed for demo.'
-        : 'Account created! Welcome to Roche’s Developer Hub.'
-    );
-    setTimeout(() => {
-      closeModals();
-    }, 1500);
+    setAuthFeedback('');
+    setIsSubmittingAuth(true);
+    try {
+      if (authTab === 'signin') {
+        await signInWithEmail(authEmail, authPassword);
+        setAuthFeedback('Welcome back! Successfully signed in.');
+      } else {
+        await signUpWithEmail(authEmail, authPassword, authName);
+        setAuthFeedback('Account created! Welcome to Roche’s Developer Hub.');
+      }
+      setTimeout(() => {
+        closeModals();
+        setAuthPassword('');
+        setAuthName('');
+      }, 1200);
+    } catch (err) {
+      setAuthFeedback(formatAuthError(err));
+    } finally {
+      setIsSubmittingAuth(false);
+    }
+  };
+
+  const handleGoogleAuth = async () => {
+    setAuthFeedback('');
+    setIsSubmittingAuth(true);
+    try {
+      await signInWithGoogle();
+      setAuthFeedback('Google authentication confirmed!');
+      setTimeout(closeModals, 1000);
+    } catch (err) {
+      setAuthFeedback(formatAuthError(err));
+    } finally {
+      setIsSubmittingAuth(false);
+    }
+  };
+
+  const handleGithubAuth = async () => {
+    setAuthFeedback('');
+    setIsSubmittingAuth(true);
+    try {
+      await signInWithGithub();
+      setAuthFeedback('GitHub authentication confirmed!');
+      setTimeout(closeModals, 1000);
+    } catch (err) {
+      setAuthFeedback(formatAuthError(err));
+    } finally {
+      setIsSubmittingAuth(false);
+    }
   };
 
   const handleBlogSubmit = (e: React.FormEvent) => {
@@ -147,8 +205,8 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href={isProjectsPage ? '/#case-studies' : '#case-studies'}
-                  className={`nav-link ${ !isProjectsPage && activeSection === 'case-studies' ? 'active' : '' }`}
+                  href={isSubPage ? '/#case-studies' : '#case-studies'}
+                  className={`nav-link ${ !isSubPage && activeSection === 'case-studies' ? 'active' : '' }`}
                 >
                   Case Studies
                 </Link>
@@ -167,32 +225,73 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href={isProjectsPage ? '/#contact-wrapper' : '#contact-wrapper'}
-                  className={`nav-link ${ !isProjectsPage && activeSection === 'contact-wrapper' ? 'active' : '' }`}
+                  href={isSubPage ? '/#contact-wrapper' : '#contact-wrapper'}
+                  className={`nav-link ${ !isSubPage && activeSection === 'contact-wrapper' ? 'active' : '' }`}
                 >
                   Contact Me
                 </Link>
               </li>
               <li>
                 <Link
-                  href={isProjectsPage ? '/#contact-wrapper' : '#contact-wrapper'}
+                  href={isSubPage ? '/#contact-wrapper' : '#contact-wrapper'}
                   className="nav-btn hire-me-btn"
                 >
                   Hire Me
                 </Link>
               </li>
-              <li>
-                <a
-                  href="#auth"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setAuthModalOpen(true);
-                  }}
-                  className="nav-btn signup-login-btn"
-                >
-                  Signup/Login
-                </a>
-              </li>
+              {user ? (
+                <li className="nav-user-item">
+                  <Link
+                    href="/profile"
+                    className={`nav-user-pill ${isProfilePage ? 'active' : ''}`}
+                    title="View & Edit Profile"
+                  >
+                    {user.photoURL ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={user.photoURL} alt={user.displayName || 'User'} className="nav-user-avatar" />
+                    ) : (
+                      <span className="nav-user-avatar-initial">
+                        {(user.displayName || user.email || 'U')[0].toUpperCase()}
+                      </span>
+                    )}
+                    <span className="nav-user-display-name">
+                      {user.displayName || user.email?.split('@')[0]}
+                    </span>
+                  </Link>
+
+                  {isAdmin && (
+                    <Link
+                      href="/admin"
+                      className={`nav-admin-link ${isAdminPage ? 'active' : ''}`}
+                      title="Open Admin Dashboard"
+                    >
+                      <span>Admin</span>
+                    </Link>
+                  )}
+
+                  <button
+                    type="button"
+                    className="nav-logout-btn"
+                    onClick={() => signOutUser()}
+                    title="Sign out of account"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="#auth"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setAuthModalOpen(true);
+                    }}
+                    className="nav-btn signup-login-btn"
+                  >
+                    Signup/Login
+                  </a>
+                </li>
+              )}
             </ul>
           </nav>
 
@@ -208,13 +307,13 @@ export default function Navbar() {
             <button
               id="back-to-wallpaper-btn"
               className="wallpaper-return-btn"
-              title={isProjectsPage ? 'Return to Home' : 'Return to wallpaper cover'}
+              title={isSubPage ? 'Return to Home' : 'Return to wallpaper cover'}
               onClick={handleReturnToWallpaper}
             >
               <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="currentColor">
                 <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
               </svg>
-              <span>{isProjectsPage ? 'Home' : 'Wallpaper'}</span>
+              <span>{isSubPage ? 'Home' : 'Wallpaper'}</span>
             </button>
           </div>
         </div>
@@ -324,8 +423,8 @@ export default function Navbar() {
                 />
               </div>
 
-              <button type="submit" className="auth-submit-btn">
-                {authTab === 'signin' ? 'Sign In' : 'Create Account'}
+              <button type="submit" className="auth-submit-btn" disabled={isSubmittingAuth}>
+                {isSubmittingAuth ? 'Processing...' : authTab === 'signin' ? 'Sign In' : 'Create Account'}
               </button>
             </form>
 
@@ -335,10 +434,8 @@ export default function Navbar() {
               <button
                 type="button"
                 className="oauth-btn"
-                onClick={() => {
-                  setAuthFeedback('GitHub auth connected!');
-                  setTimeout(closeModals, 1200);
-                }}
+                disabled={isSubmittingAuth}
+                onClick={handleGithubAuth}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -348,10 +445,8 @@ export default function Navbar() {
               <button
                 type="button"
                 className="oauth-btn"
-                onClick={() => {
-                  setAuthFeedback('Google auth connected!');
-                  setTimeout(closeModals, 1200);
-                }}
+                disabled={isSubmittingAuth}
+                onClick={handleGoogleAuth}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.344-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" />

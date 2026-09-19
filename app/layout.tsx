@@ -1,5 +1,6 @@
 import type {Metadata, Viewport} from 'next';
 import './globals.css';
+import { AuthProvider } from '@/lib/authContext';
 
 export const metadata: Metadata = {
   title: 'Roche Kollie - Fullstack Web Developer',
@@ -40,7 +41,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
