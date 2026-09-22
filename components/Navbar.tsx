@@ -190,6 +190,14 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
+                  href={isSubPage ? '/#about-wrapper' : '#about-wrapper'}
+                  className={`nav-link ${ !isSubPage && (activeSection === 'about-wrapper' || activeSection === 'about') ? 'active' : '' }`}
+                >
+                  About Me
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={isSubPage ? '/#contact-wrapper' : '#contact-wrapper'}
                   className={`nav-link ${ !isSubPage && activeSection === 'contact-wrapper' ? 'active' : '' }`}
                 >

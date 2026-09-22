@@ -3,6 +3,7 @@ import React from 'react';
 export default function AboutSection() {
   return (
     <section id="about-wrapper" className="content-section">
+      <div id="about" style={{ position: 'relative', top: '-70px', visibility: 'hidden' }} />
       <div className="section-container about-content">
         <div className="about-text">
           <h2 className="section-title">About Me</h2>
