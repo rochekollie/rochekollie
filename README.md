@@ -140,46 +140,32 @@ export const roche: DeveloperProfile = {
 
 <table>
   <tr>
-    <td width="33.33%" valign="top">
-      <h3>🌐 Epael.com</h3>
+    <td width="50%" valign="top">
+      <h3>🌐 Binary Playground</h3>
       <p>
-        A modern, high-performance web platform engineered for streamlined digital workflows, fast loading times, responsive interactions, and an intuitive user-centric interface.
+        An interactive, modern web application for practicing, mastering, and playing with Binary (Base-2), Hexadecimal (Base-16), Octal (Base-8), and Color Studio (RGB / HEX / HSL) conversions.
       </p>
       <p>
-        <img src="https://img.shields.io/badge/Next.js_16-00ab91?style=flat-square&labelColor=070b0e" alt="Next.js" />
-        <img src="https://img.shields.io/badge/React_19-00ab91?style=flat-square&labelColor=070b0e" alt="React" />
+        <img src="https://img.shields.io/badge/Web_App-00ab91?style=flat-square&labelColor=070b0e" alt="Web App" />
         <img src="https://img.shields.io/badge/TypeScript-00ab91?style=flat-square&labelColor=070b0e" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Interactive_Tool-00ab91?style=flat-square&labelColor=070b0e" alt="Interactive Tool" />
       </p>
       <p>
-        <a href="https://epael.com" target="_blank"><strong>View Project ↗</strong></a> &nbsp;|&nbsp; <a href="https://rochekollie.com#contact-wrapper"><strong>Case Study 📋</strong></a>
+        <a href="https://binary-playground.netlify.app/" target="_blank"><strong>View Project ↗</strong></a>
       </p>
     </td>
-    <td width="33.33%" valign="top">
-      <h3>🎓 CleverHigh.org</h3>
+    <td width="50%" valign="top">
+      <h3>🎨 Darksome</h3>
       <p>
-        An innovative education platform and learning hub providing structured pathways, interactive digital resources, and empowering tools for students and modern educators.
+        Darksome is an intentional, distraction-free VS Code dark theme built for developers who care deeply about visual hierarchy and typographic clarity.
       </p>
       <p>
-        <img src="https://img.shields.io/badge/Full--Stack-00ab91?style=flat-square&labelColor=070b0e" alt="Full-Stack" />
-        <img src="https://img.shields.io/badge/React-00ab91?style=flat-square&labelColor=070b0e" alt="React" />
-        <img src="https://img.shields.io/badge/Node.js-00ab91?style=flat-square&labelColor=070b0e" alt="Node.js" />
+        <img src="https://img.shields.io/badge/VS_Code_Theme-00ab91?style=flat-square&labelColor=070b0e" alt="VS Code Theme" />
+        <img src="https://img.shields.io/badge/Developer_Tools-00ab91?style=flat-square&labelColor=070b0e" alt="Developer Tools" />
+        <img src="https://img.shields.io/badge/Marketplace-00ab91?style=flat-square&labelColor=070b0e" alt="Marketplace" />
       </p>
       <p>
-        <a href="https://cleverhigh.org" target="_blank"><strong>View Project ↗</strong></a> &nbsp;|&nbsp; <a href="https://rochekollie.com#contact-wrapper"><strong>Case Study 📋</strong></a>
-      </p>
-    </td>
-    <td width="33.33%" valign="top">
-      <h3>🚀 Whizzkid.org</h3>
-      <p>
-        An engaging, accessible educational web application engineered for young learners with gamified modules, cheerful responsive animations, and strict accessibility (a11y) standards.
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/TypeScript-00ab91?style=flat-square&labelColor=070b0e" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/React-00ab91?style=flat-square&labelColor=070b0e" alt="React" />
-        <img src="https://img.shields.io/badge/Accessible_UI-00ab91?style=flat-square&labelColor=070b0e" alt="a11y" />
-      </p>
-      <p>
-        <a href="https://whizzkid.org" target="_blank"><strong>View Project ↗</strong></a> &nbsp;|&nbsp; <a href="https://rochekollie.com#contact-wrapper"><strong>Case Study 📋</strong></a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=rochekollie.darksome" target="_blank"><strong>View on Marketplace ↗</strong></a>
       </p>
     </td>
   </tr>

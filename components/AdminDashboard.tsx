@@ -519,7 +519,7 @@ export default function AdminDashboard() {
 
               <Link href="/#projects-wrapper" className="admin-quick-card">
                 <h3>🚀 Featured Projects ({PROJECTS.length})</h3>
-                <p>Explore all active web applications, EdTech hubs, and open-source tooling.</p>
+                <p>Explore active web applications and developer tools.</p>
                 <span className="card-arrow">&rarr;</span>
               </Link>
 
