@@ -1,5 +1,4 @@
-import React from 'react';
-import { PROJECTS } from '@/lib/projects';
+import {PROJECTS} from '@/lib/projects';
 
 export default function ProjectsSection() {
   const featuredProjects = PROJECTS.filter((p) => p.featured);
