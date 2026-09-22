@@ -1,9 +1,9 @@
 'use client';
 
+import {checkIsAdmin} from '@/lib/admin';
+import {useAuth} from '@/lib/authContext';
 import {formatTimeShort, getLiveWeather, getUserLocation} from '@/lib/kore';
 import {WeatherData} from '@/lib/types';
-import {useAuth} from '@/lib/authContext';
-import {checkIsAdmin} from '@/lib/admin';
 import Link from 'next/link';
 import {usePathname, useRouter} from 'next/navigation';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -11,10 +11,9 @@ import React, {useCallback, useEffect, useState} from 'react';
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
-  const isProjectsPage = pathname === '/projects';
   const isProfilePage = pathname === '/profile';
   const isAdminPage = pathname === '/admin';
-  const isSubPage = isProjectsPage || isProfilePage || isAdminPage;
+  const isSubPage = isProfilePage || isAdminPage;
 
   const {
     user,
@@ -197,18 +196,10 @@ export default function Navbar() {
             <ul className="nav-list">
               <li>
                 <Link
-                  href="/projects"
-                  className={`nav-link ${ isProjectsPage || activeSection === 'projects-wrapper' ? 'active' : '' }`}
+                  href={isSubPage ? '/#projects-wrapper' : '#projects-wrapper'}
+                  className={`nav-link ${ !isSubPage && (activeSection === 'projects-wrapper' || activeSection === 'projects') ? 'active' : '' }`}
                 >
                   Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={isSubPage ? '/#case-studies' : '#case-studies'}
-                  className={`nav-link ${ !isSubPage && activeSection === 'case-studies' ? 'active' : '' }`}
-                >
-                  Case Studies
                 </Link>
               </li>
               <li>

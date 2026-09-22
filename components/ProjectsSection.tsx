@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { PROJECTS } from '@/lib/projects';
 
 export default function ProjectsSection() {
@@ -7,6 +6,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects-wrapper" className="content-section">
+      <div id="projects" style={{ position: 'relative', top: '-70px', visibility: 'hidden' }} />
       <div id="case-studies" style={{ position: 'relative', top: '-70px', visibility: 'hidden' }} />
       <div className="section-container">
         <div className="section-header text-center">
@@ -68,31 +68,6 @@ export default function ProjectsSection() {
               </div>
             </article>
           ))}
-        </div>
-
-        <div style={{ textAlign: 'center', marginTop: '2.75rem' }}>
-          <Link
-            href="/projects"
-            className="btn btn-secondary"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.85rem 1.75rem' }}
-          >
-            <span>Explore All Projects ({PROJECTS.length})</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="18"
-              viewBox="0 0 24 24"
-              width="18"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>

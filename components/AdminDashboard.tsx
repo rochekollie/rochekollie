@@ -264,8 +264,8 @@ export default function AdminDashboard() {
               <div className="stat-card-val">{PROJECTS.length}</div>
               <div className="stat-card-label">Shipped Projects</div>
             </div>
-            <Link href="/projects" className="stat-card-link">
-              View Catalog &rarr;
+            <Link href="/#projects-wrapper" className="stat-card-link">
+              View Projects &rarr;
             </Link>
           </div>
         </div>
@@ -517,8 +517,8 @@ export default function AdminDashboard() {
                 <span className="card-arrow">&rarr;</span>
               </Link>
 
-              <Link href="/projects" className="admin-quick-card">
-                <h3>🚀 Projects Catalog ({PROJECTS.length})</h3>
+              <Link href="/#projects-wrapper" className="admin-quick-card">
+                <h3>🚀 Featured Projects ({PROJECTS.length})</h3>
                 <p>Explore all active web applications, EdTech hubs, and open-source tooling.</p>
                 <span className="card-arrow">&rarr;</span>
               </Link>

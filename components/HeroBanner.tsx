@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { getUserLocation } from '@/lib/kore';
 
 export default function HeroBanner() {
@@ -50,9 +49,9 @@ export default function HeroBanner() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <Link href="/projects" className="btn btn-secondary">
-              <span>Explore all projects</span>
-            </Link>
+            <a href="#projects-wrapper" className="btn btn-secondary">
+              <span>View Projects</span>
+            </a>
           </div>
 
           <div className="banner-metrics-strip">
