@@ -46,15 +46,9 @@ export default function Navbar() {
   const [ authFeedback, setAuthFeedback ] = useState('');
   const [ isSubmittingAuth, setIsSubmittingAuth ] = useState(false);
 
-  const [ blogModalOpen, setBlogModalOpen ] = useState(false);
-  const [ blogEmail, setBlogEmail ] = useState('');
-  const [ blogFeedback, setBlogFeedback ] = useState('');
-
   const closeModals = useCallback(() => {
     setAuthModalOpen(false);
-    setBlogModalOpen(false);
     setAuthFeedback('');
-    setBlogFeedback('');
   }, []);
 
   useEffect(() => {
@@ -172,14 +166,6 @@ export default function Navbar() {
     }
   };
 
-  const handleBlogSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setBlogFeedback('Subscribed! You’ll get early access to upcoming articles.');
-    setTimeout(() => {
-      closeModals();
-    }, 1600);
-  };
-
   return (
     <>
       <header id="site-header" className="main-nav-header">
@@ -203,31 +189,11 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#blog"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setBlogModalOpen(true);
-                  }}
-                  className={`nav-link ${ blogModalOpen ? 'active' : '' }`}
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
                 <Link
                   href={isSubPage ? '/#contact-wrapper' : '#contact-wrapper'}
                   className={`nav-link ${ !isSubPage && activeSection === 'contact-wrapper' ? 'active' : '' }`}
                 >
                   Contact Me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={isSubPage ? '/#contact-wrapper' : '#contact-wrapper'}
-                  className="nav-btn hire-me-btn"
-                >
-                  Hire Me
                 </Link>
               </li>
               {user ? (
@@ -449,82 +415,6 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* BLOG PREVIEW MODAL */}
-      {blogModalOpen && (
-        <div className="nav-modal-backdrop" onClick={closeModals}>
-          <div
-            className="nav-modal-card"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="blog-modal-title"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="nav-modal-close"
-              onClick={closeModals}
-              aria-label="Close dialog"
-            >
-              &times;
-            </button>
-
-            <div className="nav-modal-header">
-              <h2 id="blog-modal-title" className="nav-modal-title">
-                ✍️ Engineering Blog
-              </h2>
-              <p className="nav-modal-desc">
-                In-depth articles and practical guides on full-stack web engineering, UI systems, and modern architecture.
-              </p>
-            </div>
-
-            <ul className="blog-topics-list">
-              <li className="blog-topic-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Building Ambient UI with Next.js 16 & React 19</span>
-              </li>
-              <li className="blog-topic-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>CSS Scroll-Snap Architectures & Core Web Vitals</span>
-              </li>
-              <li className="blog-topic-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Scalable TypeScript Microservices & REST Design</span>
-              </li>
-            </ul>
-
-            {blogFeedback ? (
-              <div className="auth-feedback-badge" role="status">
-                {blogFeedback}
-              </div>
-            ) : (
-              <form className="auth-form" onSubmit={handleBlogSubmit}>
-                <div className="auth-input-group">
-                  <label className="auth-input-label" htmlFor="blog-subscribe-email">
-                    Be the first to read new articles
-                  </label>
-                  <input
-                    id="blog-subscribe-email"
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    value={blogEmail}
-                    onChange={(e) => setBlogEmail(e.target.value)}
-                    className="auth-input"
-                  />
-                </div>
-                <button type="submit" className="auth-submit-btn">
-                  Notify Me on Launch
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
     </>
   );
 }
